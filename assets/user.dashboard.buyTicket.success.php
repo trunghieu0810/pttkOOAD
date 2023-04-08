@@ -180,9 +180,9 @@ if(isset($_SESSION['payment'])) {
     </div>	
     <h1 style="font-size:55px;margin-top:40px;">Cảm Ơn!</h1>
     <p style="font-size:20px;margin-bottom:0">Thao tác của bạn đã được xác nhận.</p>
-    <p style="font-size:20px;"><strong>Kiểm tra email của bạn</strong> để xác nhận thanh toán.</p>
+    <p style="font-size:20px;"><strong>Kiểm tra email của bạn</strong> xem lại thanh toán.</p>
     <hr>
-    <div style="margin-bottom:15px; color:#5c5c5c">Trình duyệt của bạn sẽ tự động chuyển hướng đến trang chủ InstaMovies trong <span id="timer" style="font-weight:bold"></span> giây.</div>
+    <div style="margin-bottom:15px; color:#5c5c5c">Trình duyệt sẽ tự động chuyển hướng đến trang chủ Cinema trong <span id="timer" style="font-weight:bold"></span> giây.</div>
     <p>
         <a class="btn btn-success" href="../index.php" role="button" style="font-size:20px; background: #7ed321; border:none">Tiếp tục tới trang chủ</a>
     </p>

@@ -10,7 +10,7 @@ if(isset($_POST['ticketID']) && !empty($_POST['ticketID'])) {
         $row = mysqli_fetch_array($result);
         $_SESSION['ticketID'] = $ticketID;
         $charge = $row['total_amount'] * 12.5/100;
-        $_SESSION['charge'] = number_format((float)$charge, 2, '.', '');
+        $_SESSION['charge'] = number_format((float)$charge, 3, '.', '');
 ?>
 
 <hr style="margin-left:-15px;margin-right:-15px">
@@ -29,12 +29,12 @@ if(isset($_POST['ticketID']) && !empty($_POST['ticketID'])) {
     </div>
     <div style="margin:0;background:#d6d6d6;padding:10px 30px">
         <div style="font-size:20px;display:inline-block">Tổng:</div>
-        <div style="float:right;font-size:20px;display:inline-block;font-weight:bold">Rs. <?php echo number_format((float)$row['total_amount'], 2, '.', '') ?></div>
+        <div style="float:right;font-size:20px;display:inline-block;font-weight:bold">VND <?php echo number_format((float)$row['total_amount'], 2, '.', '') ?></div>
     </div>
 </div>
 
 <div style="margin-top:15px; padding:10px 15px 10px; color:#FFF; background:black; font-size: 20px; font-weight:500">
-    Chi Phí: <span style="float:right">Rs. <?php echo $_SESSION['charge'] ?></span>
+    Chi Phí: <span style="float:right">VND <?php echo $_SESSION['charge'] ?></span>
 </div>
 
 <?php }} ?>

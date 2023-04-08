@@ -3,7 +3,7 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-transparent fixed-top" role="navigation">
             
             <div class="header_logo visible-xs">
-                <a href="index.php"> <img src="images/logo.png" width="119px" height="54px"></a>
+                <a href="index.php"> <img src="images/logo.png" width="120px" height="55px"></a>
             </div>
             
             <div class="navbar-header">
@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="col-lg-1">
                         <div class="navbar-brand hidden-xs">
-                            <a href="index.php"> <img src="images/logo.png" width="119px" height="54px"></a>
+                            <a href="index.php"> <img src="images/logo.png" width="120px" height="55px"></a>
                         </div>
                     </div>
 
@@ -25,12 +25,12 @@
                             <ul class="navbar-nav ml-auto">
                                 <li class="item-1"><a class="nav-link" href="index.php">TRANG CHỦ</a></li>
                                 <li class="item-2"><a class="nav-link" href="movies.php">PHIM</a></li>
-                                <li class="item-3"><a class="nav-link" href="rates_and_showtimes.php">ĐÁNH GIÁ & LỊCH CHIẾU<span class="sr-only">(current)</span></a></li>
+                                <li class="item-3"><a class="nav-link" href="rates_and_showtimes.php">LỊCH CHIẾU<span class="sr-only">(current)</span></a></li>
                                 <li class="item-4"><a class="nav-link" href="theatres.php">RẠP</a></li>
                                 <!-- <li class="item-5"><a class="nav-link" href="news.php">NEWS</a></li> -->
                                 <li class="item-6"><a class="nav-link" href="offers.php">ƯU ĐÃI</a></li>
                                 <li class="item-7"><a class="nav-link" href="buy_tickets.php">ĐẶT VÉ</a></li>
-                                <li class="item-8"><a class="nav-link" href="contact_us.php">LIÊN HỆ VỚI CHÚNG TÔI</a></li>
+                                <li class="item-8"><a class="nav-link" href="contact_us.php">LIÊN HỆ</a></li>
                             </ul>
                             <ul class="navbar-nav navbar-right">
                                 <?php if(isset($_SESSION['userID'])){ ?>
@@ -39,7 +39,7 @@
                                         <?php echo strtoupper($_SESSION['username']) ?>
                                     </a>
                                     <ul class="dropdown-menu fadeIn">
-                                        <li><a href="user.dashboard.php">Trang tổng quan</a></li>
+                                        <li><a href="user.dashboard.php">Trang chủ</a></li>
                                         <li><a href="user.profile.php">Hồ sơ</a></li>                                        
                                         <li><a href="user.bookings.php">Đặt chỗ</a></li>
                                         <li><a href="user.payments.php">Thanh toán</a></li>

@@ -20,7 +20,7 @@ $theatre_id=$_GET["theatre_id"];
 		<!--Favicon Image-->
 		<link rel="shortcut icon" type="image/png" href="images/icon.png">
 		
-		<title>InstaMovies</title>
+		<title>Cinema</title>
 
         <style>
             .theatre .banner img {
@@ -167,17 +167,17 @@ $theatre_id=$_GET["theatre_id"];
 					<h4 style="color:#3f3545; font-size:20px; line-height:30px;">Chi Tiết Liên hệ</h4>
 					<table class="theatre_details">
 						<tr>
-								<td width="30%">Địa Chỉ : </td>
+								<td width="30%">Địa Chỉ: </td>
 								<td width="70%"><?php echo $row_theatre['address']?></td>
 						</tr>
 						<tr height="10"></tr>
 						<tr>
-								<td>Số điện thoại : </td>
+								<td>Số điện thoại: </td>
 								<td><a href="tel:+94<?php echo $row_theatre['telephone']?>">+94<?php echo $row_theatre['telephone']?></a> </td>
 						</tr>
 						<tr height="10"></tr>
 						<tr>
-								<td>Email :</td>
+								<td>Email:</td>
 								<td><a href="mailto:<?php echo $row_theatre['email']?>"><?php echo $row_theatre['email']?></a></td>
 						</tr>
 						<tr height="10"></tr>
@@ -195,7 +195,7 @@ $theatre_id=$_GET["theatre_id"];
 				if(mysqli_num_rows($result_nowshowing) > 0){
 				?>
 				<div class="nowshowing_movies">
-				<h4 style="font-weight:normal; color: #3f3545; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:36px; margin-bottom:30px; padding-top:15px">Now Showing Movies at <?php echo $row_theatre['theatre_name']?></h4>
+				<h4 style="font-weight:normal; color: #3f3545; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:36px; margin-bottom:30px; padding-top:15px">Phim đang chiếu tại <?php echo $row_theatre['theatre_name']?></h4>
 				<div class="row">
 						<?php while($row_nowshowing = mysqli_fetch_array($result_nowshowing)){ ?>
 						<div class="col-md-3 col-sm-4">
@@ -203,7 +203,7 @@ $theatre_id=$_GET["theatre_id"];
 								<a href="movie.php?movie_id=<?php echo $row_nowshowing['movie_id']; ?>"><img src="data:image/jpeg;base64,<?php echo base64_encode($row_nowshowing['poster'])?>" class="movie_image"></a>
 								<div class="movie_bottom_wrap">
 									<a href="movie.php?movie_id=<?php echo $row_nowshowing['movie_id']; ?>" class="movie_name"><h6><?php echo $row_nowshowing['movie_name']?></h6></a>
-									<a href="buy_tickets.php?movieID=<?php echo $row_nowshowing['movie_id'];?>" class="btn btn-danger" style="width:100%; font-size: 18px;">Buy Tickets</a>
+									<a href="buy_tickets.php?movieID=<?php echo $row_nowshowing['movie_id'];?>" class="btn btn-danger" style="width:100%; font-size: 18px;">Mua Vé</a>
 								</div>
 							</div>
 						</div>
@@ -218,7 +218,7 @@ $theatre_id=$_GET["theatre_id"];
 				if(mysqli_num_rows($result_upcoming) > 0){
 				?>
 				<div class="nowshowing_movies">
-				<h4 style="font-weight:normal; color: #3f3545; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:36px; margin-bottom:30px; padding-top:15px">Upcoming Movies at <?php echo $row_theatre['theatre_name']?></h4>
+				<h4 style="font-weight:normal; color: #3f3545; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:36px; margin-bottom:30px; padding-top:15px">Phim sắp chiếu tại <?php echo $row_theatre['theatre_name']?></h4>
 				<div class="row">
 						<?php while($row_upcoming = mysqli_fetch_array($result_upcoming)){ ?>
 						<div class="col-md-3 col-sm-4">
@@ -226,7 +226,7 @@ $theatre_id=$_GET["theatre_id"];
 								<a href="movie.php?movie_id=<?php echo $row_upcoming['movie_id']; ?>"><img src="data:image/jpeg;base64,<?php echo base64_encode($row_upcoming['poster'])?>" class="movie_image"></a>
 								<div class="movie_bottom_wrap">
 									<a href="movie.php?movie_id=<?php echo $row_upcoming['movie_id']; ?>" class="movie_name"><h6><?php echo $row_upcoming['movie_name']?></h6></a>
-									<a href="buy_tickets.php?movieID=<?php echo $row_upcoming['movie_id'];?>" class="btn btn-danger" style="width:100%; font-size: 18px;">Buy Tickets</a>
+									<a href="buy_tickets.php?movieID=<?php echo $row_upcoming['movie_id'];?>" class="btn btn-danger" style="width:100%; font-size: 18px;">Mua vé</a>
 								</div>
 							</div>
 						</div>

@@ -47,7 +47,7 @@ $_SESSION['showDate'];
 		<!--Favicon Image-->
 		<link rel="shortcut icon" type="image/png" href="../images/icon.png">
 		
-		<title>Confirm Booking</title>
+		<title>Xác nhận đặt vé</title>
 
         <style>
             .booking_process_customer_details .banner img{
@@ -244,7 +244,7 @@ $_SESSION['showDate'];
         <!--Banner Code - End-->
 
         <div class="container mt-4">
-            <h1 style="margin-top:70px; font-weight:400">Confirm Booking</h1>
+            <h1 style="margin-top:70px; font-weight:400">Xác nhận đặt vé</h1>
 
             <hr style="border:1px solid red"/>
             
@@ -252,9 +252,9 @@ $_SESSION['showDate'];
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="bookingtimer bookingtimer_3" >
                         <h3>
-                            You have 
+                            Bạn có
                             <span id="timer">300</span> 
-                            seconds to complete this booking.
+                            giây để hoàn thành thanh toán.
                         </h3>
                     </div>
                 </div>        
@@ -266,11 +266,11 @@ $_SESSION['showDate'];
                     </div>
                     <form id="booking_customer_details">
                         <div class="form-group">
-                            <span>Full Name</span>
-                            <input id="customer_name" name="customer_name" placeholder="Your name" type="text" class="form-control" value="" required>
+                            <span>Họ tên</span>
+                            <input id="customer_name" name="customer_name" type="text" class="form-control" value="" required>
                         </div>
                         <div class="form-group">
-                            <span>Mobile</span>
+                            <span>Số điện thoại</span>
                             <input id="customer_phone" name="customer_phone" placeholder="07xxxxxxxx" type="text" class="form-control" maxlength="10" value="" required>
                         </div>
                         <div class="form-group">
@@ -278,8 +278,8 @@ $_SESSION['showDate'];
                             <input id="customer_email" name="customer_email" placeholder="example@email.com" type="text" class="form-control" value="" required>
                         </div>
                         <div class="terms"> 
-                            <input type="checkbox" name="terms" id="terms"/>I Agree to <a href="../terms_and_conditions.php">Terms & Conditions</a>.
-                            <div id="erromsgterms" class="error_code">Please Agree to Terms &amp; Conditions!</div>
+                            <input type="checkbox" name="terms" id="terms"/>Tôi đồng ý với <a href="../terms_and_conditions.php">Điều khoản và điều kiện</a>.
+                            <div id="erromsgterms" class="error_code">Hãy đồng ý với Điều khoản &amp; Điều kiện!</div>
                         </div>
                     </form>
                 </div>
@@ -287,7 +287,7 @@ $_SESSION['showDate'];
                     <div class="bookingdetails">
                         <div class="row"> 
                             <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                                <h4 class="bookingdetails-heading">Booking Details</h4> 
+                                <h4 class="bookingdetails-heading">Thông tin đặt vé</h4> 
                             </div>
                         </div>
                     
@@ -297,15 +297,14 @@ $_SESSION['showDate'];
                                 <div class="theater"><?php echo $_SESSION['theaterName']." - ".$_SESSION['theaterCity'] ?></div>
                             </div>
                             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                                <div class="tickets"><h3 style="color: #322F36; margin-bottom: 0;"><?php echo $_SESSION['totalTicketCount'] ?></h3></div>
-                                <div class="tickets">Ticket(s)</div>
+                                <div class="tickets"><h3 style="color: #322F36; margin-bottom: 0;"><?php echo $_SESSION['totalTicketCount'] ?> Vé</h3></div>
                             </div>
                         </div>
                         
                         <div class="row">                               
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="seatdetails">
-                                    <div>Full : <?php echo $_SESSION['fullTicketCount'] ?> Kids : <?php echo $_SESSION['kidsTicketCount'] ?></div>
+                                    <div>Thường: <?php echo $_SESSION['fullTicketCount'] ?> Trẻ em: <?php echo $_SESSION['kidsTicketCount'] ?></div>
                                     <div><?php echo $_SESSION['seatCategory'] ?> - <?php echo $_SESSION['selectedSeats'] ?></div>
                                     <div><?php echo date("D, d F, Y", strtotime($_SESSION['showDate'])) ?></div>
                                     <div><?php echo $_SESSION['showTime'] ?></div>
@@ -319,24 +318,20 @@ $_SESSION['showDate'];
 
                     <div class="charges">
                         <div class="subtotal">
-                            Sub Total:
-                            <div class="subtotalamount">Rs. <?php echo number_format((float)$_SESSION['totalAmount'], 2, '.', '') ?></div>
+                            Tổng thanh toán:
+                            <div class="subtotalamount"><?php echo number_format((float)$_SESSION['totalAmount'], 3, '.', '') ?> VND</div>
                         </div>
                         <div class="internetfees">
                             <span id="plus_sign" data-toggle="collapse" href=".internetfeesdetails" aria-expanded="false">+</span>
-                            Internet handling Fees:
+                            Phí dịch vụ:
                             <div id="internetfeesamount" class="internetfeesamount"></div>
                             <div class="internetfeesdetails collapse">
                                 <div class="bookingfees">
-                                    Booking Fees:
+                                Phí phát hành 5%:
                                     <div id="bookingfeesamount" class="bookingfeesamount"></div>
                                 </div>
-                                <div class="nbt">
-                                    NBT on Booking Fees @ 2%:
-                                    <div id="nbtamount" class="nbtamount"></div>
-                                </div>
                                 <div class="vat">
-                                    VAT on Booking Fees + NBT @ 15%:
+                                    Phí VAT 10%:
                                     <div id="vatamount" class="vatamount"></div>
                                 </div>
                             </div>
@@ -344,7 +339,7 @@ $_SESSION['showDate'];
                     </div>
 
                     <div class="totalamount">
-                        Amount Payable
+                        Tổng tiền cần trả
                         <div id="payableamount" class="amount"></div>
                     </div>
                 </div>
@@ -356,7 +351,7 @@ $_SESSION['showDate'];
             ?>
                 <div class="coupon input-group mb-4 mt-2">
                     <div class="input-group-prepend">
-                        <span class="input-group-text">Coupon Code</span>
+                        <span class="input-group-text">Mã giảm giá</span>
                     </div>
                     <input type="text" class="form-control" id="coupon_code" placeholder="Coupon Code">
                 </div>
@@ -365,14 +360,14 @@ $_SESSION['showDate'];
             <div class="payment_options" align="center" style="margin-top: 15px;">
                 <form id="payment_options_form">
                     <table>
-                        <tr><td><input class="pay_method" type="radio" name="payment_type" id="payment_type" value="visa_mastercard" checked = "checked"></td><td>Pay by Credit Card, Visa / Master</td><td style="padding-left:10px;"><img src="../images/pp_master.jpg" /></td></tr>
-                        <tr><td><input disabled class="pay_method" type="radio" name="payment_type" id="payment_type" value="union"></td><td>Pay by Union Bank Credit</td><td style="padding-left:10px;"><img src="../images/pp_union.png" /></td></tr>
-                        <tr><td><input disabled class="pay_method" type="radio" name="payment_type" id="payment_type" value="dfcc"></td><td>Pay by DFCC Bank Credit</td><td style="padding-left:10px;"><img src="../images/pp_dfcc.png" /></td></tr>
+                        <tr><td><input class="pay_method" type="radio" name="payment_type" id="payment_type" value="visa_mastercard" checked = "checked"></td><td>Thanh toán qua Credit Card, Visa / Master</td><td style="padding-left:10px;"><img src="../images/pp_master.jpg" /></td></tr>
+                        <tr><td><input disabled class="pay_method" type="radio" name="payment_type" id="payment_type" value="union"></td><td>Thanh toán qua ngân hàng Techombank</td><td style="padding-left:10px;"><img src="../images/pp_tcb.png" /></td></tr>
+                        <tr><td><input disabled class="pay_method" type="radio" name="payment_type" id="payment_type" value="dfcc"></td><td>Thanh toán qua ngân hàng Vietcombank</td><td style="padding-left:10px;"><img src="../images/pp_vcb.png" /></td></tr>
                     </table>                    
                 </form>
 
-                <input value="Pay Now" name="submit_payment" class="btn btn-danger btn-lg paybutton" id="submit_payment" type="button" style="padding-top:6px; font-family:Tahoma, Geneva, sans-serif">
-                <input value="Cancel" name="cancel_payment" class="btn btn-secondary btn-lg" id="cancel_payment" type="button" style="padding-top:6px; font-family:Tahoma, Geneva, sans-serif">
+                <input value="Thanh toán" name="submit_payment" class="btn btn-danger btn-lg paybutton" id="submit_payment" type="button" style="padding-top:6px; font-family:Tahoma, Geneva, sans-serif">
+                <input value="Hủy" name="cancel_payment" class="btn btn-secondary btn-lg" id="cancel_payment" type="button" style="padding-top:6px; font-family:Tahoma, Geneva, sans-serif">
             </div>
 
         </div>
@@ -468,16 +463,14 @@ $_SESSION['showDate'];
             var fullTicketsCount = <?php echo $_SESSION['fullTicketCount'] ?>;
             var kidsTicketCount = <?php echo $_SESSION['kidsTicketCount'] ?>;
             var bookingfees = <?php echo $_SESSION['fullPrice'] ?> * 5/100 * fullTicketsCount + <?php echo $_SESSION['kidsPrice'] ?> * 5/100 * kidsTicketCount;
-            var nbt = bookingfees * 2/100;
-            var vat = (bookingfees + nbt) * 15/100;
-            var internetfees = bookingfees + nbt + vat;
+            var vat = subtotal * 10/100;
+            var internetfees = bookingfees + vat;
             var payableAmount = subtotal + internetfees;
             
-            document.getElementById('bookingfeesamount').innerHTML = "Rs. " + bookingfees.toFixed(2);
-            document.getElementById('nbtamount').innerHTML = "Rs. " + nbt.toFixed(2);
-            document.getElementById('vatamount').innerHTML = "Rs. " + vat.toFixed(2);
-            document.getElementById('internetfeesamount').innerHTML = "Rs. " + internetfees.toFixed(2);
-            document.getElementById('payableamount').innerHTML = "Rs. " + payableAmount.toFixed(2);
+            document.getElementById('bookingfeesamount').innerHTML = bookingfees.toFixed(3) + " VND ";
+            document.getElementById('vatamount').innerHTML = vat.toFixed(3) + " VND ";
+            document.getElementById('internetfeesamount').innerHTML = internetfees.toFixed(3) + " VND ";
+            document.getElementById('payableamount').innerHTML = payableAmount.toFixed(3) + " VND ";
 
 
             //Page Reload, Close, Back Forward - Actions - start
@@ -577,7 +570,7 @@ $_SESSION['showDate'];
                     if(coupon_code == "" || payableAmount == 0) {
                         var user_data = $("#booking_customer_details").serialize();
                         var paymentType = $("input[name='payment_type']:checked").val();
-                        window.location = "booking_process_payment.php?" + user_data + "&internetFees=" + internetfees.toFixed(2) + "&paymentType=" + paymentType + "&payableAmount=" + payableAmount.toFixed(2);
+                        window.location = "booking_process_payment.php?" + user_data + "&internetFees=" + internetfees.toFixed(3) + "&paymentType=" + paymentType + "&payableAmount=" + payableAmount.toFixed(3);
                     }
                 }else{
                     jQuery(".error_code").show();

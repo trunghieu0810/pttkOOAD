@@ -19,7 +19,7 @@
 		<!--Favicon Image-->
 		<link rel="shortcut icon" type="image/png" href="images/icon.png">
 
-		<title>InstaMovies</title>
+		<title>Cinema</title>
 
     <style>
         .login_verification .banner img {
@@ -55,7 +55,7 @@
         <form  class="login_verification-page" method="POST">
           
           <div style="text-align:center; color:#3f3545;">
-            <h2 style="font-weight:400; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: #3f3545; font-size:45px; margin-bottom:15px; border-bottom: 1px solid #333333; text-align:center; padding-bottom:15px;">Verify Account</h2>
+            <h2 style="font-weight:400; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: #3f3545; font-size:45px; margin-bottom:15px; border-bottom: 1px solid #333333; text-align:center; padding-bottom:15px;">Xác thực tài khoản</h2>
             <p style="margin:10px 0 20px; padding: 0px 0px 10px 0px !important;"><b>Nhập mã xác minh đã được gửi đến email của bạn để xác minh tài khoản của bạn.</b></p>
           </div>
           

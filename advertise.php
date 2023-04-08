@@ -21,7 +21,7 @@ session_start();
 		<!--Favicon Image-->
 		<link rel="shortcut icon" type="image/png" href="images/icon.png">
 		
-		<title>InstaMovies</title>
+		<title>Cinema</title>
 
         <style>
             .advertise p {

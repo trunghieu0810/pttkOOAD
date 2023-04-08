@@ -40,7 +40,7 @@ if(isset($_POST["sel_date"]) && isset($_POST['movie_id']) && !empty($_POST["sel_
     $rowCount_theatre = $query_theatre->num_rows;
     
     if($rowCount_theatre > 0){
-        echo '<option value="">Select Theatre</option>';
+        echo '<option value="">Chọn rạp</option>';
         while($row = $query_theatre->fetch_assoc()){ 
             echo '<option value="'.$row['theatre_id'].'">'.$row['theatre_name'].' - '.$row['city'].'</option>';
         }

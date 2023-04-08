@@ -55,16 +55,15 @@ if(isset($_SESSION['userID'])){
       <!--Banner Code - End-->
       
       <div class="container mt-4" style="line-height:22px; font-size: 14px; color: #606978; font-family:sans-serif">
-        <h2 style="font-weight:normal; color: #3f3545; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:48px; margin-bottom:10px; padding-top:15px; text-align:center;">Register with InstaMovies</h2>
+        <h2 style="font-weight:normal; color: #3f3545; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:48px; margin-bottom:10px; padding-top:15px; text-align:center;">Đăng ký</h2>
         <hr/> 
-        <p style="margin: 10px 0 25px; padding: 0px 0px 10px 0px !important;"><b>Để trở thành người dùng của trang web và thực hiện các giao dịch và sửa đổi trực tuyến, bạn phải là người dùng đã đăng ký. Vui lòng điền vào biểu mẫu sau với thông tin có liên quan và hợp lệ.</b></p>
             
           <form class="signup-page" method="POST" onSubmit = "return checkPassword(this)">
 
             <div class="form-group row">
                 <label class="col-sm-4" style="">Họ Tên Đệm: <span style="color:red">*</span> </label>
                 <div class="col-sm-8">
-                  <input class="form-control" type="text" name="first_name" id="first_name" placeholder="First Name" required>
+                  <input class="form-control" type="text" name="first_name" id="first_name" required>
                 </div>
             </div>
 
@@ -72,7 +71,7 @@ if(isset($_SESSION['userID'])){
             <div class="form-group row">
                 <label class="col-sm-4" style="">Tên: <span style="color:red">*</span> </label>
                 <div class="col-sm-8">
-                  <input class="form-control" type="text" name="last_name" id="last_name" placeholder="Last Name" required>
+                  <input class="form-control" type="text" name="last_name" id="last_name" required>
                 </div>
             </div>
 
@@ -80,14 +79,14 @@ if(isset($_SESSION['userID'])){
             <div class="form-group row">
                 <label class="col-sm-4" style="">Số điện thoại:</label>
                 <div class="col-sm-8">
-                  <input class="form-control" type="text" name="mobile" id="mobile" pattern="[0-9]{10}" title="Only 10 digit number" placeholder="Mobile">
+                  <input class="form-control" type="text" name="mobile" id="mobile" pattern="[0-9]{10}" title="Chỉ nhập 10 số">
                 </div>
             </div>
 
             <div class="form-group row">
                 <label class="col-sm-4" style="">Email: <span style="color:red">*</span></label>
                 <div class="col-sm-8">
-                  <input class="form-control" type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="The format should be user@something.XXX" placeholder="Email Address" required>
+                  <input class="form-control" type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="The format should be user@something.XXX" required>
                 </div>
             </div>
 
@@ -95,7 +94,7 @@ if(isset($_SESSION['userID'])){
             <div class="form-group row">
                 <label class="col-sm-4" style="">Tên người dùng: <span style="color:red">*</span></label>
                 <div class="col-sm-8">
-                  <input class="form-control" type="text" name="username" id="username" pattern="[A-Za-z0-9]{3,}" title="Three or more letter or number or composite" placeholder="Username" required>
+                  <input class="form-control" type="text" name="username" id="username" pattern="[A-Za-z0-9]{3,}" title="Nhiều hơn 3 ký tự" required>
                 </div>
             </div>
 
@@ -103,7 +102,7 @@ if(isset($_SESSION['userID'])){
             <div class="form-group row">
                 <label class="col-sm-4" style="">Mật khẩu: <span style="color:red">*</span></label>
                 <div class="col-sm-8">
-                  <input class="form-control" type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Password" required>
+                  <input class="form-control" type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Phải chứa ít nhất một số và một chữ hoa và chữ thường và ít nhất 8 ký tự trở lên" required>
                 </div>
             </div>
 
@@ -111,7 +110,7 @@ if(isset($_SESSION['userID'])){
             <div class="form-group row">
                 <label class="col-sm-4" style="">Xác nhận mật khẩu: <span style="color:red">*</span></label>
                 <div class="col-sm-8">
-                  <input class="form-control" type="password" name="repassword" id="repassword" placeholder="Re-type Password" required>
+                  <input class="form-control" type="password" name="repassword" id="repassword" required>
                 </div>
             </div>
 
@@ -154,7 +153,7 @@ if(isset($_SESSION['userID'])){
         password2 = form.repassword.value; 
 
         if (password1 != password2) { 
-            alert ("Password didn't match. Please enter correct password!");
+            alert ("Mật khẩu không khớp. Vui lòng nhập đúng mật khẩu!");
             return false; 
         }
         // If same return True. 

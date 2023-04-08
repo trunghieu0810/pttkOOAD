@@ -26,7 +26,7 @@ if(!isset($_SESSION['userID'])){
 		
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-		<title>InstaMovies</title>
+		<title>Cinema</title>
 
     <style>
         .forgot_password .banner img {

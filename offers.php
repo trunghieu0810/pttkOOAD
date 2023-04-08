@@ -22,7 +22,7 @@ include_once ('db_config.php');
 		<!--Favicon Image-->
 		<link rel="shortcut icon" type="image/png" href="images/icon.png">
 		
-		<title>InstaMovies</title>
+		<title>Cinema</title>
 
         <style>
             .movies .banner img {
@@ -107,10 +107,10 @@ include_once ('db_config.php');
         <!--Banner Code - End-->
 
         <div class="container mt-4" style="line-height:22px; font-size: 14px; color: #606978; font-family:sans-serif">
-						<h2 style="font-weight:normal; color:#23241d; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:48px; margin-bottom:20px; padding-top:15px">Offers & Promotions</h2>
+						<h2 style="font-weight:normal; color:#23241d; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:48px; margin-bottom:20px; padding-top:15px">Ưu đãi và Mã giảm giá</h2>
 						<p style="line-height:30px">
-						Đôi khi, InstaMovies cung cấp cho khách hàng quen của mình nhiều ưu đãi khác nhau với sự ràng buộc của bên thứ ba. Những phiếu mua hàng này đôi khi được liên kết với một bộ phim cụ thể và hoặc một Nhà hát.<br/>
-						Dưới đây là danh sách một số chương trình khuyến mãi và ưu đãi hiện tại và sắp tới đang được cung cấp cho khách hàng quen của InstaMovies.
+							Hiện tại không có ưu đãi nào.
+							<p>&nbsp;</p>
 						</p>
 							
 						<?php
@@ -119,7 +119,7 @@ include_once ('db_config.php');
 						if(mysqli_num_rows($result_nowshowing) > 0){
 						?>
 						<div class="nowshowing_movies">
-							<h2 style="font-weight:normal; color:#23241d; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:40px; margin-bottom:30px; padding-top:15px">Now Available</h2>
+							<h2 style="font-weight:normal; color:#23241d; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:40px; margin-bottom:30px; padding-top:15px">Có sẵn</h2>
 							<div class="row">
 								<?php while($row_nowshowing = mysqli_fetch_array($result_nowshowing)){ ?>
 								
@@ -147,7 +147,7 @@ include_once ('db_config.php');
 						if(mysqli_num_rows($result_upcoming) > 0){
 						?>
 						<div class="upcoming_movies">
-							<h2 style="font-weight:normal; color:#23241d; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:40px; margin-bottom:30px; padding-top:15px">Upcoming Offers</h2>
+							<h2 style="font-weight:normal; color:#23241d; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:40px; margin-bottom:30px; padding-top:15px">Ưu đãi sắp tới</h2>
 							
 							<div class="row">
 							<?php while($row_upcoming = mysqli_fetch_array($result_upcoming)){ ?>

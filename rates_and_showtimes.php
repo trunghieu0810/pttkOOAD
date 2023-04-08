@@ -55,13 +55,9 @@ include 'assets/rates_and_showtimes.inc.php';
 				<!--Banner Code - End-->
 
         <div class="container mt-4">
-        <h1>Tỷ lệ và thời gian hiển thị</h1>
+        <h1>Lịch chiếu</h1>
                  <p>
-                     Vui lòng chọn bộ phim và rạp chiếu được yêu cầu từ danh sách thả xuống và nó sẽ hiển thị giá vé hiện tại và thời gian chiếu của rạp có liên quan.
-                     <br>
-                     <strong>Lưu ý:</strong>
-                     <br>
-                     Giá vé và Thời gian chiếu được hiển thị là giá và lịch chiếu tiêu chuẩn CHỈ dành cho Nhà hát. Giá vé và thời gian chiếu có thể khác nhau giữa các bộ phim.
+                     Giá vé và Thời gian chiếu có thể khác nhau giữa các bộ phim, và từng cụm rạp.
                  </p>
 
                 <form class="form_details mt-4" action="request.php" id="detailsFrm" name="frmName" method="POST">
@@ -104,13 +100,13 @@ include 'assets/rates_and_showtimes.inc.php';
                 
                 <div class="output_details" id="output_details" style="display:none;">
                     <div class="rates_details mt-4">
-                        <label class="heading">Đánh giá:</label>
+                        <label class="heading">Đánh giá: </label>
                         <div class="rates_table mt-2" id="output_details_rates_table">
                             <!--table file link-->
                         </div>
                     </div>
                     <div class="showtimes_details mt-4">
-                        <label class="heading">Lịch chiếu:</label>
+                        <label class="heading">Lịch chiếu: </label>
                         <div class="showtimes_table mt-2" id="output_details_showtimes_table">
                             <!--table file link-->
                         </div>

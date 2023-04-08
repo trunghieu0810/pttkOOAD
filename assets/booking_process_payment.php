@@ -128,7 +128,7 @@ if($_GET['paymentType'] == "visa_mastercard") {
 <div class="loader">
     <div class="loading-content">
         <img draggable="false" src="../images/loading.gif">
-        <h1 style="margin-top:30px;">Please wait! Loading payment method... </h1>
+        <h1 style="margin-top:30px;">Vui lòng chờ! Đang tải phương thức thanh toán...</h1>
     </div>
 </div>
 
@@ -138,26 +138,26 @@ if($_GET['paymentType'] == "visa_mastercard") {
         <img src="../images/visa.jpg">
     </div> -->
     <div class="merchant_name">
-        Merchant Name: <span style="float:right">InstaMovies Private Limited</span>
+        Nhà phát hành: <span style="float:right">CINEMA</span>
     </div>
     <form action="booking_process.success.php" method="post" id="accountDetailsForm">
         <div class="form-group">
-            <label class="control-label">Card Type</label>
+            <label class="control-label">Loại thẻ</label>
             <select id="type" class="form-control" name="type">
                 <option value="mastercard" selected>Mastercard</option>
                 <option value="visa">Visa</option>
             </select>
         </div>
         <div class="form-group">
-            <label class="control-label">Name on Card</label>
+            <label class="control-label">Tên chủ thẻ</label>
             <input type="text" class="form-control" id="name" name="name">
         </div>
         <div class="form-group">
-            <label class="control-label">Card Number</label>
+            <label class="control-label">Số thẻ</label>
             <input type="text" class="form-control" id="card_number" name="number" required title="Enter 16 digit card number" maxlength="16">
         </div>      
         <div class="form-group">
-            <label class="control-label">Expiry date</label>
+            <label class="control-label">Ngày hết hạn</label>
             <input type="date" id="datefield" class="form-control" name="date" onkeydown="return false">
         </div>
         <div class="form-group">
@@ -165,7 +165,7 @@ if($_GET['paymentType'] == "visa_mastercard") {
             <input type="text" class="form-control" id="cvv" name="cvv" maxlength="3">
         </div>
         <div class="form-group">
-            <button class="pay-button">Make Payment</button>
+            <button class="pay-button">Thanh toán</button>
         </div>
     </form>
 </div>

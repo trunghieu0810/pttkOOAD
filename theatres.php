@@ -24,7 +24,7 @@ include_once ('db_config.php');
 		<!--Favicon Image-->
 		<link rel="shortcut icon" type="image/png" href="images/icon.png">
 		
-		<title>InstaMovies</title>
+		<title>Cinema</title>
 
         <style>
             .theatres .banner img {
@@ -137,7 +137,7 @@ include_once ('db_config.php');
 						if(mysqli_num_rows($result_theatres) > 0){
 						?>
 						<div class="theatres">
-							<h2 style="font-weight:normal; color:#23241d; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:45px; margin-bottom:30px; padding-top:15px">Theatres</h2>
+							<h2 style="font-weight:normal; color:#23241d; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:45px; margin-bottom:30px; padding-top:15px">Các rạp chiếu phim</h2>
 							<div class="row">
 								<?php while($row_theatres = mysqli_fetch_array($result_theatres)){
 									$allIpAddress = explode(',',$row_theatres['user_ip_addresses']);
@@ -159,17 +159,17 @@ include_once ('db_config.php');
 											<h6 class="theatre_name"><?php echo $row_theatres['theatre_name'].' - '.$row_theatres['city'] ?></h6>
 											<table class="theatre_details">
 												<tr>
-														<td width="30%">Địa chỉ : </td>
+														<td width="30%">Địa chỉ: </td>
 														<td width="70%"><?php echo $row_theatres['address']?></td>
 												</tr>
 												<tr height="10"></tr>
 												<tr>
-														<td>Số điện thoại : </td>
+														<td>Số điện thoại: </td>
 														<td><a href="tel:+94<?php echo $row_theatres['telephone']?>">+94<?php echo $row_theatres['telephone']?></a> </td>
 												</tr>
 												<tr height="10"></tr>
 												<tr>
-														<td>Email :</td>
+														<td>Email:</td>
 														<td><a href="mailto:<?php echo $row_theatres['email']?>"><?php echo $row_theatres['email']?></a></td>
 												</tr>
 												<tr height="10"></tr>
@@ -179,7 +179,7 @@ include_once ('db_config.php');
 												<div class="rating <?php echo $class; ?>" id="<?php echo $row_theatres['avg_ratings']; ?>_<?php echo $row_theatres['theatre_id']; ?>"></div>
 											</div>
 
-											<a href="theatre.php?theatre_id=<?php echo $row_theatres['theatre_id'];?>" class="btn">Khác</a>
+											<a href="theatre.php?theatre_id=<?php echo $row_theatres['theatre_id'];?>" class="btn">Chi tiết</a>
 										</div>
 									</div>
 								</div>

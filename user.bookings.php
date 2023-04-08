@@ -26,7 +26,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
 		
 		<link rel="shortcut icon" type="image/png" href="images/icon.png">
 		
-        <title>InstaMovies - <?php echo $user_row['first_name'];?> | Đặt vé</title>
+        <title>Cinema - <?php echo $user_row['first_name'];?> | Đặt vé</title>
         
         <style>
             .navbar {
@@ -68,10 +68,10 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
 	
     <div style="margin-top:100px; margin-bottom:25px">
         <div class="container mt-3" style="background:#FFF;padding-bottom:15px">
-            <div style="padding:15px"><h1 style="font-size:35px; font-weight:normal;">Bookings</h1></div>
+            <div style="padding:15px"><h1 style="font-size:35px; font-weight:normal;">Đặt vé</h1></div>
             <div style="margin:10px 0 30px; text-align:center">
-                <button class="btn btn-info" style="margin:0 2px" data-toggle="modal" data-target="#changeSeatModal">Change Seat</button>
-                <button class="btn btn-success" style="margin:0 2px" data-toggle="modal" data-target="#publishTicketModal">Publish Ticket</button>
+                <button class="btn btn-info" style="margin:0 2px" data-toggle="modal" data-target="#changeSeatModal">Đổi ghế</button>
+                <button class="btn btn-success" style="margin:0 2px" data-toggle="modal" data-target="#publishTicketModal">Xuất vé</button>
             </div>
             <div class="table-responsive" style="padding:0 15px">
                 <table id="bookings_table" class="table table-striped table-bordered table-sm">
@@ -86,7 +86,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                             <th>Giờ</th>
                             <th>Loại ghế</th>
                             <th>Số vé</th>
-                            <th>Ghế(s)</th>
+                            <th>Ghế</th>
                             <th>Tổng giá</th>
                             <th>Trạng thái</th>
                         </tr>
@@ -113,7 +113,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                                         echo "<td>{$row['ticket_category']}</td>";
                                         echo "<td>"."Full: {$row['full_seat_count']}"."<br>"."Kids: {$row['kids_seat_count']}"."</td>";
                                         echo "<td>{$row['seat_number']}</td>";
-                                        echo "<td>Rs. ".number_format((float)$row['total_amount'], 2, '.', '')."</td>";
+                                        echo "<td>".number_format((float)$row['total_amount'], 3, '.', '')." VND</td>";
                                         echo "<td style='text-align:center'>";
                                             if($row['status'] == '2'){
                                                 echo "<span style='font-weight:bold;color:#c40099'>Sold<br>(&#10003;)</span>";
@@ -138,22 +138,6 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                             }
                         ?>
                     </tbody>
-                    <tfoot style="text-align:center">
-                    <tr>
-                            <th>#</th>
-                            <th>Mã vé</th>
-                            <th>Thời Gian đặt</th>
-                            <th>Phim</th>
-                            <th>Rạp</th>
-                            <th>Ngày</th>
-                            <th>Giờ</th>
-                            <th>Loại ghế</th>
-                            <th>Số vé</th>
-                            <th>Ghế(s)</th>
-                            <th>Tổng giá</th>
-                            <th>Trạng thái</th>
-                        </tr>
-                    </tfoot>
                 </table>
             </div>
             
@@ -178,7 +162,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                             <th>Giờ</th>
                             <th>Loại ghế</th>
                             <th>Số vé</th>
-                            <th>Ghế(s)</th>
+                            <th>Ghế</th>
                             <th>Tổng giá</th>
                             <th>Trạng thái</th>
                         </tr>
@@ -205,7 +189,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                                         echo "<td>{$row['ticket_category']}</td>";
                                         echo "<td>"."Full: {$row['full_seat_count']}"."<br>"."Kids: {$row['kids_seat_count']}"."</td>";
                                         echo "<td>{$row['seat_number']}</td>";
-                                        echo "<td>Rs. ".number_format((float)$row['total_amount'], 2, '.', '')."</td>";
+                                        echo "<td>".number_format((float)$row['total_amount'], 3, '.', '')." VND</td>";
                                         
                                     echo "</tr>";
                                 }
@@ -214,22 +198,6 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                             }
                         ?>
                     </tbody>
-                    <tfoot style="text-align:center">
-                    <tr>
-                            <th>#</th>
-                            <th>Mã vé</th>
-                            <th>Thời Gian đặt</th>
-                            <th>Phim</th>
-                            <th>Rạp</th>
-                            <th>Ngày</th>
-                            <th>Giờ</th>
-                            <th>Loại ghế</th>
-                            <th>Số vé</th>
-                            <th>Ghế(s)</th>
-                            <th>Tổng giá</th>
-                            <th>Trạng thái</th>
-                        </tr>
-                    </tfoot>
                 </table>
             </div>
 
@@ -253,7 +221,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                         <div class="col-sm-8">
                             <input id="changeSeat_ticket_id" type="text" class="form-control" maxlength="15" style="text-transform:uppercase">
                         </div>
-                        <button id="changeSeat_viewTicket" type="button" class="btn btn-danger col-sm-2">xem</button>
+                        <button id="changeSeat_viewTicket" type="button" class="btn btn-danger col-sm-2">Xem</button>
                     </div>
                 </form>
 
@@ -298,9 +266,9 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                     <div class="payment_options" align="center" style="margin-top: 20px">
                         <form id="payment_options_form">
                             <table>
-                                <tr><td><input class="pay_method" type="radio" name="payment_type" id="payment_type" value="visa_mastercard" checked = "checked"></td><td>Thanh toán bằng Thẻ ngân hàng, Visa / Master</td><td style="padding-left:10px;"><img src="images/pp_master.jpg" /></td></tr>
-                                <tr><td><input disabled class="pay_method" type="radio" name="payment_type" id="payment_type" value="union"></td><td>Thanh toán bằng thẻ tín dụng ngân hàng</td><td style="padding-left:10px;"><img src="images/pp_union.png" /></td></tr>
-                                <tr><td><input disabled class="pay_method" type="radio" name="payment_type" id="payment_type" value="dfcc"></td><td>Thanh toán bằng thẻ tín dụng DFCC</td><td style="padding-left:10px;"><img src="images/pp_dfcc.png" /></td></tr>
+                                <tr><td><input class="pay_method" type="radio" name="payment_type" id="payment_type" value="visa_mastercard" checked = "checked"></td><td>Thanh toán qua thẻ Visa/Master Card</td><td style="padding-left:10px;"><img src="images/pp_master.jpg" /></td></tr>
+                                <tr><td><input disabled class="pay_method" type="radio" name="payment_type" id="payment_type" value="union"></td><td>Thanh toán qua ngân hàng Vietcombank</td><td style="padding-left:10px;"><img src="images/vcb.png" /></td></tr>
+                                <tr><td><input disabled class="pay_method" type="radio" name="payment_type" id="payment_type" value="dfcc"></td><td>Thanh toán qua ngân hàng Techcombank</td><td style="padding-left:10px;"><img src="images/pp_tcb.png" /></td></tr>
                             </table>                    
                         </form>
                     </div>
@@ -321,7 +289,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
         <div class="modal-dialog  modal-dialog-centered" role="document">
             <div class="modal-content" style="background:white">
             <div class="modal-header">
-                <h5 class="modal-title">Không & Nhận vé</h5>
+                <h5 class="modal-title">Nhận vé</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="outline:none">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -378,9 +346,9 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                     <div class="payment_options" align="center" style="margin-top: 20px">
                         <form id="publishTicket_payment_options_form">
                             <table>
-                                <tr><td><input class="pay_method" type="radio" name="publishTicket_payment_type" id="publishTicket_payment_type" value="visa_mastercard" checked = "checked"></td><td>Thanh toán bằng Thẻ ngân hàng, Visa / Master</td><td style="padding-left:10px;"><img src="images/pp_master.jpg" /></td></tr>
-                                <tr><td><input disabled class="pay_method" type="radio" name="publishTicket_payment_type" id="publishTicket_payment_type" value="union"></td><td>Thanh toán bằng thẻ tín dụng ngân hàng</td><td style="padding-left:10px;"><img src="images/pp_union.png" /></td></tr>
-                                <tr><td><input disabled class="pay_method" type="radio" name="publishTicket_payment_type" id="publishTicket_payment_type" value="dfcc"></td><td>Thanh toán bằng thẻ tín dụng DFCC</td><td style="padding-left:10px;"><img src="images/pp_dfcc.png" /></td></tr>
+                                <tr><td><input class="pay_method" type="radio" name="publishTicket_payment_type" id="publishTicket_payment_type" value="visa_mastercard" checked = "checked"></td><td>Thanh toán qua thẻ Visa/Master Card</td><td style="padding-left:10px;"><img src="images/pp_master.jpg" /></td></tr>
+                                <tr><td><input disabled class="pay_method" type="radio" name="publishTicket_payment_type" id="publishTicket_payment_type" value="union"></td><td>Thanh toán qua ngân hàng Vietcombank</td><td style="padding-left:10px;"><img src="images/pp_vcb.png" /></td></tr>
+                                <tr><td><input disabled class="pay_method" type="radio" name="publishTicket_payment_type" id="publishTicket_payment_type" value="dfcc"></td><td>Thanh toán qua ngân hàng Techcombank</td><td style="padding-left:10px;"><img src="images/pp_vcb.png" /></td></tr>
                             </table>                    
                         </form>
                     </div>

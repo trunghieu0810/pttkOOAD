@@ -20,7 +20,7 @@ $movie_id=$_GET["movie_id"];
     <!--Favicon Image-->
     <link rel="shortcut icon" type="image/png" href="images/icon.png">
     
-    <title>InstaMovies</title>
+    <title>Cinema</title>
 
     <style>
         .movie .banner img {
@@ -217,9 +217,9 @@ $movie_id=$_GET["movie_id"];
             <div class="banner-caption">
                 <p><button class="btn-0 btn-lg" style="min-width:323px" disabled><?php echo $row_movie['movie_name'];?></button></p>
                 <p>
-                    <a class="btn-1 btn-lg" style="text-decoration: none;" href="" role="button" data-src="<?php echo $row_movie['trailer_url'];?>" data-toggle="modal" data-target="#trailerModal">WATCH TRAILER</a>
+                    <a class="btn-1 btn-lg" style="text-decoration: none;" href="" role="button" data-src="<?php echo $row_movie['trailer_url'];?>" data-toggle="modal" data-target="#trailerModal">XEM TRAILER</a>
                     <?php if ($row_movie['status']=='1') { ?>
-                        <a class="btn-2 btn-lg" style="text-decoration: none;" href="buy_tickets.php?movieID=<?php echo $row_movie['movie_id'];?>" role="button">BUY TICKETS</a>
+                        <a class="btn-2 btn-lg" style="text-decoration: none;" href="buy_tickets.php?movieID=<?php echo $row_movie['movie_id'];?>" role="button">MUA VÉ</a>
                     <?php } ?>
                 </p>
             </div>
@@ -234,7 +234,7 @@ $movie_id=$_GET["movie_id"];
                 <h4>Ngày phát hành</h4><h6><?php echo date("d F Y", strtotime($row_movie['release_date']))?></h6><br>
                 <h4>Thời lượng</h4><h6><?php echo $row_movie['running_time']?></h6><br>
                 <h4>Ngôn ngữ</h4><h6><?php echo $row_movie['language']?></h6><br>
-                <h4>Quản Lý</h4><h6><?php echo $row_movie['director']?></h6><br>
+                <h4>Đạo diễn</h4><h6><?php echo $row_movie['director']?></h6><br>
                 <h4>Tóm Tắt</h4><h6><?php echo $row_movie['synopsis']?></h6><br>
                 <h4>Diễn viên</h4><h6><?php echo $row_movie['casts']?></h6>
             </div>

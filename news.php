@@ -19,7 +19,7 @@
 		
 		<link rel="shortcut icon" type="image/png" href="images/icon.png">
 		
-		<title>InstaMovies</title>
+		<title>Cinema</title>
 
 	</head>
 
@@ -44,12 +44,12 @@
 								<ul class="navbar-nav ml-auto">
 									<li class="item-1"><a class="nav-link" href="index.html">TRANG CHỦ</a></li>
 									<li class="item-2"><a class="nav-link" href="movies.html">PHIM</a></li>
-									<li class="item-3"><a class="nav-link" href="rates_and_showtimes.html">ĐÁNH GIÁ & LỊCH CHIẾU<span class="sr-only">(hiện tại)</span></a></li>
+									<li class="item-3"><a class="nav-link" href="rates_and_showtimes.html">LỊCH CHIẾU<span class="sr-only">(hiện tại)</span></a></li>
 									<li class="item-4"><a class="nav-link" href="theatres.html">RẠP</a></li>
 									<li class="item-5 active"><a class="nav-link" href="news.html">TIN TỨC</a></li>
 									<li class="item-6"><a class="nav-link" href="offers.html">ƯU ĐÃI</a></li>
 									<li class="item-7"><a class="nav-link" href="buytickets.html">ĐẶT VÉ</a></li>
-									<li class="item-8"><a class="nav-link" href="contact_us.html">LIÊN HỆ VỚI CHÚNG TÔI</a></li>
+									<li class="item-8"><a class="nav-link" href="contact_us.html">LIÊN HỆ</a></li>
 								</ul>
 								<form class="form-inline">
 									<button class="btn btn-primary" type="button">ĐĂNG NHẬP</button>
@@ -74,7 +74,7 @@
     <!--Rates and ShowTime Body - Start-->
     <div class="rates_showtime">
         <div class="container mt-3">
-            <h1>Đánh giá và lịch chiếu</h1>
+            <h1>Lịch chiếu</h1>
         </div>
     </div>
     <!--Rates and ShowTime Body - End-->
@@ -89,7 +89,7 @@
 			  <div class="col-md-5 col-sm-12">
 			    <div class="footer_left">
 				  <img src="images/footer_logo.png" class="img-responsive" alt="InstaMovies Logo">
-				  <p> © 2018 InstaMovies. All Rights Reserved.</p>
+				  <p> © 2023 Cinema. All Rights Reserved.</p>
 				</div>
 			  </div>
 			</div>
@@ -99,14 +99,12 @@
                 <li class="footer-item-2"><a href="../privacy_policy.php">Chính sách bảo mật</a></li>
                 <li class="footer-item-3"><a href="../terms_and_conditions.php">Điều khoản sử dụng</a></li>
                 <li class="footer-item-4"><a href="../disclaimer.php">Trách nhiệm</a></li>
-                <li class="footer-item-5"><a href="../about_us.php">Chúng tôi</a></li>
+                <li class="footer-item-5"><a href="../about_us.php">Về chúng tôi</a></li>
             </ul>
         
             <ul class="footer-nav">
                 <li class="footer-item-6"><a href="../login.php">Đăng Nhập</a></li>
                 <li class="footer-item-7"><a href="../register.php">Đăng kí</a></li>
-                <li class="footer-item-8"><a href="../advertise.php">Quảng cáo</a></li>
-                <li class="footer-item-9"><a href="../careers.php">Nghề nghiệp</a></li>
                 <li class="footer-item-10"><a href="../contact_us.php">Liên hệ</a></li>
             </ul>
         </div>

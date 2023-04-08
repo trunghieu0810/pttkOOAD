@@ -20,12 +20,12 @@ $_SESSION['showTimeID']=$_GET['showTimeID'];
         <form class="first_form">
             <div class="container-fluid" align="center">
                 <div class="form_area_header">
-                    <h5>Số Vé ?</h5>
+                    <h5>Thông tin vé</h5>
                 </div>
                 <div class="form_area col-md-6 col-md-offset-3">
                     <div class="form-row">
                         <div class="form-group col-sm-4">
-                            <label>Số Vé Thường</label>
+                            <label>Số vé thường</label>
                             <select class="form-control" id="full_ticket_count">
                                 <option>0</option>
                                 <option selected>1</option>
@@ -36,7 +36,7 @@ $_SESSION['showTimeID']=$_GET['showTimeID'];
                             </select>
                         </div>
                         <div class="form-group col-sm-4">
-                            <label>Số vé Trẻ em</label>
+                            <label>Số vé trẻ em</label>
                             <select class="form-control" id="kids_ticket_count">
                                 <?php for($k=0; $k<=20; $k++) {
                                     echo '<option>'.$k.'</option>';

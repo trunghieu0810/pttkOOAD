@@ -121,7 +121,7 @@ if(isset($_POST['ticketID']) && !empty($_POST['ticketID'])) {
 </div>
 
 <div style="margin-top:35px; padding:10px 15px 10px; color:#FFF; background:black; font-size: 20px; font-weight:500">
-    Charges: <span style="float:right">Rs. <?php echo $_SESSION['charge'] ?></span>
+    Phí: <span style="float:right">VND <?php echo $_SESSION['charge'] ?></span>
 </div>
 
 

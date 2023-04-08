@@ -22,7 +22,7 @@ include 'assets/contact_us.inc.php';
 		<!--Favicon Image-->
 		<link rel="shortcut icon" type="image/png" href="images/icon.png">
 		
-		<title>InstaMovies</title>
+		<title>Cinema</title>
 
         <style>
             .contact_us .banner img {
@@ -49,10 +49,10 @@ include 'assets/contact_us.inc.php';
         <!--Banner Code - End-->
 
         <div class="container mt-4" style="line-height:22px; font-size: 14px; color: #606978; font-family:sans-serif">
-            <h2 style="font-weight:normal; color: #3f3545; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:48px; margin-bottom:30px; padding-top:15px; text-align:center">Contact InstaMovies</h2>
+            <h2 style="font-weight:normal; color: #3f3545; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:48px; margin-bottom:30px; padding-top:15px; text-align:center">Liên hệ Cinema</h2>
             
             <div>
-							<p style="border-bottom: 1px solid #e9e8e8; margin: 10px 0px; padding: 0px 0px 10px 0px !important; text-align:center"><b>If you wish to contact us via email please fill in the following form and we will get in touch with you at the earliest.</b></p>
+							<p style="border-bottom: 1px solid #e9e8e8; margin: 10px 0px; padding: 0px 0px 10px 0px !important; text-align:center"><b>Điền thông tin góp ý của bạn vào bên dưới.</b></p>
 							
 							<div align="center">
 								<div class="contact_form_area" style="max-width:445px;text-align:left">

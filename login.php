@@ -23,7 +23,7 @@ if(!isset($_SESSION['userID'])){
 		<!--Favicon Image-->
 		<link rel="shortcut icon" type="image/png" href="images/icon.png">
 		
-		<title>InstaMovies</title>
+		<title>Cinema</title>
 
     <style>
         .login .banner img {
@@ -57,7 +57,7 @@ if(!isset($_SESSION['userID'])){
       <div class="container mt-4" style="line-height:22px; font-size: 14px; color: #606978; font-family:sans-serif">
         
         <form class="login-page" method="POST">
-          <h2 style="font-weight:400; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: #3f3545; font-size:48px; margin-bottom:30px; padding-top:15px; border-bottom: 1px solid #333333; text-align:center; padding-bottom: 15px;">Login</h2>
+          <h2 style="font-weight:400; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: #3f3545; font-size:48px; margin-bottom:30px; padding-top:15px; border-bottom: 1px solid #333333; text-align:center; padding-bottom: 15px;">Đăng nhập</h2>
           <div class="form-group row">
             <label class="col-sm-3 col-form-label">Email:</label>
             <div class="col-sm-9">

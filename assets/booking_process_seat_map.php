@@ -45,7 +45,7 @@ date_default_timezone_set("Asia/Colombo");
                 <div class="ticket_count"><?php echo $_GET['totalTicketCount']?></div>
             </div>
             <div class="showtime_display">
-                <label class="showtime_label">Thời gian:</label>
+                <label class="showtime_label">Giờ chiếu:</label>
                 <div class="showtime"><?php echo $showTime?></div>
             </div>
         </div>
@@ -59,7 +59,7 @@ date_default_timezone_set("Asia/Colombo");
                 </div>
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 total-right">
                     <h4>
-                    Tổng: Rs. <span class="amount_value"><!--Total Amount Value--></span>
+                    Tổng: VND <span class="amount_value"><!--Total Amount Value--></span>
                     </h4>
                 </div>
             </div>
@@ -100,11 +100,11 @@ date_default_timezone_set("Asia/Colombo");
                         <?php
                         if($fullPrice!="")
                         {
-                            echo '<span>F. Rs.'.number_format((float)$fullPrice, 2, '.', '').'</span>';
+                            echo '<span>Thường '.number_format((float)$fullPrice, 3, '.', '').'</span>';
                         }
                         if($kidsPrice!="")
                         {
-                            echo '<span>/ H. Rs.'.number_format((float)$kidsPrice, 2, '.', '').'</span>';
+                            echo '<span> / Trẻ em '.number_format((float)$kidsPrice, 3, '.', '').'</span>';
                         }
                         ?>
                         )
@@ -115,7 +115,7 @@ date_default_timezone_set("Asia/Colombo");
                             <tr>
                                 <td colspan="2">
                                     <div class="screen_area">
-                                        <span>Màn Hình Rạp</span>
+                                        <span>Màn Hình</span>
                                     </div>
                                 </td>
                             </tr>

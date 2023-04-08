@@ -192,9 +192,9 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                     <div class="payment_options" align="center" style="margin-top: 20px">
                         <form id="payment_options_form">
                             <table>
-                                <tr><td><input class="pay_method" type="radio" name="payment_type" id="payment_type" value="visa_mastercard" checked = "checked"></td><td>Thanh toán bằng thẻ ngân hàng, Visa / Master</td><td style="padding-left:10px;"><img src="images/pp_master.jpg" /></td></tr>
-                                <tr><td><input disabled class="pay_method" type="radio" name="payment_type" id="payment_type" value="union"></td><td>Thanh toán bằng thẻ tín dụng ngân hàng</td><td style="padding-left:10px;"><img src="images/pp_union.png" /></td></tr>
-                                <tr><td><input disabled class="pay_method" type="radio" name="payment_type" id="payment_type" value="dfcc"></td><td>Thanh toán bằng thẻ tín dụng DFCC</td><td style="padding-left:10px;"><img src="images/pp_dfcc.png" /></td></tr>
+                                <tr><td><input class="pay_method" type="radio" name="payment_type" id="payment_type" value="visa_mastercard" checked = "checked"></td><td>Thanh toán qua thẻ Visa/Master Card</td><td style="padding-left:10px;"><img src="images/pp_master.jpg" /></td></tr>
+                                <tr><td><input disabled class="pay_method" type="radio" name="payment_type" id="payment_type" value="union"></td><td>Thanh toán qua thẻ ngân hàng Vietcombank</td><td style="padding-left:10px;"><img src="images/pp_vcb.png" /></td></tr>
+                                <tr><td><input disabled class="pay_method" type="radio" name="payment_type" id="payment_type" value="dfcc"></td><td>Thanh toán qua thẻ Techcombank</td><td style="padding-left:10px;"><img src="images/pp_tcb.png" /></td></tr>
                             </table>                    
                         </form>
                     </div>

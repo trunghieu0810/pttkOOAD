@@ -122,7 +122,7 @@ if($_GET['paymentType'] == "visa_mastercard") {
         <img src="../images/visa.jpg">
     </div> -->
     <div class="merchant_name">
-        Tên Người Thanh Toán: <span style="float:right">InstaMovies luôn bảo mật tuyệt đối</span>
+        Tên Người Thanh Toán: <span style="float:right">Cinema luôn bảo mật tuyệt đối</span>
     </div>
     <form action="user.bookings.changeSeat.success.php" method="post" id="accountDetailsForm">
         <div class="form-group">

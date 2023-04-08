@@ -50,8 +50,8 @@ if(isset($_SESSION['payment'])) {
     <div style="margin:5px 15px;">Transaction No. - '.$paymentNumber.'</div>
     <div style="margin:5px 15px;">Transaction Date - '.date("Y-m-d H:i:s", $paymentTime).'</div>
     <div style="margin:20px 0 0;background:#d6d6d6;padding:10px 15px">
-    <div style="color:#000;font-size:20px;display:inline-block">Amount:</div>
-    <div style="float:right;color:#000;font-size:20px;display:inline-block;font-weight:bold">Rs. '.$_SESSION['charge'].'</div>
+    <div style="color:#000;font-size:20px;display:inline-block">Tổng:</div>
+    <div style="float:right;color:#000;font-size:20px;display:inline-block;font-weight:bold">VND '.$_SESSION['charge'].'</div>
     </div>
     </div>
     </body>

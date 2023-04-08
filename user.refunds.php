@@ -27,7 +27,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
 		
 		<link rel="shortcut icon" type="image/png" href="images/icon.png">
 		
-        <title>InstaMovies - <?php echo $user_row['first_name'];?> | Hoàn tiền</title>
+        <title>Cinema - <?php echo $user_row['first_name'];?> | Hoàn tiền</title>
         
         <style>
             .navbar {
@@ -107,7 +107,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
         <div class="modal-dialog  modal-dialog-centered" role="document">
             <div class="modal-content" style="background:white">
             <div class="modal-header">
-                <h5 class="modal-title">Đổi Hoàn tiền</h5>
+                <h5 class="modal-title">Hoàn tiền</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="outline:none">
                 <span aria-hidden="true">&times;</span>
                 </button>

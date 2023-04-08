@@ -3,7 +3,7 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-transparent fixed-top" role="navigation">
             
             <div class="header_logo visible-xs">
-                <a href="index.php"> <img src="../images/logo.png" width="119px" height="54px"></a>
+                <a href="index.php"> <img src="../images/logo.png" width="120px" height="55px"></a>
             </div>
             
             <div class="navbar-header">
@@ -25,10 +25,10 @@
                             <ul class="navbar-nav ml-auto">
                                 <li class="item-1"><a class="nav-link" href="../index.php">Trang Chủ</a></li>
                                 <li class="item-2"><a class="nav-link" href="../movies.php">Phim</a></li>
-                                <li class="item-3"><a class="nav-link" href="../rates_and_showtimes.php">Đánh Giá & Lịch Chiếu<span class="sr-only">(current)</span></a></li>
+                                <li class="item-3"><a class="nav-link" href="../rates_and_showtimes.php">Lịch Chiếu<span class="sr-only">(current)</span></a></li>
                                 <li class="item-4"><a class="nav-link" href="../theatres.php">Rạp</a></li>
                                 <!-- <li class="item-5"><a class="nav-link" href="../news.php">NEWS</a></li> -->
-                                <li class="item-6"><a class="nav-link" href="../offers.php">Đề Xuất</a></li>
+                                <li class="item-6"><a class="nav-link" href="../offers.php">Ưu đãi</a></li>
                                 <li class="item-7"><a class="nav-link" href="../buy_tickets.php">Đặt Vé</a></li>
                                 <li class="item-8"><a class="nav-link" href="../contact_us.php">Liên Hệ</a></li>
                             </ul>

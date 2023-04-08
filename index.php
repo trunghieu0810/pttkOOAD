@@ -24,7 +24,7 @@ date_default_timezone_set("Asia/Colombo");
 		
 		<link rel="shortcut icon" type="image/png" href="images/icon.png">
 		
-		<title>InstaMovies</title>
+		<title>Cinema</title>
 
 		<style>
 			.btn-booking {

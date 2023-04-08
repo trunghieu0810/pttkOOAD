@@ -9,14 +9,14 @@ if(isset($_POST['ticketID']) && !empty($_POST['ticketID'])) {
     if(mysqli_num_rows($result) > 0){
         $row = mysqli_fetch_array($result);
         $_SESSION['ticketID'] = $ticketID;
-        $fee = $row['total_amount'] * 4/100;
+        $fee = $row['total_amount'] * 3/100;
         $nbt = $fee * 2/100;
-        $vat = ($fee + $nbt) * 15/100;
+        $vat = ($fee + $nbt) * 10/100;
         $charge = $fee + $nbt + $vat;
         $totalCharge = $row['total_amount'] + $charge;
         $_SESSION['total_amount'] = $row['total_amount'];
-        $_SESSION['charge'] = number_format((float)$charge, 2, '.', '');
-        $_SESSION['total_charge'] = number_format((float)$totalCharge, 2, '.', '');
+        $_SESSION['charge'] = number_format((float)$charge, 3, '.', '');
+        $_SESSION['total_charge'] = number_format((float)$totalCharge, 3, '.', '');
 ?>
 
 <hr style="margin-left:-15px;margin-right:-15px">
@@ -33,14 +33,14 @@ if(isset($_POST['ticketID']) && !empty($_POST['ticketID'])) {
         <div style="margin:2px 0 15px;">Thời gian: <?php echo date("h:i A", strtotime($row['starting_time'])) ?></div>
     </div>
     <div style="margin:0;background:#d6d6d6;padding:10px 30px">
-        <div style="font-size:20px;display:inline-block">Tổng:</div>
-        <div style="float:right;font-size:20px;display:inline-block;font-weight:bold">Rs. <?php echo number_format((float)$row['total_amount'], 2, '.', '') ?></div>
+        <div style="font-size:20px;display:inline-block">Tổng: </div>
+        <div style="float:right;font-size:20px;display:inline-block;font-weight:bold">VND <?php echo number_format((float)$row['total_amount'], 3, '.', '') ?></div>
     </div>
 </div>
 
 <div style="margin-top:15px; padding:10px 15px 10px; color:#FFF; background:black; font-size: 20px; font-weight:500">
-    <div>Phí xử lý: <span style="float:right">Rs. <?php echo $_SESSION['charge'] ?></span></div>
-    <div>Tổng giá: <span style="float:right">Rs. <?php echo $_SESSION['total_charge'] ?></span></div>
+    <div>Phí xử lý: <span style="float:right">VND <?php echo $_SESSION['charge'] ?></span></div>
+    <div>Tổng giá: <span style="float:right">VND <?php echo $_SESSION['total_charge'] ?></span></div>
 </div>
 
 <?php }} ?>

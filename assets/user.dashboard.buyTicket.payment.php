@@ -112,13 +112,13 @@ if($_GET['paymentType'] == "visa_mastercard") {
 <div class="loader">
     <div class="loading-content">
         <img draggable="false" src="../images/loading.gif">
-        <h1 style="margin-top:30px;">Please wait! Loading payment method... </h1>
+        <h1 style="margin-top:30px;">Vui lòng đợi trong khi xử lý thanh toán của bạn...</h1>
     </div>
 </div>
 
 <div class="content">
 <div class="merchant_name">
-        Tên Người Thanh Toán: <span style="float:right">InstaMovies luôn bảo mật tuyệt đối</span>
+        Tên Người Thanh Toán: <span style="float:right">Cinema luôn bảo mật tuyệt đối</span>
     </div>
     <form action="user.bookings.changeSeat.success.php" method="post" id="accountDetailsForm">
         <div class="form-group">

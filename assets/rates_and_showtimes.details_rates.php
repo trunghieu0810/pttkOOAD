@@ -31,14 +31,14 @@ if(isset($_POST['action']) && ($_POST['action']!='')){
 
                 if(mysqli_num_rows($result_rates)>0){
                     echo "<tr>
-                            <th>Category</th>
-                            <th>Type</th>
-                            <th>Ticket Price</th> 
+                            <th>Hạng ghế</th>
+                            <th>Loại vé</th>
+                            <th>Giá vé</th> 
                         </tr>";
 
                     while($row=mysqli_fetch_array($result_rates)){
                         $showID = $row["show_id"];
-                        echo"<tr><td>".$row["category_name"]."</td><td>".$row["ticket_type"]."</td><td>Rs. ".number_format((float)$row["ticket_price"], 2, '.', '')."</td></tr>";
+                        echo"<tr><td>".$row["category_name"]."</td><td>".$row["ticket_type"]."</td><td>".number_format((float)$row["ticket_price"], 3, '.', '')." VND</td></tr>";
                     }
                     echo"</table>";
                 }

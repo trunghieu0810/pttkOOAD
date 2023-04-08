@@ -21,7 +21,7 @@ session_start();
 		<!--Favicon Image-->
 		<link rel="shortcut icon" type="image/png" href="images/icon.png">
 		
-		<title>InstaMovies</title>
+		<title>Cinema</title>
 
         <style>
             .terms_and_conditions p {
@@ -58,7 +58,7 @@ session_start();
             <div>
                 <p style="font-size: 18px;">01. Introduction</p>
                 <p>&nbsp;</p>
-                <p>This website – www.instamovies.cf is owned and operated by Team GenetriX in the name of InstaMovies Private Limited.</p>
+                <p>This website is owned and operated by Team GenetriX in the name of Cinema Private Limited.</p>
                 <p>PLEASE READ THESE TERMS OF USE CAREFULLY BEFORE USING THIS SITE</p>
                 <p>By using this Site or by clicking a box that states that you accept or agree to these terms, you signify your agreement to these terms of use. If you do not agree to these terms of use, you may not use this Site.</p>
                 <p>You acknowledge that these terms of use are supported by reasonable and valuable consideration, the receipt and adequacy of which are hereby acknowledged. Without limiting the generality of the foregoing, you acknowledge that such consideration includes your use of this Site and receipt of data, materials and information available at or through this Site, the possibility of our use or display of your Submissions (as defined below in Section 3, entitled "SUBMISSIONS") and the possibility of the publicity and promotion from our use or display of your Submissions.<strong></strong></p>
@@ -67,14 +67,14 @@ session_start();
                 <p>&nbsp;</p>
                 <p>The Site is only for your personal use. You may not use the Site for commercial purposes or in any way that is unlawful, or harms us or any other person or entity, as determined in our sole discretion.</p>
                 <p>The following are the terms and conditions applicable to access and use of this website (or ‘site’). By gaining access to and using this site, you agree to comply with these terms and conditions and all applicable laws, rules and regulations.</p>
-                <p>If you are not agreeable with these Terms of Use, kindly refrain from accessing and using the service provided by www.instamovies.cf.</p>
-                <p>Registering with and/or the use of the www.instamovies.cf services and products, including and without limitation the www.instamovies.cf web site, purchase of movie and/or DVD –CD purchasing online, and other similar products or services offered by www.instamovies.cf, is indicative that you have read and understood the terms and conditions set forth below and agree to be legally bound by the said terms and conditions.<br />We reserve the right to change these terms of use from time to time by posting the new version on the website. It is your responsibility to check regularly this page for the latest terms and conditions.<strong></strong></p>
+                <p>If you are not agreeable with these Terms of Use, kindly refrain from accessing and using the service provided by Cinema</p>
+                <p>Registering with and/or the use of the www.Cinema services and products, including and without limitation the www.Cinema web site, purchase of movie and/or DVD –CD purchasing online, and other similar products or services offered by www.Cinema, is indicative that you have read and understood the terms and conditions set forth below and agree to be legally bound by the said terms and conditions.<br />We reserve the right to change these terms of use from time to time by posting the new version on the website. It is your responsibility to check regularly this page for the latest terms and conditions.<strong></strong></p>
                 <p>&nbsp;</p>
                 <p style="font-size: 18px;">03. Permitted Use</p>
                 <p>&nbsp;</p>
-                <p>The service provided by www.instamovies.cf  is for personal &amp; non-commercial use.</p>
-                <p>You hereby agree that you will not duplicate, download, publish, modify, distribute and/or use any material included in www.instamovies.cf for any purpose, unless and otherwise you have obtained prior written permission from www.instamovies.cf.<br /><br />You also agree that you will not use the services provided by www.instamovies.cf for any purpose other than to subscribe and review the information in www.instamovies.cf and purchase movie tickets and /or DVD – CD’s for your personal use.</p>
-                <p>Use of the material and / or content contained in www.instamovies.cf for any purpose not set forth in these Terms of Use is strictly prohibited.<strong></strong></p>
+                <p>The service provided by www.Cinema  is for personal &amp; non-commercial use.</p>
+                <p>You hereby agree that you will not duplicate, download, publish, modify, distribute and/or use any material included in www.Cinema for any purpose, unless and otherwise you have obtained prior written permission from www.Cinema.<br /><br />You also agree that you will not use the services provided by www.Cinema for any purpose other than to subscribe and review the information in www.Cinema and purchase movie tickets and /or DVD – CD’s for your personal use.</p>
+                <p>Use of the material and / or content contained in www.Cinema for any purpose not set forth in these Terms of Use is strictly prohibited.<strong></strong></p>
                 <p>&nbsp;</p>
                 <p style="font-size: 18px;">04. Suppliers Terms and Conditions for the Sale of Items</p>
                 <p>&nbsp;</p>
@@ -86,10 +86,10 @@ session_start();
                 <p>&nbsp;</p>
                 <p style="font-size: 18px;">06. Amendments in Bookings</p>
                 <p>&nbsp;</p>
-                <p><strong>Note:</strong> You should have made your bookings through your InstaMovies account in order to make amendments in bookings. A certain amount will be charged according to the type of amendment and ticket price.</p>
-                <p>Tickets can be cancelled by publishing the ticket on InstaMovies website by entering your ticket number in the publish ticket prompt menu of your bookings page. Refunds will be made only if the published ticket is sold out to another customer. Seats can be changed even after bookings were made by entering your ticket number in the seat change prompt menu of your bookings page. These amendments are valid until 2 hours before the time of the booked movie show.</p>
+                <p><strong>Note:</strong> You should have made your bookings through your Cinema account in order to make amendments in bookings. A certain amount will be charged according to the type of amendment and ticket price.</p>
+                <p>Tickets can be cancelled by publishing the ticket on Cinema website by entering your ticket number in the publish ticket prompt menu of your bookings page. Refunds will be made only if the published ticket is sold out to another customer. Seats can be changed even after bookings were made by entering your ticket number in the seat change prompt menu of your bookings page. These amendments are valid until 2 hours before the time of the booked movie show.</p>
                 <p>Amendments such as date or time changes and lost tickets will NOT be entertained for any reason. Therefore make sure to check your payment details before you make your payments.</p>
-                <p>www.instamovies.cf reserves the right to NOT to screen a movie ( and due to unavoidable circumstances) and in such cases refunds will be made to valid ticket holders.<strong></strong></p>
+                <p>www.Cinema reserves the right to NOT to screen a movie ( and due to unavoidable circumstances) and in such cases refunds will be made to valid ticket holders.<strong></strong></p>
                 <p>&nbsp;</p>
                 <p style="font-size: 18px;">07. Change or Suspension of Site</p>
                 <p>&nbsp;</p>
@@ -101,17 +101,17 @@ session_start();
                 <p>&nbsp;</p>
                 <p style="font-size: 18px;">09. Registration, Accounts and Passwords</p>
                 <p>&nbsp;</p>
-                <p>You agree to provide accurate, current and complete data about yourself on the www.instamovies.cf registration form and keep your profile updated with accurate, current and complete information.</p>
-                <p>You also understand that failure to maintain accurate, current and complete information in your profile will give www.instamovies.cf adequate cause to suspend or terminate your use of its services.</p>
-                <p>Upon registration you will receive a User Name and Password. Continued maintenance of confidentiality with regard to your User Name and Password will always remain your sole responsibility. You agree to bring to the immediate notice of www.instamovies.cf any unauthorized use of your password or account or any other breach of security. You also agree to ensure that you exit from your account each time you use www.instamovies.cf. Access to and use of password protected and/or secure areas of www.instamovies.cf is restricted to its registered users only. Unauthorized attempts to access these areas of www.instamovies.cf may be subject to prosecution.<strong></strong></p>
+                <p>You agree to provide accurate, current and complete data about yourself on the www.Cinema registration form and keep your profile updated with accurate, current and complete information.</p>
+                <p>You also understand that failure to maintain accurate, current and complete information in your profile will give www.Cinema adequate cause to suspend or terminate your use of its services.</p>
+                <p>Upon registration you will receive a User Name and Password. Continued maintenance of confidentiality with regard to your User Name and Password will always remain your sole responsibility. You agree to bring to the immediate notice of www.Cinema any unauthorized use of your password or account or any other breach of security. You also agree to ensure that you exit from your account each time you use www.Cinema. Access to and use of password protected and/or secure areas of www.Cinema is restricted to its registered users only. Unauthorized attempts to access these areas of www.Cinema may be subject to prosecution.<strong></strong></p>
                 <p>&nbsp;</p>
                 <p style="font-size: 18px;">10. Privacy Policy</p>
                 <p>&nbsp;</p>
-                <p>Your use of www.instamovies.cf is governed by its Privacy Policy. You hereby agree to www.instamovies.cf collection, use and sharing of your information as set forth in the www.instamovies.cf Privacy Policy.<strong></strong></p>
+                <p>Your use of www.Cinema is governed by its Privacy Policy. You hereby agree to www.Cinema collection, use and sharing of your information as set forth in the www.Cinema Privacy Policy.<strong></strong></p>
                 <p>&nbsp;</p>
                 <p style="font-size: 18px;">11. User Conduct</p>
                 <p>&nbsp;</p>
-                <p>You agree that you will not use www.instamovies.cf to upload, post, or otherwise distribute or facilitate distribution of any material that is</p>
+                <p>You agree that you will not use www.Cinema to upload, post, or otherwise distribute or facilitate distribution of any material that is</p>
                 <ul class="page_bullet">
                 <li>Libelous, defamatory or slanderous;</li>
                 <li>Sexually suggestive or contains explicit sexual content (including nudity) and Child Pornography;</li>
@@ -121,32 +121,32 @@ session_start();
                 <li>Condones, promotes, contains or links to cracks, hacks or similar utilities or programs;</li>
                 <li>Constitutes unauthorized or unsolicited advertising, junk or bulk e-mail (also known as “spam”), chain letters, any other form of unauthorized solicitation, or any form of lottery or gambling;</li>
                 <li>Contains a software virus or any other computer code that is designed or intended to disrupt, damage, or limit the functioning of any software, hardware, or telecommunications equipment, or to damage or obtain unauthorized access to any data or other information of any third party;</li>
-                <li>Impersonates any person or entity, including any employee or representative of www.instamovies.cf; or</li>
+                <li>Impersonates any person or entity, including any employee or representative of www.Cinema; or</li>
                 <li>Violates any applicable law or these Terms of Use.</li>
                 </ul>
-                <p><br />You also agree that you will not collect information about third parties via www.instamovies.cf or use any such information for the purpose of transmitting and / or facilitating transmission of unauthorized or unsolicited advertising, junk or bulk e-mail, chain letters, or any other form of unauthorized solicitation.<br /><br />You agree that you will not engage in the systematic retrieval of data or other content from www.instamovies.cf to create or compile, directly or indirectly, a collection, compilation, database or directory, without www.instamovies.cf’s prior written consent. You agree not to take any actions for the purpose of manipulating or distorting, or that may undermine the integrity and accuracy of, any ratings or reviews of any movie or other entertainment program, service or product that may be presented by www.instamovies.cf.<strong></strong></p>
+                <p><br />You also agree that you will not collect information about third parties via www.Cinema or use any such information for the purpose of transmitting and / or facilitating transmission of unauthorized or unsolicited advertising, junk or bulk e-mail, chain letters, or any other form of unauthorized solicitation.<br /><br />You agree that you will not engage in the systematic retrieval of data or other content from www.Cinema to create or compile, directly or indirectly, a collection, compilation, database or directory, without www.Cinema’s prior written consent. You agree not to take any actions for the purpose of manipulating or distorting, or that may undermine the integrity and accuracy of, any ratings or reviews of any movie or other entertainment program, service or product that may be presented by www.Cinema.<strong></strong></p>
                 <p>&nbsp;</p>
                 <p style="font-size: 18px;">12. Copyrights</p>
                 <p>&nbsp;</p>
-                <p>www.instamovies.cf respects the intellectual property of others, and we ask our users to do the same. If notified of allegedly infringing, defamatory, damaging, illegal, or offensive content, www.instamovies.cf may, in its sole discretion, investigate the allegation and/or edit, remove or request the removal of such content. Notwithstanding the foregoing, www.instamovies.cf does not ensure that any such content will be edited or removed. www.instamovies.cf may terminate the accounts of users who infringe the intellectual property rights of others.<strong></strong></p>
+                <p>www.Cinema respects the intellectual property of others, and we ask our users to do the same. If notified of allegedly infringing, defamatory, damaging, illegal, or offensive content, www.Cinema may, in its sole discretion, investigate the allegation and/or edit, remove or request the removal of such content. Notwithstanding the foregoing, www.Cinema does not ensure that any such content will be edited or removed. www.Cinema may terminate the accounts of users who infringe the intellectual property rights of others.<strong></strong></p>
                 <p>&nbsp;</p>
                 <p style="font-size: 18px;">13. Proprietary Rights</p>
                 <p>&nbsp;</p>
-                <p>www.instamovies.cf owns all right, title and interest in and to this service and all materials and content contained in www.instamovies.cf, including, without limitation, all content, site design, logos, button icons, images, digital downloads, data compilations, text, and graphics are protected by copyright, trademark and other intellectual property laws. Any unauthorized use of the materials provided as part of the www.instamovies.cf is strictly prohibited.<br /><br />Permission is granted to individual consumers to electronically copy and to print hard copy portions of the Site solely for personal use. Any other use of materials on the site, including reproduction for purposes other than those noted above, modification, distribution, or republication, any form of data extraction or data mining, or other commercial exploitation of any kind, without prior written permission of an authorized officer of www.instamovies.cf is strictly prohibited. You agree that you will not use any robot, spider, other automatic device, or manual process to monitor or copy our Web pages or the content contained therein without prior written permission of an authorized officer of www.instamovies.cf.</p>
+                <p>www.Cinema owns all right, title and interest in and to this service and all materials and content contained in www.Cinema, including, without limitation, all content, site design, logos, button icons, images, digital downloads, data compilations, text, and graphics are protected by copyright, trademark and other intellectual property laws. Any unauthorized use of the materials provided as part of the www.Cinema is strictly prohibited.<br /><br />Permission is granted to individual consumers to electronically copy and to print hard copy portions of the Site solely for personal use. Any other use of materials on the site, including reproduction for purposes other than those noted above, modification, distribution, or republication, any form of data extraction or data mining, or other commercial exploitation of any kind, without prior written permission of an authorized officer of www.Cinema is strictly prohibited. You agree that you will not use any robot, spider, other automatic device, or manual process to monitor or copy our Web pages or the content contained therein without prior written permission of an authorized officer of www.Cinema.</p>
                 <p>&nbsp;</p>
                 <p style="font-size: 18px;">14. Termination</p>
                 <p>&nbsp;</p>
-                <p>In its sole and absolute discretion, with or without notice to you www.instamovies.cf may</p>
+                <p>In its sole and absolute discretion, with or without notice to you www.Cinema may</p>
                 <ul class="page_bullet">
-                <li>Suspend or terminate your use of the services provided by www.instamovies.cf,</li>
-                <li>Terminate your account at www.instamovies.cf;</li>
+                <li>Suspend or terminate your use of the services provided by www.Cinema,</li>
+                <li>Terminate your account at www.Cinema;</li>
                 </ul>
-                <p>You may terminate your account by informing in writing to www.instamovies.cf about your decision to terminate your account and www.instamovies.cf will de-activate your account upon receipt of such notification.  www.instamovies.cf shall not be liable to you or any third party for any claims or damages arising out of any termination or suspension of its service.<strong></strong></p>
+                <p>You may terminate your account by informing in writing to www.Cinema about your decision to terminate your account and www.Cinema will de-activate your account upon receipt of such notification.  www.Cinema shall not be liable to you or any third party for any claims or damages arising out of any termination or suspension of its service.<strong></strong></p>
                 <p>&nbsp;</p>
                 <p style="font-size: 18px;">15. General</p>
                 <p>&nbsp;</p>
-                <p>The Terms of Use and the relationship between you and www.instamovies.cf shall be governed by the laws of the Republic of Sri Lanka. The section titles in these Terms of Use are for convenience only and have no legal or contractual effect.</p>
-                <p>These terms and conditions are binding upon and shall ensure the benefit of both parties, their respective successors, heirs, executor, administrators, personal representatives and permitted assigns.<br />You shall not assign your rights or obligations hereunder without www.instamovies.cf’s prior written consent. <br /><br /><br /></p> 
+                <p>The Terms of Use and the relationship between you and www.Cinema shall be governed by the laws of the Republic of Sri Lanka. The section titles in these Terms of Use are for convenience only and have no legal or contractual effect.</p>
+                <p>These terms and conditions are binding upon and shall ensure the benefit of both parties, their respective successors, heirs, executor, administrators, personal representatives and permitted assigns.<br />You shall not assign your rights or obligations hereunder without www.Cinema’s prior written consent. <br /><br /><br /></p> 
             </div>
         </div>
     </div>

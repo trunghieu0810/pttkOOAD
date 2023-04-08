@@ -27,7 +27,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
 		
 		<link rel="shortcut icon" type="image/png" href="images/icon.png">
 		
-        <title>InstaMovies - <?php echo $user_row['first_name'];?> | Payments</title>
+        <title>Cinema - <?php echo $user_row['first_name'];?> | Thanh toán</title>
         
         <style>
             .navbar {
@@ -70,7 +70,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                                         echo "<td>{$i}</td>";
                                         echo "<td>{$row['timestamp']}</td>";
                                         echo "<td>{$row['process']}</td>";
-                                        echo "<td>Rs. ".number_format((float)$row['paid_amount'], 2, '.', '')."</td>";
+                                        echo "<td>".number_format((float)$row['paid_amount'], 3, '.', '')." VND</td>";
                                     echo "</tr>";
                                 }
                             }else{
@@ -78,14 +78,6 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                             }
                         ?>
                     </tbody>
-                    <tfoot style="text-align:center">
-                        <tr>
-                            <th>#</th>
-                            <th>Thời gian thanh toán</th>
-                            <th>Xử lý</th>
-                            <th>Số tiền</th>
-                        </tr>
-                    </tfoot>
                 </table>
             </div>
         </div>

@@ -21,7 +21,7 @@ session_start();
 		<!--Favicon Image-->
 		<link rel="shortcut icon" type="image/png" href="images/icon.png">
 		
-		<title>InstaMovies</title>
+		<title>Cinema</title>
 
         <style>
             .career p {
@@ -53,12 +53,9 @@ session_start();
         <!--Banner Code - End-->
 
         <div class="container mt-4" style="line-height:22px; font-size: 14px; color: #606978; font-family:sans-serif">
-            <h2 style="font-weight:normal; color: #3f3545; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:48px; margin-bottom:30px; padding-top:15px">Careers</h2>
+            <h2 style="font-weight:normal; color: #3f3545; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:48px; margin-bottom:30px; padding-top:15px">Tuyển dụng</h2>
             
             <div>
-            <p>Trên phần này của trang web của chúng tôi, bạn có thể xem các vị trí tuyển dụng hiện tại tại InstaMovies.</p>
-               <p>Với tầm nhìn trở thành chuỗi rạp chiếu phim tốt nhất ở châu Á, chúng tôi hoan nghênh các chương trình &amp; những cá nhân năng động muốn gia nhập đội ngũ của chúng tôi. Chúng tôi có một nền văn hóa &amp; một hệ thống giá trị cốt lõi mạnh mẽ, nơi bạn sẽ được đối xử đồng nhất &amp; tương ứng. Nếu bạn muốn thực hiện ước mơ của mình với chúng tôi, chúng tôi nồng nhiệt chào đón bạn tham gia cùng nhóm của chúng tôi.</p>
-               <p>&nbsp;</p>
                <p>Hiện tại không có vị trí nào còn trống.</p>
               <br/>
             </div>

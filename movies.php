@@ -24,7 +24,7 @@ include_once ('db_config.php');
 		<!--Favicon Image-->
 		<link rel="shortcut icon" type="image/png" href="images/icon.png">
 		
-		<title>InstaMovies</title>
+		<title>Cinema</title>
 
         <style>
             .movies .banner img {
@@ -130,7 +130,7 @@ include_once ('db_config.php');
 						if(mysqli_num_rows($result_nowshowing) > 0){
 						?>
 						<div class="nowshowing_movies">
-							<h2 style="font-weight:normal; color:#23241d; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:45px; margin-bottom:30px; padding-top:15px">Now Showing</h2>
+							<h2 style="font-weight:normal; color:#23241d; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:45px; margin-bottom:30px; padding-top:15px">Đang chiếu tại rạp</h2>
 							<div class="row">
 								<?php while($row_nowshowing = mysqli_fetch_array($result_nowshowing)){
 									

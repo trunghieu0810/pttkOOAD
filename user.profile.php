@@ -27,7 +27,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
 		
 		<link rel="shortcut icon" type="image/png" href="images/icon.png">
 		
-        <title>InstaMovies - <?php echo $user_row['first_name'];?> | Hồ sơ</title>
+        <title>Cinema - <?php echo $user_row['first_name'];?> | Hồ sơ</title>
         
         <style>
             .navbar {
@@ -152,7 +152,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-12">
-                        <a class="btn btn-primary" style="font-weight:500; float:right; box-shadow:none; color:white" data-toggle="modal" data-target="#editUserProfileModal">Edit Profile</a>
+                        <a class="btn btn-primary" style="font-weight:500; float:right; box-shadow:none; color:white" data-toggle="modal" data-target="#editUserProfileModal">Sửa hồ sơ</a>
                     </div>
                 </div>
                 <hr/>
@@ -165,7 +165,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Tài khoản:</label>
                     <div class="col-sm-3">
-                        <button type="button" class="btn btn-danger" style="font-weight:500; width:100%; box-shadow:none" data-toggle="modal" data-target="#deleteAccountModal">Delete Account</button>
+                        <button type="button" class="btn btn-danger" style="font-weight:500; width:100%; box-shadow:none" data-toggle="modal" data-target="#deleteAccountModal">Xóa tài khoản</button>
                     </div>
                 </div>
             </form>

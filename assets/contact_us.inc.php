@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
     $sql = "INSERT INTO tbl_contact_us (`name`, `phone`, `email`, `message`) VALUES ('$name', '$phone', '$email', '$message')";
     $db->query($sql);
 
-    $to = 'thuvarahan97@gmail.com';
+    $to = 'example@gmail.com';
     $subject = 'Contact Us';
     $headers = "MIME-Version: 1.0\r\n";
     $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
