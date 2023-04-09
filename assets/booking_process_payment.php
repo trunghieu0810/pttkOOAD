@@ -31,7 +31,7 @@ if($_GET['paymentType'] == "visa_mastercard") {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="../validation/dist/css/bootstrapValidator.css"/>
   
-    <title>Payment Gateway</title>
+    <title>Cổng thanh toán</title>
 
     <style>
         body {

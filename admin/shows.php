@@ -18,7 +18,7 @@ else if($_SESSION['admin_id']=='1'){
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>InstaMovies - Admin | Dashboard</title>
+  <title>Cinema - Admin | Dashboard</title>
   <!--Favicon-->
   <link rel="shortcut icon" type="image/png" href="images/icon.png">
   <!-- Font Awesome -->
@@ -250,7 +250,7 @@ else if($_SESSION['admin_id']=='1'){
 
         <!-- Editable table -->
         <div class="card">
-            <h3 class="card-header text-center font-weight-bold text-uppercase py-3">Hiển Thị</h3>
+            <h3 class="card-header text-center font-weight-bold text-uppercase py-3">Lịch chiếu</h3>
             <div class="card-body">
                 <div class="add_new_show">
                     <button type="button" class="add_button" data-toggle="modal" data-target="#addShowModal">Thêm Lịch chiếu</button>
@@ -386,7 +386,7 @@ else if($_SESSION['admin_id']=='1'){
                         </div>
 
                         <div class="form-group row">
-                            <label for="end_date_label" class="col-sm-3 col-form-label">Dến Ngày:</label>
+                            <label for="end_date_label" class="col-sm-3 col-form-label">Đến Ngày:</label>
                             <div class="col-sm-9">
                                 <div class="input-group">
                                     <input type='text' class="form-control" id='end_date_update' name="end_date_update" placeholder="Select End Date" onfocus="this.blur()" required="required">

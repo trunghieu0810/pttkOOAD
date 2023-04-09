@@ -24,7 +24,7 @@ if(!isset($_SESSION['admin_id'])){
 		<!--Favicon Image-->
 		<link rel="shortcut icon" type="image/png" href="images/icon.png">
 		
-		<title>InstaMovies</title>
+		<title>Cinema</title>
 
     <style>
         body {
@@ -63,28 +63,28 @@ if(!isset($_SESSION['admin_id'])){
       <form  class="reset_password-page" method="POST" onSubmit = "return checkPassword(this)">
 
         <div style="text-align:center;">
-          <h2 style="font-weight:400; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size:45px; margin-bottom:15px; border-bottom: 1px solid #FFF; text-align:center; padding-bottom:15px;">Reset Password</h2>
+          <h2 style="font-weight:400; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size:45px; margin-bottom:15px; border-bottom: 1px solid #FFF; text-align:center; padding-bottom:15px;">Đặt lại mật khẩu</h2>
           <p style="margin:10px 0 20px; padding: 0px 0px 10px 0px !important;"><b>Một mã xác nhận đã được gửi đến email của bạn. Vui lòng sử dụng mã xác nhận đó để đặt lại mật khẩu của bạn.</b></p>
         </div>
 
         <div class="form-group row">
           <label class="col-sm-5 col-form-label" style="">Mã Xác Nhận: <span style="color:red">*</span></label>
           <div class="col-sm-7">
-            <input class="form-control" type="text" name="code" id="code" pattern="[A-Za-z0-9]{10}" placeholder="Confirmation Code" title=" A-Z, a-z, 0-9 only"maxlength="10" required>
+            <input class="form-control" type="text" name="code" id="code" pattern="[A-Za-z0-9]{10}" title=" A-Z, a-z, 0-9 only"maxlength="10" required>
           </div>
         </div>
         
         <div class="form-group row">
           <label class="col-sm-5 col-form-label" style="">Mật Khẩu Mới: <span style="color:red">*</span></label>
           <div class="col-sm-7">
-            <input class="form-control" type="password" name="new_password1" id="new_password1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="New Password" required>
+            <input class="form-control" type="password" name="new_password1" id="new_password1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
           </div>
         </div>
 
         <div class="form-group row">
           <label class="col-sm-5 col-form-label" style="">Xác Nhận Mật Khẩu: <span style="color:red">*</span></label>
           <div class="col-sm-7">
-            <input class="form-control" type="password" name="new_password2" id="new_password2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Retype New Password"required>
+            <input class="form-control" type="password" name="new_password2" id="new_password2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
           </div>
         </div>
         

@@ -22,13 +22,6 @@
                           }
                       </script>
 
-
-
-
-
-
-
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -80,20 +73,12 @@
   </head>
 
   <body>
-
-
-
-
-
-
-
-
-
+    
 <div>
   <form  class="signup-page" method="POST" onSubmit = "return checkPassword(this)">
 
     <div class="signup-header">
-       <h2>Admin Change Password</h2>
+       <h2>Đổi mật khẩu</h2>
                                    
     </div>
     <br>
@@ -103,18 +88,18 @@
 
 
     <div class="form-group row">
-              <label class="col-sm-5" style="">Current Password <span style="color:red">*</span></label>
-              <input class="form-control col-sm-7" type="password" name="cur_password" id="cur_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Current Password" required>
+              <label class="col-sm-5" style="">Mật khẩu hiện tại<span style="color:red">*</span></label>
+              <input class="form-control col-sm-7" type="password" name="cur_password" id="cur_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
     </div>
 
     <div class="form-group row">
-              <label class="col-sm-5" style="">New Password<span style="color:red">*</span></label>
-              <input class="form-control col-sm-7" type="password" name="new_password1" id="new_password1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="New Password" required>
+              <label class="col-sm-5" style="">Mật khẩu mới<span style="color:red">*</span></label>
+              <input class="form-control col-sm-7" type="password" name="new_password1" id="new_password1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
     </div>
 
     <div class="form-group row">
-              <label class="col-sm-5" style="">Confirm New Password<span style="color:red">*</span></label>
-              <input class="form-control col-sm-7" type="password" name="new_password2" id="new_password2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Retype New Password"required>
+              <label class="col-sm-5" style="">Nhập lại mật khẩu<span style="color:red">*</span></label>
+              <input class="form-control col-sm-7" type="password" name="new_password2" id="new_password2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
     </div>
 
 
@@ -123,7 +108,7 @@
     <div class=" row">
                                 
           <div  class="button" style="text-align:center">
-              <button class="btn btn-danger" style="align-self:center"type="submit" name="change_password">Submit</button>
+              <button class="btn btn-danger" style="align-self:center"type="submit" name="change_password">Đồng ý</button>
           </div>
     </div>
      </form>

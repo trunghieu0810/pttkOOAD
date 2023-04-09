@@ -85,7 +85,7 @@ include 'assets/rates_and_showtimes.inc.php';
                             <label for="inputTheatre" class="col-sm-2 col-form-label">Rạp</label>
                             <div class="col-sm-10">
                                 <select class="form-control" id="theatre" name="theatre">
-                                    <option value="">Chọn Rạp</option>
+                                    <option value="">Chọn rạp</option>
                                 </select>
                             </div>
                         </div>
@@ -93,7 +93,7 @@ include 'assets/rates_and_showtimes.inc.php';
 
                     <div class="form-group row">
                         <div class="col-sm-12">
-                            <input class="btn btn-warning" role="button" name="view" value="View Details" type="submit">
+                            <input class="btn btn-warning" role="button" name="view" value="Xem kết quả" type="submit">
                         </div>
                     </div>
                 </form>
@@ -227,11 +227,11 @@ include 'assets/rates_and_showtimes.inc.php';
                         success:function(data){
                             var start_Date = data;
                             $('#datepicker').datepicker('option','minDate',start_Date);
-                            $('#theatre').html('<option value="">Select Theatre</option>');
+                            $('#theatre').html('<option value="">Chọn rạp</option>');
                         }
                     }); 
                 }else{
-                    $('#theatre').html('<option value="">Select Theatre</option>');
+                    $('#theatre').html('<option value="">Chọn rạp</option>');
                 }
             });
             
@@ -257,7 +257,7 @@ include 'assets/rates_and_showtimes.inc.php';
                         }
                     }); 
                 }else{
-                    $('#theatre').html('<option value="">Select Theatre</option>');
+                    $('#theatre').html('<option value="">Chọn rạp</option>');
                 }
 
             })

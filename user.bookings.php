@@ -26,7 +26,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
 		
 		<link rel="shortcut icon" type="image/png" href="images/icon.png">
 		
-        <title>Cinema - <?php echo $user_row['first_name'];?> | Đặt vé</title>
+        <title>Cinema</title>
         
         <style>
             .navbar {
@@ -68,7 +68,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
 	
     <div style="margin-top:100px; margin-bottom:25px">
         <div class="container mt-3" style="background:#FFF;padding-bottom:15px">
-            <div style="padding:15px"><h1 style="font-size:35px; font-weight:normal;">Đặt vé</h1></div>
+            <div style="padding:15px"><h1 style="font-size:35px; font-weight:normal;">Lịch sử đặt vé</h1></div>
             <div style="margin:10px 0 30px; text-align:center">
                 <button class="btn btn-info" style="margin:0 2px" data-toggle="modal" data-target="#changeSeatModal">Đổi ghế</button>
                 <button class="btn btn-success" style="margin:0 2px" data-toggle="modal" data-target="#publishTicketModal">Xuất vé</button>
@@ -125,9 +125,9 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                                                 }
                                             }else{
                                                 if ($timeDiff > 0){
-                                                    echo "<span style='font-weight:bold;color:green'>Booked</span>";
+                                                    echo "<span style='font-weight:bold;color:green'>Đã đặt</span>";
                                                 }else{
-                                                    echo "<span style='font-weight:bold;font-size:20px;color:green'>&#10003;</span>";
+                                                    echo "<span style='font-weight:bold;color:green'>Hoàn thành</span>";
                                                 }
                                             }
                                             echo "</td>";
@@ -145,7 +145,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
     </div>
 
 
-    <div style="margin-top:25px; margin-bottom:25px">
+    <!-- <div style="margin-top:25px; margin-bottom:25px">
         <div class="container mt-3" style="background:#FFF;padding-bottom:15px">
             <div style="padding:15px"><h1 style="font-size:35px; font-weight:normal">Vé đã mua</h1></div>
 
@@ -202,7 +202,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
             </div>
 
         </div>
-    </div>
+    </div> -->
         
         
     <div class="modal fade" id="changeSeatModal" tabindex="-1" role="dialog">

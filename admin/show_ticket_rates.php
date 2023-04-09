@@ -18,7 +18,7 @@ else if($_SESSION['admin_id']=='1'){
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>InstaMovies - Admin | Giá Vé</title>
+  <title>Cinema - Admin | Dashboard</title>
   <!--Favicon-->
   <link rel="shortcut icon" type="image/png" href="images/icon.png">
   <!-- Font Awesome -->
@@ -270,10 +270,10 @@ else if($_SESSION['admin_id']=='1'){
                     <form id="add_show_ticket_rate_form">
 
                         <div class="form-group row">
-                            <label for="show_label" class="col-sm-2 col-form-label">Hiển Thị:</label>
+                            <label for="show_label" class="col-sm-2 col-form-label">Chọn:</label>
                             <div class="col-sm-10">
                                 <select id="show" name="show" class="form-control" required="required">
-                                    <option value="" disabled selected>Lựa chọn hiển thị</option>
+                                    <option value="" disabled selected>Phim | Rạp</option>
                                     <?php
                                         $sql_shows_list = "SELECT A.show_id, A.theatre_id, B.movie_name, C.theatre_name, C.city FROM tbl_shows A, tbl_movies B, tbl_theatres C WHERE A.movie_id = B.movie_id AND A.theatre_id = C.theatre_id AND C.admin_id = '{$_SESSION['admin_id']}' ORDER BY B.movie_id ASC";
                                         $result_shows_list = mysqli_query($db, $sql_shows_list);

@@ -17,11 +17,10 @@ while($row_category = mysqli_fetch_array($result_category))
         </div>
 
         <div class="form-group row">
-            <label for="full_rate_label" class="col-sm-4 col-form-label">Giá Vé:</label>
+            <label for="full_rate_label" class="col-sm-4 col-form-label">Giá vé thường:</label>
             <div class="col-sm-8">
                 <div id="currency_input">
-                    <input type='text' class="form-control" id='full_rate' name="full_rate[]" value="" data-type="currency" maxlength="5" placeholder="0.00" required="required">
-                    <i>Rs.</i>
+                    <input type='text' class="form-control" id='full_rate' name="full_rate[]" value="" data-type="currency" maxlength="3" required="required">
                 </div>
             </div>
         </div>
@@ -30,8 +29,7 @@ while($row_category = mysqli_fetch_array($result_category))
             <label for="kids_rate_label" class="col-sm-4 col-form-label">Giá vé trẻ em:</label>
             <div class="col-sm-8">
                 <div id="currency_input">
-                    <input type='text' class="form-control" id='kids_rate' name="kids_rate[]" value="" data-type="currency" maxlength="5" placeholder="0.00">
-                    <i>Rs.</i>
+                    <input type='text' class="form-control" id='kids_rate' name="kids_rate[]" value="" data-type="currency" maxlength="3" >
                 </div>
             </div>
         </div>
@@ -66,7 +64,7 @@ function formatCurrency(input, blur) {
         left_side = formatNumber(left_side);
         right_side = formatNumber(right_side);
         if (blur === "blur") {
-            right_side += "00";
+            right_side += "000";
         }
         right_side = right_side.substring(0, 2);
         input_val = left_side + "." + right_side;
@@ -74,7 +72,7 @@ function formatCurrency(input, blur) {
         input_val = formatNumber(input_val);
         input_val = input_val;
         if (blur === "blur") {
-            input_val += ".00";
+            input_val += ".000";
         }
     }
     input.val(input_val);    

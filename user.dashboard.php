@@ -28,7 +28,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
 		
 		<link rel="shortcut icon" type="image/png" href="images/icon.png">
 		
-        <title>InstaMovies - <?php echo $user_row['first_name'];?> | Dashboard</title>
+        <title>Cinema</title>
         
         <style>
             .navbar {

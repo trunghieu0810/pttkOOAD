@@ -17,7 +17,7 @@ else if($_SESSION['admin_id']=='1'){
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>InstaMovies - Admin | Chuyển Khoản</title>
+  <title>Cinema - Admin | Dashboard</title>
   
   <!--Favicon-->
   <link rel="shortcut icon" type="image/png" href="images/icon.png">
@@ -178,7 +178,7 @@ else if($_SESSION['admin_id']=='1'){
 
         <!-- Editable table -->
         <div class="card">
-            <h3 class="card-header text-center font-weight-bold text-uppercase py-3">Payments</h3>
+            <h3 class="card-header text-center font-weight-bold text-uppercase py-3">Thanh toán</h3>
             <div class="card-body">
                 
                 <br>
@@ -190,7 +190,7 @@ else if($_SESSION['admin_id']=='1'){
                                 <th>Mã Người Dùng</th>
                                 <th>Mã Vé</th>
                                 <th>Thời Gian Giao Dịch</th>
-                                <th>Quy Trình Giao Dịch</th>
+                                <th>Trạng thái</th>
                                 <th>Tên</th>
                                 <th>Số Điện Thoại</th>
                                 <th>Email</th>
@@ -235,9 +235,9 @@ else if($_SESSION['admin_id']=='1'){
                                                 echo $row['payment_type'];
                                             }
                                             echo "</td>";
-                                            echo "<td style='vertical-align:middle'>Rs. ".number_format((float)$row['sub_total'], 2, '.', '')."</td>";
-                                            echo "<td style='vertical-align:middle'>Rs. ".number_format((float)$row['service_tax'], 2, '.', '')."</td>";
-                                            echo "<td style='vertical-align:middle'>Rs. ".number_format((float)$row['paid_amount'], 2, '.', '')."</td>";
+                                            echo "<td style='vertical-align:middle'>".number_format((float)$row['sub_total'], 3, '.', '')." VND</td>";
+                                            echo "<td style='vertical-align:middle'>".number_format((float)$row['service_tax'], 3, '.', '')." VND</td>";
+                                            echo "<td style='vertical-align:middle'>".number_format((float)$row['paid_amount'], 3, '.', '')." VND</td>";
                                         echo "</tr>";
                                     }
                                 }else{
@@ -245,23 +245,6 @@ else if($_SESSION['admin_id']=='1'){
                                 }
                             ?>
                         </tbody>
-
-                        <tfoot class="grey lighten-1" style="text-align:center">
-                        <tr>
-                                <th>#</th>
-                                <th>Mã Người Dùng</th>
-                                <th>Mã Vé</th>
-                                <th>Thời Gian Giao Dịch</th>
-                                <th>Quy Trình Giao Dịch</th>
-                                <th>Tên</th>
-                                <th>Số Điện Thoại</th>
-                                <th>Email</th>
-                                <th>Loại Thanh Toán</th>
-                                <th>Tổng Giá Trị</th>
-                                <th>Thuế Dịch Vụ</th>
-                                <th>Số Tiền Thanh Toán</th>
-                            </tr>
-                        </tfoot>
                     </table>
                 </div>
             </div>

@@ -10,7 +10,7 @@ header('location:movies.php')
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>InstaMovies - Admin | Dashboard</title>
+  <title>Cinema - Admin | Dashboard</title>
   <!--Favicon-->
   <link rel="shortcut icon" type="image/png" href="images/icon.png">
   <!-- Font Awesome -->

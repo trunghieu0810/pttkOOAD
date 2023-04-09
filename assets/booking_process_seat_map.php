@@ -494,7 +494,7 @@ date_default_timezone_set("Asia/Colombo");
         var full_amount = 0;
         var kids_amount = 0;
         var total_amount = full_amount + kids_amount;
-        $('.amount_value').html(Number(total_amount).toFixed(2));
+        $('.amount_value').html(Number(total_amount).toFixed(3));
         
         //Seat_Category and Seat_Map_Wrap - Script - Start
         $("a").click(function(){
@@ -569,7 +569,7 @@ date_default_timezone_set("Asia/Colombo");
                             total_amount = Number(0);
                         }
                         $('.ticket_count').html(total_ticket_count);
-                        $('.amount_value').html(total_amount.toFixed(2));
+                        $('.amount_value').html(total_amount.toFixed(3));
                     }else{
                         if($(this).parent().hasClass("selected_seat")){
                             $(this).parent().removeClass("selected_seat");
@@ -585,7 +585,7 @@ date_default_timezone_set("Asia/Colombo");
                             }
                             total_amount = full_amount + kids_amount;
                             $('.ticket_count').html(total_ticket_count);
-                            $('.amount_value').html(total_amount.toFixed(2));
+                            $('.amount_value').html(total_amount.toFixed(3));
                         }else{
                             $.toast({
                                 text: "All seats are selected, change number of ticket(s) to pick more.",

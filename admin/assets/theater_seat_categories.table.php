@@ -46,19 +46,6 @@ include_once ('../db_config.php');
             }
         ?>
     </tbody>
-    <tfoot class="grey lighten-1">
-    <tr>
-            <th id="row_num_column">#</th>
-            <th id="id_column">ID</th>
-            <th class="th-sm">Rạp</th>
-            <th class="th-sm">Thể Loại</th>
-            <th id="row_column" class="th-sm">Số Hàng</th>
-            <th id="col_column" class="th-sm">Số Dãy</th>
-            <th id="seat_column" class="th-sm">Số Ghế</th>
-            <th id="seat_map_column">Sơ đồ Ghế</th>
-            <th id="action_column">Chiếu</th>
-        </tr>
-    </tfoot>
 </table>
 
 <script>

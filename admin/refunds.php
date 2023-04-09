@@ -17,7 +17,7 @@ else if($_SESSION['admin_id']=='1'){
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>InstaMovies - Admin | Dashboard</title>
+  <title>Cinema - Admin | Dashboard</title>
   
   <!--Favicon-->
   <link rel="shortcut icon" type="image/png" href="images/icon.png">
@@ -178,7 +178,7 @@ else if($_SESSION['admin_id']=='1'){
 
         <!-- Editable table -->
         <div class="card">
-            <h3 class="card-header text-center font-weight-bold text-uppercase py-3">Refunds</h3>
+            <h3 class="card-header text-center font-weight-bold text-uppercase py-3">Hoàn tiền</h3>
             <div class="card-body">
                 
                 <br>
@@ -191,7 +191,7 @@ else if($_SESSION['admin_id']=='1'){
                                 <th>Thời gian giao dịch</th>
                                 <th>Số Tiền</th>
                                 <th>Trạng thái</th>
-                                <th>ACTION</th>
+                                <th></th>
                             </tr>
                         </thead>
 
@@ -239,17 +239,6 @@ else if($_SESSION['admin_id']=='1'){
                                 }
                             ?>
                         </tbody>
-
-                        <tfoot class="grey lighten-1" style="text-align:center">
-                        <tr>
-                                <th>#</th>
-                                <th>Mã Người Dùng</th>
-                                <th>Thời gian giao dịch</th>
-                                <th>Số Tiền</th>
-                                <th>Trạng thái</th>
-                                <th>ACTION</th>
-                            </tr>
-                        </tfoot>
                     </table>
                 </div>
             </div>

@@ -24,7 +24,7 @@ if(!isset($_SESSION['admin_id'])){
 		<!--Favicon Image-->
 		<link rel="shortcut icon" type="image/png" href="images/icon.png">
 		
-		<title>InstaMovies</title>
+		<title>Cinema</title>
 
     <style>
         body {
@@ -54,7 +54,7 @@ if(!isset($_SESSION['admin_id'])){
     <div class="login">
     
       <form class="login-page" method="POST">
-        <h2 style="font-weight:400; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: white; font-size:48px; margin-bottom:30px; padding-top:15px; border-bottom: 1px solid #FFF; text-align:center; padding-bottom: 15px;">Login</h2>
+        <h2 style="font-weight:400; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: white; font-size:48px; margin-bottom:30px; padding-top:15px; border-bottom: 1px solid #FFF; text-align:center; padding-bottom: 15px;">Đăng nhập</h2>
         
         <div class="form-group row">
           <label class="col-sm-3 col-form-label">Email:</label>
@@ -80,7 +80,6 @@ if(!isset($_SESSION['admin_id'])){
         <div style="margin:30px 0;">
           <a style="text-decoration:none;color:red" href="admin.login.forgot_password.php">Quên mật khẩu</a>
           <br/>
-          <a style="text-decoration:none;color:red" href="admin.register.php">Đăng kí</a>
         </div>
       
       </form>

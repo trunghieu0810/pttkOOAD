@@ -47,17 +47,6 @@ include_once ('../db_config.php');
             }
         ?>
     </tbody>
-    <tfoot class="grey lighten-1">
-        <tr>
-            <th id="row_num_column">#</th>
-            <th id="show_id_column">ID</th>
-            <th class="th-sm">Phim</th>
-            <th class="th-sm">Rạp</th>
-            <th class="th-sm">Ngày Phát Hành</th>
-            <th class="th-sm">Ngày Kết Thúc</th>
-            <th id="action_column">Chiếu</th>
-        </tr>
-    </tfoot>
 </table>
 
 <script>

@@ -19,7 +19,7 @@ else if($_SESSION['admin_id']=='1'){
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>InstaMovies - Admin | Điều Khiển</title>
+  <title>Cinema - Admin | Dashboard</title>
   
   <!--Favicon-->
   <link rel="shortcut icon" type="image/png" href="images/icon.png">
@@ -233,7 +233,7 @@ else if($_SESSION['admin_id']=='1'){
                                             echo "<td>{$row['ticket_category']}</td>";
                                             echo "<td>"."Full: {$row['full_seat_count']}"."<br>"."Kids: {$row['kids_seat_count']}"."</td>";
                                             echo "<td>{$row['seat_number']}</td>";
-                                            echo "<td>Rs. ".number_format((float)$row['total_amount'], 2, '.', '')."</td>";
+                                            echo "<td>".number_format((float)$row['total_amount'], 3, '.', ''). " VND</td>";
                                             echo "<td style='text-align:center'>";
                                                 if($row['status'] == '2'){
                                                     echo "<span style='font-weight:bold;color:#c40099'>Sold<br>(&#10003;)</span>";
@@ -245,37 +245,19 @@ else if($_SESSION['admin_id']=='1'){
                                                     }
                                                 }else{
                                                     if ($timeDiff > 0){
-                                                        echo "<span style='font-weight:bold;color:green'>Booked</span>";
+                                                        echo "<span style='font-weight:bold;color:green'>Đã đặt</span>";
                                                     }else{
-                                                        echo "<span style='font-weight:bold;font-size:20px;color:green'>&#10003;</span>";
+                                                        echo "<span style='font-weight:bold;color:green'>Hoàn thành</span>";
                                                     }
                                                 }
                                                 echo "</td>";
                                         echo "</tr>";
                                     }
                                 }else{
-                                    echo "<tr><td colspan='13' style='padding-left:7px'>No bookings found.</td></tr>";
+                                    echo "<tr><td colspan='13' style='padding-left:7px'>Không có lịch sử đặt vé</td></tr>";
                                 }
                             ?>
                         </tbody>
-
-                        <tfoot class="grey lighten-1">
-                        <tr>
-                                <th>#</th>
-                                <th>Số vé</th>
-                                <th>Thời gian đặt</th>
-                                <th>Mã Người dùng</th>
-                                <th>Phim</th>
-                                <th>Rạp</th>
-                                <th>Ngày Phát Hành</th>
-                                <th>Thời gian chiếu</th>
-                                <th>Loại</th>
-                                <th>Giá Vé</th>
-                                <th>Ghế</th>
-                                <th>Tổng giá</th>
-                                <th>Trạng thái</th>
-                            </tr>
-                        </tfoot>
                     </table>
                 </div>
             </div>

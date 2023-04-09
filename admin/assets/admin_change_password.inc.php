@@ -7,7 +7,7 @@ $cur_password="";
 $new_password1="";
 $new_password2="";
 
-$db = mysqli_connect('localhost', 'root', '', 'instamovies');
+$db = mysqli_connect('localhost', 'root', '', 'moviebooking');
 if (isset($_POST['change_password'])) {
     $cur_password = mysqli_real_escape_string($db, $_POST['cur_password']);
     $new_password1 = mysqli_real_escape_string($db, $_POST['new_password1']);

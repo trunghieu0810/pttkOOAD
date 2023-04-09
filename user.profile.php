@@ -27,7 +27,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
 		
 		<link rel="shortcut icon" type="image/png" href="images/icon.png">
 		
-        <title>Cinema - <?php echo $user_row['first_name'];?> | Hồ sơ</title>
+        <title>Cinema</title>
         
         <style>
             .navbar {

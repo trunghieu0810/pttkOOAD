@@ -19,7 +19,7 @@ if(!isset($_SESSION['admin_id'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>InstaMovies - Admin | Dashboard</title>
+  <title>Cinema - Admin | Dashboard</title>
   <!--Favicon-->
   <link rel="shortcut icon" type="image/png" href="images/icon.png">
   <!-- Font Awesome -->
@@ -180,7 +180,7 @@ if(!isset($_SESSION['admin_id'])) {
         <div class="card">
             <h3 class="card-header text-center font-weight-bold text-uppercase py-3">Phim</h3>
             <div class="card-body">
-                <?php if($_SESSION['admin_id']=='1'){ ?>
+                <?php if($_SESSION['admin_id']){ ?>
                 <div class="add_new_movie">
                    <a href="movies.add.php"><button type="button" class="add_button">Thêm Phim</button></a>
                 </div>
@@ -198,19 +198,18 @@ if(!isset($_SESSION['admin_id'])) {
                                 <th class="th-sm">Loại</th>
                                 <th class="th-sm">Ngôn Ngữ</th>
                                 <th class="th-sm">Diễn Viên</th>
-                                <th class="th-sm">Quản Lý</th>
+                                <th class="th-sm">Đạo diễn</th>
                                 <th class="th-sm">Ngày Phát Hành</th>
                                 <th class="th-sm">Thời gian</th>
                                 <th class="th-sm">Tóm Tắt</th>
                                 <th class="th-sm">Trailer URL</th>
                                 <th class="th-sm">Poster</th>
                                 <th class="th-sm">Banner</th>
-                                <th class="th-sm">Hình nền</th>
                                 <th class="th-sm">Trạng thái</th>
                                 <th class="th-sm">Đánh giá</th>
                                 <th class="th-sm">Ngày bắt đầu</th>
                                 <th class="th-sm">Ngày kết thúc</th>
-                                <?php if($_SESSION['admin_id']=='1'){ ?><th class="th-sm">Chiếu</th><?php } ?>
+                                <?php if($_SESSION['admin_id']){ ?><th class="th-sm"></th><?php } ?>
                                  
                             </tr>
                         </thead>
@@ -239,9 +238,8 @@ if(!isset($_SESSION['admin_id'])) {
                                     ?>
                                 </td>
                                 <td><?php echo $row['trailer_url']; ?></td>
-                                <td><?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['poster']).'" style="height:30%;"/>'; ?></td>
-                                <td><?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['banner']).'" style="height:30%;"/>'; ?></td>
-                                <td><?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['wallpaper']).'" style="height:25%;"/>'; ?></td>
+                                <td><?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['poster']).'" style="height:25%; width: 100px;"/>'; ?></td>
+                                <td><?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['banner']).'" style="height:25%; width: 260px;"/>'; ?></td>
                                 <td><?php
                                     if ($row['status']=="0"){
                                         echo "Inactive";
@@ -252,38 +250,12 @@ if(!isset($_SESSION['admin_id'])) {
                                 <td><?php echo $row['avg_ratings']; ?></td>
                                 <td><?php echo $row['starting_date']; ?></td>
                                 <td><?php echo $row['ending_date']; ?></td>
-                                <?php if($_SESSION['admin_id']=='1'){ ?>
-                                <td id='action_column'><a href="movies.edit.php?movie_id=<?php echo $row['movie_id']; ?>"><button  type='button' align='center' class='edit_button'><i class='fa fa-edit'></i></button></a><a href="assets/movies.delete.php?movie_id=<?php echo $row['movie_id']; ?>"><button  type='button' class='delete_button'><i class='fa fa-trash'></i></button></a></td>
+                                <?php if($_SESSION['admin_id']){ ?>
+                                <td id='action_column'><a href="assets/movies.delete.php?movie_id=<?php echo $row['movie_id']; ?>"><button  type='button' class='delete_button'><i class='fa fa-trash'></i></button></a></td>
                                 <?php } ?>
                             </tr>
                            <?php }} ?>
                         </tbody>
-
-                        <tfoot class="grey lighten-1">
-                        <tr>
-                                <th id="row_num_column">#</th>
-                                <th id="id_column">ID</th>
-                                <th class="th-sm">Tên</th>
-                                <th class="th-sm">Năm</th>
-                                <th class="th-sm">Loại</th>
-                                <th class="th-sm">Ngôn Ngữ</th>
-                                <th class="th-sm">Diễn Viên</th>
-                                <th class="th-sm">Quản Lý</th>
-                                <th class="th-sm">Ngày Phát Hành</th>
-                                <th class="th-sm">Thời gian</th>
-                                <th class="th-sm">Tóm Tắt</th>
-                                <th class="th-sm">Trailer URL</th>
-                                <th class="th-sm">Poster</th>
-                                <th class="th-sm">Banner</th>
-                                <th class="th-sm">Hình nền</th>
-                                <th class="th-sm">Trạng thái</th>
-                                <th class="th-sm">Đánh giá</th>
-                                <th class="th-sm">Ngày bắt đầu</th>
-                                <th class="th-sm">Ngày kết thúc</th>
-                                <?php if($_SESSION['admin_id']=='1'){ ?><th class="th-sm">Chiếu</th><?php } ?>
-                                 
-                            </tr>
-                        </tfoot>
                     </table>
                 </div>
             </div>

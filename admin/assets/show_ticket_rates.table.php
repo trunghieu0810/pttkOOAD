@@ -13,7 +13,7 @@ include_once ('../db_config.php');
             <th class="th-sm">Loại Ghế</th>
             <th class="th-sm">Loại Vé</th>
             <th class="th-sm">Giá Vé</th>
-            <th id="action_column">Chiếu</th>
+            <th id="action_column"></th>
         </tr>
     </thead>
     <tbody>
@@ -52,9 +52,9 @@ include_once ('../db_config.php');
                             echo "<table align='center' style='margin:0; width:100%'>";
                             for ($j=0; $j<sizeof($ticket_price_array); $j++)
                             {
-                                $ticket_price = number_format((float)$ticket_price_array[$j], 2, '.', '');
-                            echo "<tr><td class='th-sm'>Rs. {$ticket_price}</td></tr>";
-                            }
+                                $ticket_price = number_format((float)$ticket_price_array[$j], 3, '.', '');
+                            echo "<tr><td class='th-sm'>{$ticket_price} VND</td></tr>";
+                            } 
                             echo "</table>";
                         echo "</td>";
                         echo "<td id='action_column'><button type='button' class='delete_button' showID='{$row['show_id']}'><i class='fa fa-trash'></i></button></td>";
@@ -63,18 +63,6 @@ include_once ('../db_config.php');
             }
         ?>
     </tbody>
-    <tfoot class="grey lighten-1">
-        <tr>
-            <th id="row_num_column">#</th>
-            <th id="show_id_column">ID</th>
-            <th class="th-sm">Phim</th>
-            <th class="th-sm">Rạp</th>
-            <th class="th-sm">Loại Ghế</th>
-            <th class="th-sm">Loại Vé</th>
-            <th class="th-sm">Giá Vé</th>
-            <th id="action_column">Chiếu</th>
-        </tr>
-    </tfoot>
 </table>
 
 <script>

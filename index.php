@@ -168,8 +168,8 @@ date_default_timezone_set("Asia/Colombo");
 									<div class="carousel-caption d-none d-md-block">
 													<p><button class="btn-0 btn-danger btn-lg" style="min-width:323px" disabled>'.$row['movie_name'].'</button></p>
 													<p>
-															<a class="btn-1 btn-warning btn-lg" style="text-decoration: none;" href="" role="button" data-src="'.$row['trailer_url'].'" data-toggle="modal" data-target="#trailerModal">WATCH TRAILER</a>
-															<a class="btn-2 btn-danger btn-lg" style="text-decoration: none;" href="buy_tickets.php?movieID='.$row['movie_id'].'" role="button">BUY TICKETS</a>
+															<a class="btn-1 btn-warning btn-lg" style="text-decoration: none;" href="" role="button" data-src="'.$row['trailer_url'].'" data-toggle="modal" data-target="#trailerModal">TRAILER</a>
+															<a class="btn-2 btn-danger btn-lg" style="text-decoration: none;" href="buy_tickets.php?movieID='.$row['movie_id'].'" role="button">MUA VÉ</a>
 													</p>
 											</div>
 									</div>
@@ -235,7 +235,7 @@ date_default_timezone_set("Asia/Colombo");
 								<a href="movie.php?movie_id=<?php echo $row_nowshowing['movie_id'];?>"><img src="<?php echo 'data:image/jpeg;base64,'.base64_encode($row_nowshowing['poster']);?>" alt="img" class="card-img-top"></a>
 								<div class="card-body">
 									<a class="movie_name" href="movie.php?movie_id=<?php echo $row_nowshowing['movie_id'];?>"><h5><?php echo $row_nowshowing['movie_name'] ?></h5></a>
-									<a class="btn btn-booking btn-danger" href="buy_tickets.php?movieID=<?php echo $row_nowshowing['movie_id'] ?>">Buy Tickets</a>
+									<a class="btn btn-booking btn-danger" href="buy_tickets.php?movieID=<?php echo $row_nowshowing['movie_id'] ?>">Mua Vé</a>
 								</div>
 							</div>
 						</div>

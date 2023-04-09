@@ -20,7 +20,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>InstaMovies - Admin | Dashboard</title>
+<title>Cinema - Admin | Dashboard</title>
 
 <!--Favicon-->
 <link rel="shortcut icon" type="image/png" href="images/icon.png">
@@ -109,12 +109,12 @@
 <?php include ('header.php'); ?>
 <!--Main Navigation-->
 
-<main class="pt-5 mx-lg-5">
+<!-- <main class="pt-5 mx-lg-5">
 <div class="container-fluid mt-5">
     <div class="card">   
         <div class="content" style="max-width:700px;display:block;margin:auto;margin-top:45px;margin-bottom:25px;">
             <div class="content-header" align="center" style="margin-bottom:40px">
-                <h2>Edit Movie</h2>
+                <h2>Sửa</h2>
             </div>
             <form id="add_form" action="assets/movies.edit.update.php" method="post" enctype="multipart/form-data">            
                 <div class="content-body">
@@ -125,7 +125,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="label" class="col-sm-3 col-form-label">Hình nền</label>
+                        <label for="label" class="col-sm-3 col-form-label">Banner</label>
                         <div class="col-sm-9">
                             <input name="wallpaper" id="wallpaper" type="file" id="" accept=".jpg,.jpeg,.png"/>                        
                         </div>
@@ -153,7 +153,7 @@
         </div>
     </div>
 </div>
-</main>
+</main> -->
 
 
 <!--Footer-->

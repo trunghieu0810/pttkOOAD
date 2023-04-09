@@ -18,7 +18,7 @@ if(isset($_POST['ticketID']) && !empty($_POST['ticketID'])) {
         $_SESSION['showtimeID'] = $row['showtime_id'];
         $_SESSION['showDate'] = $row['show_date'];
         $charge = $row['total_amount'] * 5/100;
-        $_SESSION['charge'] = number_format((float)$charge, 2, '.', '');
+        $_SESSION['charge'] = number_format((float)$charge, 3, '.', '');
         $_SESSION['ticketID'] = $row['ticket_id'];
 ?>
 
@@ -121,7 +121,7 @@ if(isset($_POST['ticketID']) && !empty($_POST['ticketID'])) {
 </div>
 
 <div style="margin-top:35px; padding:10px 15px 10px; color:#FFF; background:black; font-size: 20px; font-weight:500">
-    Phí: <span style="float:right">VND <?php echo $_SESSION['charge'] ?></span>
+    Phí: <span style="float:right"> <?php echo $_SESSION['charge'] ?>VND</span>
 </div>
 
 

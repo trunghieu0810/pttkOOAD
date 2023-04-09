@@ -10,7 +10,7 @@
             <th class="th-sm">Phim</th>
             <th class="th-sm">Rạp</th>
             <th id="showtime_column" class="th-sm">Thời Gian</th>
-            <th id="action_column">Chiếu</th>
+            <th id="action_column"></th>
         </tr>
     </thead>
     <tbody>
@@ -44,16 +44,6 @@
             }
         ?>
     </tbody>
-    <tfoot class="grey lighten-1">
-        <tr>
-            <th id="row_num_column">#</th>
-            <th id="show_id_column">ID</th>
-            <th class="th-sm">Phim</th>
-            <th class="th-sm">Rạp</th>
-            <th id="showtime_column" class="th-sm">Thời Gian</th>
-            <th id="action_column">Chiếu</th>
-        </tr>
-    </tfoot>
 </table>
 
 <script>

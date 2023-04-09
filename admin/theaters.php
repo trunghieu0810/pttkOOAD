@@ -20,7 +20,7 @@ else if($_SESSION['admin_id']=='1'){
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>InstaMovies - Admin | Dashboard</title>
+  <title>Cinema - Admin | Dashboard</title>
   
   <!--Favicon-->
   <link rel="shortcut icon" type="image/png" href="images/icon.png">
@@ -203,8 +203,8 @@ else if($_SESSION['admin_id']=='1'){
                                 <th class="th-sm">Cơ sở</th>
                                 <th class="th-sm">Đánh giá</th>
                                 <th class="th-sm">Trạng thái</th>
-                                <th class="th-sm">Mã admin</th>
-                                <th class="th-sm">ACTION</th>
+                                <th class="th-sm">Admin ID</th>
+                                <th class="th-sm"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -227,7 +227,7 @@ else if($_SESSION['admin_id']=='1'){
                                     $row['description'];
                                     ?>
                                 </td>
-                                <td><?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image']).'" style="height:30%;"/>'; ?></td>
+                                <td><?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image']).'" style="height:30%; width: 260px"/>'; ?></td>
                                 <td><?php echo $row['Facilities']; ?></td>
                                 <td><?php echo $row['avg_ratings']; ?></td>
                                 <td><?php echo $row['status']; ?></td>
@@ -235,26 +235,7 @@ else if($_SESSION['admin_id']=='1'){
                                 <td id='action_column'><a href="assets/theaters.delete.php?theatre_id=<?php echo $row['theatre_id']; ?>"><button  type='button' class='delete_button'><i class='fa fa-trash'></i></button></a></td>
                             </tr>
                            <?php }} ?>
-                            
                         </tbody>
-                        <tfoot class="grey lighten-1">
-                        <tr>
-                                <th id="row_num_column">#</th>
-                                <th id="id_column">ID</th>
-                                <th class="th-sm">Tên</th>
-                                <th class="th-sm">Thành Phố</th>
-                                <th class="th-sm">Địa Chỉ</th>
-                                <th class="th-sm">Số Điện Thoại</th>
-                                <th class="th-sm">Email</th>
-                                <th class="th-sm">Mô Tả</th>
-                                <th class="th-sm">Hình ảnh</th>
-                                <th class="th-sm">Cơ sở</th>
-                                <th class="th-sm">Đánh giá</th>
-                                <th class="th-sm">Trạng thái</th>
-                                <th class="th-sm">Mã admin</th>
-                                <th class="th-sm">ACTION</th>
-                            </tr>
-                        </tfoot>
                     </table>
                 </div>
             </div>

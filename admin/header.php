@@ -1,7 +1,7 @@
 <header>
 
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark grey darken-4 scrolling-navbar">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark grey darken-2 scrolling-navbar">
       <div class="container-fluid">
 
         <!-- Brand -->
@@ -35,7 +35,7 @@
                     <a href="carousel.php" class="item-7">
                         <i class="fas fa-images mr-3"></i>Carousel</a>
                     <a href="offers.php" class="item-8">
-                        <i class="fas fa-tags mr-3"></i>Đề xuất</a>
+                        <i class="fas fa-tags mr-3"></i>Ưu đãi</a>
                 </div>
               <?php } else { ?>
                 <div class="">
@@ -48,17 +48,17 @@
                     <a href="theater_seat_categories.php" class="item-3">
                         <i class="fas fa-table mr-3"></i>Sơ đồ ghế ngồi</a>
                     <a href="shows.php" class="item-4">
-                        <i class="fas fa-calendar-alt mr-3"></i>Shows</a>
+                        <i class="fas fa-calendar-alt mr-3"></i>Lịch chiếu</a>
                     <a href="showtimes.php" class="item-5">
                         <i class="fas fa-clock mr-3"></i>Thời gian chiếu</a>
                     <a href="show_ticket_rates.php" class="item-6">
                         <i class="fas fa-money-bill-alt mr-3"></i>Giá vế</a>
                     <a href="offers.php" class="item-8">
-                        <i class="fas fa-tags mr-3"></i>Đề xuất</a>
+                        <i class="fas fa-tags mr-3"></i>Ưu đãi</a>
                     <a href="bookings.php" class="item-9">
-                        <i class="fas fa-ticket-alt mr-3"></i>Đặt trước</a>
+                        <i class="fas fa-ticket-alt mr-3"></i>Lịch sử đặt vé</a>
                     <a href="payments.php" class="item-11">
-                        <i class="fas fa-coins mr-3"></i>Chuyển khoản</a>
+                        <i class="fas fa-coins mr-3"></i>Thanh toán</a>
                     <a href="refunds.php" class="item-10">
                         <i class="fas fa-coins mr-3"></i>Hoàn tiền</a>
                 </div>
@@ -73,7 +73,7 @@
           <ul class="navbar-nav nav-flex-icons">
             <li class="nav-item">
               <a class="nav-link logout-button" href="admin.logout.php">
-                Logout
+                Đăng xuất
               </a>
             </li>
           </ul>
@@ -113,17 +113,17 @@
             <a href="theater_seat_categories.php" class="list-group-item item-3">
                 <i class="fas fa-table mr-3"></i>Sơ đồ ghế</a>
             <a href="shows.php" class="list-group-item item-4">
-                <i class="fas fa-calendar-alt mr-3"></i>Shows</a>
+                <i class="fas fa-calendar-alt mr-3"></i>Lịch chiếu</a>
             <a href="showtimes.php" class="list-group-item item-5">
                 <i class="fas fa-clock mr-3"></i>Thời gian chiếu</a>
             <a href="show_ticket_rates.php" class="list-group-item item-6">
                 <i class="fas fa-money-bill-alt mr-3"></i>Giá vé</a>
             <a href="offers.php" class="list-group-item item-8">
-                <i class="fas fa-tags mr-3"></i>Đề xuất</a>
+                <i class="fas fa-tags mr-3"></i>Ưu đãi</a>
             <a href="bookings.php" class="list-group-item item-9">
-                <i class="fas fa-ticket-alt mr-3"></i>Đặt trước</a>
+                <i class="fas fa-ticket-alt mr-3"></i>Lịch sử đặt vé</a>
             <a href="payments.php" class="list-group-item item-11">
-                <i class="fas fa-coins mr-3"></i>Chuyển Khoản</a>
+                <i class="fas fa-coins mr-3"></i>Thanh toán</a>
             <a href="refunds.php" class="list-group-item item-10">
                 <i class="fas fa-coins mr-3"></i>Hoàn tiền</a>
         </div>

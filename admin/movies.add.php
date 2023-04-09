@@ -9,7 +9,7 @@ session_start();
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>InstaMovies - Admin | Dashboard</title>
+  <title>Cinema - Admin | Dashboard</title>
   
   <!--Favicon-->
   <link rel="shortcut icon" type="image/png" href="images/icon.png">
@@ -129,12 +129,8 @@ session_start();
                         <label for="label" class="col-sm-3 col-form-label">Ngôn Ngữ</label>
                         <div class="col-sm-9">
                         <select class="form-control " name="language" id="language">
-                            <option value="English" for="language">English</option>
-                            <option value="Tamil" for="language">Tamil</option>
-                            <option value="Sinhala" for="language">Sinhala</option>
-                            <option value="Telugu" for="language">Telugu</option>
-                            <option value="Malayalam" for="language">Malayalam</option>
-                            <option value="Hindi" for="language">Hindi</option>
+                            <option value="English" for="language">Tiếng Anh</option>
+                            <option value="Tamil" for="language">Việt Nam</option>
                         </select>
                     
                         </div>
@@ -146,7 +142,7 @@ session_start();
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="label" class="col-sm-3 col-form-label">Quản Lý</label>
+                        <label for="label" class="col-sm-3 col-form-label">Đạo diễn</label>
                         <div class="col-sm-9">
                             <input  class="form-control" type="text" name="director" title="include director name! " required>
                         </div>
@@ -188,7 +184,7 @@ session_start();
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="label" class="col-sm-3 col-form-label">Khẩu hiệu</label>
+                        <label for="label" class="col-sm-3 col-form-label">Banner</label>
                         <div class="col-sm-9">
                             <input name="banner" type="file" id="" accept=".jpg,.jpeg,.png" required/>
                         </div>
@@ -209,7 +205,7 @@ session_start();
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="label" class="col-sm-3 col-form-label">Ngày phát hành</label>
+                        <label for="label" class="col-sm-3 col-form-label">Ngày khởi chiếu</label>
                         <div class="col-sm-9">
                             <input class="form-control" type="date" name="starting_date" title="include release_date! " min=<?php echo date('Y-m-d'); ?> required>
                         </div>
