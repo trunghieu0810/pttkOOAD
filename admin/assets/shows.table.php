@@ -9,9 +9,9 @@ include_once ('../db_config.php');
             <th id="show_id_column">ID</th>
             <th class="th-sm">Phim</th>
             <th class="th-sm">Rạp</th>
-            <th class="th-sm">Ngày Phát Hành</th>
-            <th class="th-sm">Ngày Kết Thúc</th>
-            <th id="action_column">Chiếu</th>
+            <th class="th-sm">Ngày khởi chiếu</th>
+            <th class="th-sm">Ngày kết thúc</th>
+            <th id="action_column"></th>
         </tr>
     </thead>
     <tbody>

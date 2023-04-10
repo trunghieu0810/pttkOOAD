@@ -34,7 +34,7 @@ include_once ('db_config.php');
 							margin-bottom: 25px;
 						}
 						.movie_image {
-							width:100%;
+							width:90%;
 						}
 						@media (max-width: 480px){
 							.movie_image {

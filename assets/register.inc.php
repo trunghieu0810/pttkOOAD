@@ -58,10 +58,10 @@ if (isset($_POST['register'])) {
 
         $to = $email;
         $subject = "User Registration - Verification";
-        $msg = 'Thanks for creating an account with InstaMovies! Please verify your account by using the verification code below.';
+        $msg = 'Thanks for creating an account with Cinema! Please verify your account by using the verification code below.';
         $msg .= 'Verification Code: '.$x;
         
-        $headers = "From: support@instamovies.cf";
+        $headers = "From: support@cinema.com";
         mail($to, $subject, $msg, $headers);
 
         header('location: register.verification.php?email=' . $email);

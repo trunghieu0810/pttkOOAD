@@ -34,7 +34,7 @@ if (isset($_POST['reset-password'])) {
     echo "<script>alert('Enter your email address!');</script>";
     array_push($errors, "Your email is required");
   }else if(mysqli_num_rows($results) <= 0) {
-    echo "<script>alert('Your are not registered with InstaMovies!');</script>";
+    echo "<script>alert('Your are not registered with Cinema!');</script>";
     array_push($errors, "Sorry, no user exists in our system with that email");
   }
   // generate a unique random token of length 100
@@ -49,11 +49,11 @@ if (isset($_POST['reset-password'])) {
 
     // Send email to user with the token in a link they can click on
     $to = $email;
-    $subject = "Password Recovery - InstaMovies";
+    $subject = "Password Recovery";
     $msg = "We have just received your request to reset the password for your account. In order to reset password please use the confirmation code below. If you haven't ask for password reset service just ignore this message.";
     $msg .= 'Confirmation Code: '.$x;
     
-    $headers = "From: support@instamovies.cf";
+    $headers = "From: support@cinema.com";
     mail($to, $subject, $msg, $headers);
 
     header('location: login.forgot_password.reset_password.php?email=' . $email);

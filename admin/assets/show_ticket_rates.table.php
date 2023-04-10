@@ -10,9 +10,9 @@ include_once ('../db_config.php');
             <th id="show_id_column">ID</th>
             <th class="th-sm">Phim</th>
             <th class="th-sm">Rạp</th>
-            <th class="th-sm">Loại Ghế</th>
+            <th class="th-sm">Phòng chiếu</th>
             <th class="th-sm">Loại Vé</th>
-            <th class="th-sm">Giá Vé</th>
+            <th class="th-sm">Giá</th>
             <th id="action_column"></th>
         </tr>
     </thead>

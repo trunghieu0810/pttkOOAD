@@ -104,12 +104,12 @@ include ("assets/offers.add.insert.php");
     <div class="card">   
         <div class="content" style="max-width:700px;display:block;margin:auto;margin-top:45px;margin-bottom:25px;">
             <div class="content-header" align="center" style="margin-bottom:40px">
-                <h2>Thêm Đề Xuất</h2>
+                <h2>Thêm Ưu Đãi</h2>
             </div>
             <form id="add_form" method="post" enctype="multipart/form-data">
                 <div class="content-body">
                     <div class="form-group row">
-                        <label for="label" class="col-sm-3 col-form-label">Tên Đề Xuất</label>
+                        <label for="label" class="col-sm-3 col-form-label">Tên ưu đãi</label>
                         <div class="col-sm-9">
                             <input class="form-control" type="text" name="name" id="name" required>
                         </div>

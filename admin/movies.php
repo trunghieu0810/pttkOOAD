@@ -195,19 +195,19 @@ if(!isset($_SESSION['admin_id'])) {
                                 <th id="id_column">ID</th>
                                 <th class="th-sm">Tên</th>
                                 <th class="th-sm">Năm</th>
-                                <th class="th-sm">Loại</th>
-                                <th class="th-sm">Ngôn Ngữ</th>
-                                <th class="th-sm">Diễn Viên</th>
+                                <th class="th-sm">Thể loại</th>
+                                <th class="th-sm">Ngôn ngữ</th>
+                                <th class="th-sm">Diễn viên</th>
                                 <th class="th-sm">Đạo diễn</th>
-                                <th class="th-sm">Ngày Phát Hành</th>
-                                <th class="th-sm">Thời gian</th>
-                                <th class="th-sm">Tóm Tắt</th>
+                                <th class="th-sm">Ngày phát hành</th>
+                                <th class="th-sm">Thời lượng phim</th>
+                                <th class="th-sm">Tóm tắt</th>
                                 <th class="th-sm">Trailer URL</th>
                                 <th class="th-sm">Poster</th>
                                 <th class="th-sm">Banner</th>
                                 <th class="th-sm">Trạng thái</th>
                                 <th class="th-sm">Đánh giá</th>
-                                <th class="th-sm">Ngày bắt đầu</th>
+                                <th class="th-sm">Ngày khởi chiếu</th>
                                 <th class="th-sm">Ngày kết thúc</th>
                                 <?php if($_SESSION['admin_id']){ ?><th class="th-sm"></th><?php } ?>
                                  
@@ -233,7 +233,7 @@ if(!isset($_SESSION['admin_id'])) {
                                 <td><?php echo $row['running_time']; ?></td>
                                 <td ><?php
                                     echo strlen($row['synopsis']) >= 110 ? 
-                                    substr($row['synopsis'], 0, 100).'...' : 
+                                    substr($row['synopsis'], 0, 100).' ...' : 
                                     $row['synopsis'];
                                     ?>
                                 </td>

@@ -371,10 +371,10 @@ else if($_SESSION['admin_id']=='1'){
 
         <!-- Editable table -->
         <div class="card">
-            <h3 class="card-header text-center font-weight-bold text-uppercase py-3">Danh mục chỗ ngồi trong rạp</h3>
+            <h3 class="card-header text-center font-weight-bold text-uppercase py-3">Sơ đồ ghế ngồi</h3>
             <div class="card-body">
                 <div class="add_new_seat_category">
-                    <button type="button" class="add_button" data-toggle="modal" data-target="#addSeatCategoryModal">Thêm hạng ghế mới</button>
+                    <button type="button" class="add_button" data-toggle="modal" data-target="#addSeatCategoryModal">Thêm sơ đồ mới</button>
                 </div>
                 <div id="output" class="table-responsive">
                     <!--Table Link-->
@@ -391,7 +391,7 @@ else if($_SESSION['admin_id']=='1'){
             <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
                 <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addSeatCategoryModalLongTitle">Thêm hạng mục chỗ ngồi trong rạp</h5>
+                    <h5 class="modal-title" id="addSeatCategoryModalLongTitle">Thêm sơ đồ ghế mới</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
@@ -404,7 +404,7 @@ else if($_SESSION['admin_id']=='1'){
                                 <label for="theater_label" class="col-sm-3 col-form-label">Rạp:</label>
                                 <div class="col-sm-9">
                                     <select id="theater" name="theater" class="form-control" required="required">
-                                        <option value="" disabled selected>Chọn Rạp</option>
+                                        <option value="" disabled selected>Chọn rạp</option>
                                         <?php
                                             $sql_theaters_list = "SELECT * FROM `tbl_theatres` WHERE admin_id = '{$_SESSION['admin_id']}'";
                                             $result_theaters_list = mysqli_query($db, $sql_theaters_list);
@@ -422,7 +422,7 @@ else if($_SESSION['admin_id']=='1'){
                                 <label for="num_of_rows_label" class="col-sm-5 col-form-label">Số hàng ghế:</label>
                                 <div class="col-sm-7">
                                     <select id="num_of_rows" name="num_of_rows" class="form-control" required="required">
-                                        <option value="" disabled selected>Chọn Số Hàng ghế</option>
+                                        <option value="" disabled selected>Chọn số hàng ghế</option>
                                         <?php
                                             for ($r = 1; $r <= 20; $r++)
                                             {
@@ -436,10 +436,10 @@ else if($_SESSION['admin_id']=='1'){
 
                         <div class="form-row">
                             <div class="form-group row col-md-6">
-                                <label for="seat_category_label" class="col-sm-3 col-form-label">Hạng Ghế:</label>
+                                <label for="seat_category_label" class="col-sm-3 col-form-label">Phòng chiếu</label>
                                 <div class="col-sm-9">
                                     <select id="seat_category" name="seat_category" class="form-control" required="required">
-                                        <option value="" disabled selected>Chọn Hạng Ghế</option>
+                                        <option value="" disabled selected>Chọn phòng</option>
                                         <?php
                                             $sql_common_seat_categories = "SELECT * FROM `tbl_common_seat_categories`";
                                             $result_common_seat_categories = mysqli_query($db, $sql_common_seat_categories);

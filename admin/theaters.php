@@ -194,11 +194,11 @@ else if($_SESSION['admin_id']=='1'){
                                 <th id="row_num_column">#</th>
                                 <th id="id_column">ID</th>
                                 <th class="th-sm">Tên</th>
-                                <th class="th-sm">Thành Phố</th>
-                                <th class="th-sm">Địa Chỉ</th>
-                                <th class="th-sm">Số Điện Thoại</th>
+                                <th class="th-sm">Thành phố</th>
+                                <th class="th-sm">Địa chỉ</th>
+                                <th class="th-sm">Số điện thoại</th>
                                 <th class="th-sm">Email</th>
-                                <th class="th-sm">Mô Tả</th>
+                                <th class="th-sm">Mô tả</th>
                                 <th class="th-sm">Hình ảnh</th>
                                 <th class="th-sm">Cơ sở</th>
                                 <th class="th-sm">Đánh giá</th>

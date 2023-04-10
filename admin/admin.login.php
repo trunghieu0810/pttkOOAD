@@ -24,7 +24,8 @@ if(!isset($_SESSION['admin_id'])){
 		<!--Favicon Image-->
 		<link rel="shortcut icon" type="image/png" href="images/icon.png">
 		
-		<title>Cinema</title>
+		<title>Cinema - Admin | Dashboard</title>
+  </title>
 
     <style>
         body {

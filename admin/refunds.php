@@ -178,7 +178,7 @@ else if($_SESSION['admin_id']=='1'){
 
         <!-- Editable table -->
         <div class="card">
-            <h3 class="card-header text-center font-weight-bold text-uppercase py-3">Hoàn tiền</h3>
+            <h3 class="card-header text-center font-weight-bold text-uppercase py-3">Hoàn Tiền</h3>
             <div class="card-body">
                 
                 <br>
@@ -187,9 +187,9 @@ else if($_SESSION['admin_id']=='1'){
                         <thead class="grey lighten-1" style="text-align:center">
                             <tr>
                                 <th>#</th>
-                                <th>Mã Người Dùng</th>
+                                <th>Mã người dùng</th>
                                 <th>Thời gian giao dịch</th>
-                                <th>Số Tiền</th>
+                                <th>Số tiền</th>
                                 <th>Trạng thái</th>
                                 <th></th>
                             </tr>

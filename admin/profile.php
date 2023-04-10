@@ -133,7 +133,7 @@ header('location:movies.php')
     <div class="sidebar-fixed position-fixed">
 
       <div class="logo-wrapper-custom">
-        <img src="images/logo.png" width="30px" height="30px" class="img-fluid" alt="InstaMovies Private Limited"> InstaMovies
+        <img src="images/logo.png" width="30px" height="30px" class="img-fluid" alt="Cinema Private Limited"> Cinema
       </div>
 
       <div class="list-group list-group-flush">
@@ -148,15 +148,15 @@ header('location:movies.php')
         <a href="theater_seat_categories.php" class="list-group-item">
             <i class="fas fa-table mr-3"></i>Sơ đồ ghế ngồi</a>
         <a href="shows.php" class="list-group-item">
-            <i class="fas fa-calendar-alt mr-3"></i>Shows</a>
+            <i class="fas fa-calendar-alt mr-3"></i>Lịch chiếu</a>
         <a href="showtimes.php" class="list-group-item">
             <i class="fas fa-clock mr-3"></i>Thời gian</a>
         <a href="show_ticket_rates.php" class="list-group-item">
             <i class="fas fa-money-bill-alt mr-3"></i>Giá vé</a>
         <a href="carousel.php" class="list-group-item">
-            <i class="fas fa-images mr-3"></i>Carousel</a>
+            <i class="fas fa-images mr-3"></i>Slide</a>
         <a href="offers.php" class="list-group-item">
-            <i class="fas fa-images mr-3"></i>Đề xuất</a>
+            <i class="fas fa-images mr-3"></i>Ưu đãi</a>
         <a href="bookings.php" class="list-group-item">
             <i class="fas fa-ticket-alt mr-3"></i>Đặt trước</a>
         <a href="refunds.php" class="list-group-item">
@@ -214,7 +214,7 @@ header('location:movies.php')
 
     <!--Copyright-->
     <div class="footer-copyright py-3">
-      <font color="white">© 2019 InstaMovies. All Rights Reserved.</font>
+      <font color="white">© 2023 Cinema. All Rights Reserved.</font>
     </div>
     <!--/.Copyright-->
 

@@ -177,11 +177,11 @@ if(!isset($_SESSION['admin_id'])) {
 
         <!-- Editable table -->
         <div class="card">
-            <h3 class="card-header text-center font-weight-bold text-uppercase py-3">Đề xuất</h3>
+            <h3 class="card-header text-center font-weight-bold text-uppercase py-3">Ưu Đãi</h3>
             <div class="card-body">
                 <?php if($_SESSION['admin_id']=='1'){ ?>
                 <div class="add_new_offer">
-                   <a href="offers.add.php"> <button type="button" class="add_button" data-toggle="modal" data-target="#addModal">Add New Offer</button></a>
+                   <a href="offers.add.php"> <button type="button" class="add_button" data-toggle="modal" data-target="#addModal">Thêm ưu đãi</button></a>
                 </div>
                 <?php } ?>
                 
@@ -191,7 +191,7 @@ if(!isset($_SESSION['admin_id'])) {
                     <table id="table" class="table table-striped table-bordered table-sm">
                         <thead class="grey lighten-1">
                             <tr>
-                                <th id="row_num_column">Stt</th>
+                                <th id="row_num_column">#</th>
                                 <th id="id_column">ID</th>
                                 <th class="th-sm">Tên</th>
                                 <th class="th-sm">Ngày bắt đầu</th>
@@ -199,7 +199,7 @@ if(!isset($_SESSION['admin_id'])) {
                                 <th class="th-sm">Miêu tả</th>
                                 <th class="th-sm">Hình ảnh</th>
                                 <th class="th-sm">Banner</th>
-                                <?php if($_SESSION['admin_id']=='1'){ ?><th class="th-sm">ACTION</th><?php } ?>
+                                <?php if($_SESSION['admin_id']=='1'){ ?><th class="th-sm"></th><?php } ?>
                             </tr>
 
                         </thead>
@@ -230,19 +230,6 @@ if(!isset($_SESSION['admin_id'])) {
                             <?php }} ?>
                             
                         </tbody>
-                        <tfoot class="grey lighten-1">
-                        <tr>
-                                <th id="row_num_column">Stt</th>
-                                <th id="id_column">ID</th>
-                                <th class="th-sm">Tên</th>
-                                <th class="th-sm">Ngày bắt đầu</th>
-                                <th class="th-sm">Ngày kết thúc</th>
-                                <th class="th-sm">Miêu tả</th>
-                                <th class="th-sm">Hình ảnh</th>
-                                <th class="th-sm">Banner</th>
-                                <?php if($_SESSION['admin_id']=='1'){ ?><th class="th-sm">ACTION</th><?php } ?>
-                            </tr>
-                        </tfoot>
                     </table>
                 </div>
             </div>

@@ -9,7 +9,7 @@
             <th id="show_id_column">ID</th>
             <th class="th-sm">Phim</th>
             <th class="th-sm">Rạp</th>
-            <th id="showtime_column" class="th-sm">Thời Gian</th>
+            <th id="showtime_column" class="th-sm">Giờ chiếu</th>
             <th id="action_column"></th>
         </tr>
     </thead>

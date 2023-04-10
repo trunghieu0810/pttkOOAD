@@ -65,7 +65,7 @@ if(isset($_POST["sel_date"]) && isset($_POST['movie_id']) && !empty($_POST["sel_
     }
     else{
         echo "<div class='alert alert-danger' role='alert' style='margin-top:18px'>
-            Theaters / Showtimes are not available for this date. Please check back again later.
+        Rạp chiếu phim / Lịch chiếu không có sẵn cho ngày này. Vui lòng kiểm tra lại sau.
             </div>";
     }    
 }

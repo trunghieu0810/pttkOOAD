@@ -103,7 +103,7 @@ session_start();
     <div class="card">   
         <div class="content" style="max-width:700px;display:block;margin:auto;margin-top:45px;margin-bottom:25px;">
             <div class="content-header" align="center" style="margin-bottom:40px">
-                <h2>Add New Movie</h2>
+                <h2>Thêm Phim Mới</h2>
             </div>
             <form id="add_form" action="assets/movies.add.insert.php" method="post" enctype="multipart/form-data" onsubmit="return checkDate(this)">            
                 <div class="content-body">
@@ -114,19 +114,19 @@ session_start();
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="label" class="col-sm-3 col-form-label">Năm</label>
+                        <label for="label" class="col-sm-3 col-form-label">Năm phát hành</label>
                         <div class="col-sm-9">
                             <input type='number' class="form-control"  name="year" value="<?php echo date('Y')?>" required>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="label" class="col-sm-3 col-form-label">Loại</label>
+                        <label for="label" class="col-sm-3 col-form-label"> Thể loại</label>
                         <div class="col-sm-9">
                             <input  class="form-control" type="text" name="category" title="Three or more letter" required>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="label" class="col-sm-3 col-form-label">Ngôn Ngữ</label>
+                        <label for="label" class="col-sm-3 col-form-label">Ngôn ngữ</label>
                         <div class="col-sm-9">
                         <select class="form-control " name="language" id="language">
                             <option value="English" for="language">Tiếng Anh</option>
@@ -148,7 +148,7 @@ session_start();
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="label" class="col-sm-3 col-form-label">Ngày Phát Hành</label>
+                        <label for="label" class="col-sm-3 col-form-label">Ngày phát hành</label>
                         <div class="col-sm-9">
                             <input  class="form-control" type="date" name="release_date" title="include release_date! " required>
                         </div>
@@ -196,7 +196,7 @@ session_start();
                         </div>
                     </div>     -->
                     <div class="form-group row">
-                        <label for="label" class="col-sm-3 col-form-label">Trạng Thái</label>
+                        <label for="label" class="col-sm-3 col-form-label">Trạng thái</label>
                         <div class="col-sm-9">
                             <select class="form-control " name="status" required>
                                 <option value="0" for="status">0</option>
@@ -219,7 +219,7 @@ session_start();
                 </div>
                 <hr style="margin:30px 0 20px">
                 <div class="content-footer" align="center">
-                    <input type="submit" name="add" value="add" class="btn btn-primary">
+                    <input type="submit" name="add" value="Thêm" class="btn btn-primary">
                     <a onclick="location.href='movies.php'" class="btn btn-secondary">Hủy</a>
                 </div>
             </form>

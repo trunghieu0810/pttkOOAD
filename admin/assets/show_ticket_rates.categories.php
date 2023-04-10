@@ -9,7 +9,7 @@ while($row_category = mysqli_fetch_array($result_category))
 ?>
     <div id="category">
         <div class="form-group row">
-            <label for="category_label" class="col-sm-4 col-form-label">Loại Ghế:</label>
+            <label for="category_label" class="col-sm-4 col-form-label">Phòng chiếu:</label>
             <div class="col-sm-8">
                 <input type='text' class="form-control" value="<?php echo $row_category['category_name']; ?>" disabled="disabled">
                 <input type='text' class="form-control" id='seat_category' name="seat_category[]" value="<?php echo $row_category['seat_category_id']; ?>" style="display: none;">

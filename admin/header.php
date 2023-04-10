@@ -33,7 +33,7 @@
                     <a href="movies.php" class="item-1">
                         <i class="fas fa-film mr-3"></i>Phim</a>
                     <a href="carousel.php" class="item-7">
-                        <i class="fas fa-images mr-3"></i>Carousel</a>
+                        <i class="fas fa-images mr-3"></i></a>
                     <a href="offers.php" class="item-8">
                         <i class="fas fa-tags mr-3"></i>Ưu đãi</a>
                 </div>

@@ -194,7 +194,7 @@ else if($_SESSION['admin_id']=='1'){
                                 <th>Tên</th>
                                 <th>Số Điện Thoại</th>
                                 <th>Email</th>
-                                <th>Loại Thanh Toán</th>
+                                <th>Hình thức</th>
                                 <th>Tổng Giá Trị</th>
                                 <th>Thuế Dịch Vụ</th>
                                 <th>Số Tiền Thanh Toán</th>

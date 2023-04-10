@@ -9,7 +9,7 @@ echo '<table class="table seat_map_wrap">';
         echo '<tr>
             <td colspan="2">
                 <div class="screen_area">
-                    <span>THEATER SCREEN</span>
+                    <span>MÀN HÌNH</span>
                 </div>
             </td>
         </tr>';

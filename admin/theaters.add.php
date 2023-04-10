@@ -174,19 +174,19 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="label" class="col-sm-3 col-form-label">Thành Phố</label>
+                    <label for="label" class="col-sm-3 col-form-label">Thành phố</label>
                     <div class="col-sm-9">
                         <input type='text' class="form-control" type="text" name="city"   title="Three or more letter" required>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="label" class="col-sm-3 col-form-label">Địa Chỉ</label>
+                    <label for="label" class="col-sm-3 col-form-label">Địa chỉ</label>
                     <div class="col-sm-9">
                         <input type='text' class="form-control" type="text" name="address"   title="Three or more letter" required>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="label" class="col-sm-3 col-form-label">Số Điện Thoại</label>
+                    <label for="label" class="col-sm-3 col-form-label">Số điện thoại</label>
                     <div class="col-sm-9">
                         <input type='text' class="form-control"type="text" name="telephone"  pattern="[0-9]{10}" title="only 10 digit number" required>
                     </div>
@@ -198,7 +198,7 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="label" class="col-sm-3 col-form-label">Mô Tả</label>
+                    <label for="label" class="col-sm-3 col-form-label">Mô tả</label>
                     <div class="col-sm-9">
                         <input type='textbox' class="form-control" type="text" name="description" title="include description" required>
                     </div>
@@ -210,13 +210,13 @@
                     </div>
                 </div>
                     <div class="form-group row">
-                    <label for="label" class="col-sm-3 col-form-label">Cơ Sở</label>
+                    <label for="label" class="col-sm-3 col-form-label">Cơ cở</label>
                     <div class="col-sm-9">
                         <input type='text' class="form-control" type="text" name="Facilities" title="include the facilities available" required>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="label" class="col-sm-3 col-form-label">Trạng Thái</label>
+                    <label for="label" class="col-sm-3 col-form-label">Trạng thái</label>
                     <div class="col-sm-9">
                         <select class="form-control " name="status" required>
                             <option value="0" for="status">0</option>
