@@ -28,10 +28,10 @@ if (isset($_POST['change_password'])) {
             header("location: assets/login.forgot_password.reset_password.success.php");
             
         }else{
-            echo "<script>alert('Password does not match. Check and try again!');</script>";
+            echo "<script>alert('Mật khẩu không khớp, hãy thử lại!');</script>";
         }
     }else{
-        echo "<script>alert('Confirmation code is invalid!');</script>";
+        echo "<script>alert('Mã xác nhận không chính xác!');</script>";
     }
 }
 

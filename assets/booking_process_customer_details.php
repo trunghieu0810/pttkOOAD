@@ -353,7 +353,7 @@ $_SESSION['showDate'];
                     <div class="input-group-prepend">
                         <span class="input-group-text">Mã giảm giá</span>
                     </div>
-                    <input type="text" class="form-control" id="coupon_code" placeholder="Coupon Code">
+                    <input type="text" class="form-control" id="coupon_code">
                 </div>
             <?php } ?>
 
@@ -534,12 +534,12 @@ $_SESSION['showDate'];
                     // alert(numberfilter.test(customerphone));
                     if (!numberfilter.test(customerphone) || customerphone.length!=10) {
                         jQuery(".error-form").show();
-                        jQuery(".error-form").html("Invalid phone number !");
+                        jQuery(".error-form").html("Số điện thoại không hợp lệ!");
 
                     }else{
                         if(!emailfilter.test(customeremail)){
                             jQuery(".error-form").show();
-                            jQuery(".error-form").html("Invalid email !");
+                            jQuery(".error-form").html("Email không hợp lệ!");
                         }else{
                             jQuery(".error-form").hide();
                             saveUserData();
@@ -547,7 +547,7 @@ $_SESSION['showDate'];
                     }
                 }else{
                     jQuery(".error-form").show();
-                    jQuery(".error-form").html("Fields can not be empty !");
+                    jQuery(".error-form").html("Các trường không được để trống!");
                 }
             }
 

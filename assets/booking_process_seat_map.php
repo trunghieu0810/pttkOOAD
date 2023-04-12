@@ -59,7 +59,7 @@ date_default_timezone_set("Asia/Colombo");
                 </div>
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 total-right">
                     <h4>
-                    Tổng: VND <span class="amount_value"><!--Total Amount Value--></span>
+                    Tổng: <span class="amount_value"> VND<!--Total Amount Value--></span>
                     </h4>
                 </div>
             </div>
@@ -185,294 +185,294 @@ date_default_timezone_set("Asia/Colombo");
 </div>
 
 <style>
-.modal .modal-dialog {
-    height: auto !important;
-}
-.modal_content_theater_seat_map {
-    background-color: #FFF;
-}
-.modal_content_theater_seat_map .modal-header{
-    border-radius: 0;
-	border-bottom: 2px solid #3e3e3e;
-	background-color: #000;
-	min-height: 55px;
-}
-.modal_content_theater_seat_map .modal-header h6 {
-	color: #fff;
-	display: inline-block;
-	margin-top: 8px;
-	user-select: none;
-}
-.modal_content_theater_seat_map .close {
-	font-size: 38px;
-	color: #fff;
-    opacity: 1;
-    outline:none;
-}
-.modal_content_theater_seat_map .modal-body {
-	background-color: #131313;
-	user-select: none;
-}
-.modal_content_theater_seat_map .modal-body .movie-data {
-	margin-top: 15px;
-	margin-bottom: 25px;
-	text-align: center;
-}
-.modal_content_theater_seat_map .modal-body .movie-data h2{
-	font-size: 28px;
-	font-family: sans-serif;
-	color: #fff;
-	font-weight: 300;
-}
-.modal_content_theater_seat_map .modal-body .movie-data h4{
-	font-size: 14px;
-	font-family: sans-serif;
-	color: #fff;
-	font-weight: 500;
-	padding-top: 0;
-}
-.modal_content_theater_seat_map .modal-body hr {
-	border-top: 1px solid #232323;
-	width: 33%;
-}
-.modal_content_theater_seat_map .modal-body .booking_category_showtime {
-	padding-top: 7px;
-	padding-bottom: 7px;
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.modal_content_theater_seat_map .modal-body .booking_category_showtime .ticket_count_display{
-	display: inline;
-}
-.modal_content_theater_seat_map .modal-body .booking_category_showtime .ticket_count_display .ticket_count_label {
-	display: inline;
-	color: #FFF;
-}
-.modal_content_theater_seat_map .modal-body .booking_category_showtime .ticket_count_display .ticket_count{
-	display: inline;
-	margin-left: 10px;
-	text-align: center;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-	font-weight: 600;
-	color: #fff;
-	border-radius: 4px;
-	padding: 5px 30px;
-	background: #333;
-}
-.modal_content_theater_seat_map .modal-body .booking_category_showtime .showtime_display{
-	display: inline;
-	margin-left: 40px;
-}
-.modal_content_theater_seat_map .modal-body .booking_category_showtime .showtime_display .showtime_label {
-	display: inline;
-	color: #FFF;
-}
-.modal_content_theater_seat_map .modal-body .booking_category_showtime .showtime_display .showtime{
-	display: inline;
-	margin-left: 10px;
-	text-align: center;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-	font-weight: 600;
-	color: #fff;
-	border-radius: 4px;
-	padding: 5px 20px;
-	background: #ad0b0b;
-}
-.modal_content_theater_seat_map .show-date-total-amount {
-	background-color: #f0f0f0;
-	margin-top: 0;
-	font-size: 32px;
-	user-select: none;
-}
-@media (min-width: 768px) {
-.modal_content_theater_seat_map .show-date-total-amount .col-sm-9 {
-		width: 75%;
-}}
-.modal_content_theater_seat_map .show-date-total-amount h4{    
-	margin: 20px 0;
-	font-size: 24px;
-	font-weight: 600;
-}
-.modal_content_theater_seat_map .show-date-total-amount .date-left h4{    
-	text-align: left;
-	color: #282828;
-}
-@media (min-width: 768px) {
-.modal_content_theater_seat_map .show-date-total-amount .col-sm-9 {
-		width: 25%;
-}}
-.modal_content_theater_seat_map .show-date-total-amount .total-right h4 {    
-	text-align: right;
-	color: #ad0b0b;
-}
-.modal_content_theater_seat_map .seat-map {
-	text-align: center;
-	margin-top: 60px;
-	user-select: none;
-}
-.modal_content_theater_seat_map .seat-map .container-fluid {
-	padding-right: 15px;
-	padding-left: 15px;
-	margin-right: auto;
-	margin-left: auto;
-}
-@media screen and (max-width: 767px) {
-.modal_content_theater_seat_map .seat-map .table-responsive {
-	width: 100%;
-	margin-bottom: 15px;
-	border: 1px solid #ddd;
-	overflow-y: hidden;
-}}
-.modal_content_theater_seat_map .seat-map .table-responsive {
-	min-height: .01%;
-	overflow-x: auto;
-}
-.modal_content_theater_seat_map .seat-map .table-responsive .seat_category {
-	text-align: center;
-	margin: 0;
-	width: 100%;
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.modal_content_theater_seat_map .seat-map .table-responsive .seat_category .seat_category_name {
-	color: #282828;
-	font-size: 25px;
-	margin-bottom: 0;
-}
-.modal_content_theater_seat_map .seat-map .table-responsive .seat_category .category_price {
-	font-weight: 400;
-	color: #777;
-}
-.modal_content_theater_seat_map .seat-map .table-responsive .seat_category .table {
-	margin-bottom: 20px;
-	border-spacing: 0;
-	border-collapse: collapse;
-	background-color: transparent;
-}
-.modal_content_theater_seat_map .seat-map .table-responsive .seat_category table.seat_map_wrap {
-	display: inline-block;
-	text-align: center;
-	padding: 2%;
-	width: auto;
-	margin-top: 10px;
-	max-width: 100%;
-	margin-bottom: 20px;
-}
-@media only screen and (max-width: 570px) {
-.modal_content_theater_seat_map .seat-map .table.seat_map_wrap {
-	width: 1040px !important;
-	max-width: 1040px !important;
-}}
-.modal_content_theater_seat_map .seat-map .table-responsive .seat_category .seat_map_wrap .screen_area span {
-	background-color: #6b6b6b;
-	display: block;
-	font-family: sans-serif;
-	font-weight: 600;
-	font-size: 20px;
-	color: #fff;
-	width: 95%;
-	padding-top: -5px;
-	margin: 0 auto 15px;
-}
-.modal_content_theater_seat_map .seat-map .seat_map_wrap td {
-	border-top: none !important;
-	padding: 0 !important;
-	line-height: 1.42857143;
-}
-.modal_content_theater_seat_map .seat-map .table td {
-	padding: 0;
-	vertical-align: middle;
-	border-top: none;
-}
-.modal_content_theater_seat_map .seat-map .seat_map_wrap .seat_row_label {
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	color: #4c4d4f;
-	font-size: 12px;
-	margin-right: 6px;
-	margin-top: 4px;
-}
-.modal_content_theater_seat_map .seat-map .seat_map_wrap .seat {
-	float: left;
-	margin: 4px 3px;
-	width: 24px;
-}
-.modal_content_theater_seat_map .seat-map .seat_map_wrap .seat a {
-	display: inline-block;
-	font-family: inherit;
-	font-size: 10px;
-	line-height: 26px;
-	box-shadow: 0 0 0 1px #f09c0b inset;
-	height: 26px;
-	text-align: center;
-	width: 26px;
-	border-radius: 26%;
-	color: #6c6c6c;
-	cursor: pointer;
-	font-weight: bolder;
-	text-decoration: none;
-    background: #fff9d8;
-    user-select: none;
-}
-.modal_content_theater_seat_map .seat-map .seat_map_wrap .seat a:hover {
-	color: #fff;
-	background: green;
-	text-decoration: none;
-	transform: scale(1.6);
-	transition: .5s;
-}
-.modal_content_theater_seat_map .seat-map .seat_map_wrap .seat .not_available_seat a {
-	color: #fff;
-	background: red;
-	text-decoration: none;
-	pointer-events: none;
-	box-shadow: 0 0 0 1px red inset;
-}
-.modal_content_theater_seat_map .seat-map .seat_map_wrap .seat .selected_seat a{
-	color: #fff;
-	background: green;
-	text-decoration: none;
-	box-shadow: 0 0 0 1px green inset;
-}
-.modal_content_theater_seat_map #bottom-next-wrapper {
-	background-color: #000;
-	padding: 15px 0;
-	text-align: center;
-}
-.modal_content_theater_seat_map #bottom-next-wrapper .next-btn {
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-	font-weight: 700;
-	background-color: transparent;
-	color: #ad0b0b;
-	font-size: 25px;
-	line-height: 20px;
-	padding: 15px 60px;
-	display: inline-block;
-	border: 2px solid #fff;
-	border-radius: 40px;
-	box-shadow: none;
-}
-.modal_content_theater_seat_map #bottom-next-wrapper .next-btn:hover {
-	background-color: #d30f0f !important;
-	color: #FFF;
-	box-shadow: none !important;
-}
-.modal_content_theater_seat_map #bottom-next-wrapper .next-btn:active {
-	background-color:#9b0c0c !important;
-	color: #FFF;
-	box-shadow: none !important;
-}
-.modal_content_theater_seat_map #bottom-next-wrapper .next-btn:focus {
-	box-shadow: none !important;
-}
-@media (max-width: 575px){
-	.modal_content_theater_seat_map .modal-body .showtime_display{
-        display: block !important;
-        margin-left: 0 !important;
-        margin-top: 15px !important;
+    .modal .modal-dialog {
+        height: auto !important;
     }
-    .modal_content_theater_seat_map .show-date-total-amount .total-right h4 {
-        text-align: left !important;
-        margin-top: 0 !important;
+    .modal_content_theater_seat_map {
+        background-color: #FFF;
     }
-}
+    .modal_content_theater_seat_map .modal-header{
+        border-radius: 0;
+        border-bottom: 2px solid #3e3e3e;
+        background-color: #000;
+        min-height: 55px;
+    }
+    .modal_content_theater_seat_map .modal-header h6 {
+        color: #fff;
+        display: inline-block;
+        margin-top: 8px;
+        user-select: none;
+    }
+    .modal_content_theater_seat_map .close {
+        font-size: 38px;
+        color: #fff;
+        opacity: 1;
+        outline:none;
+    }
+    .modal_content_theater_seat_map .modal-body {
+        background-color: #131313;
+        user-select: none;
+    }
+    .modal_content_theater_seat_map .modal-body .movie-data {
+        margin-top: 15px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    .modal_content_theater_seat_map .modal-body .movie-data h2{
+        font-size: 28px;
+        font-family: sans-serif;
+        color: #fff;
+        font-weight: 300;
+    }
+    .modal_content_theater_seat_map .modal-body .movie-data h4{
+        font-size: 14px;
+        font-family: sans-serif;
+        color: #fff;
+        font-weight: 500;
+        padding-top: 0;
+    }
+    .modal_content_theater_seat_map .modal-body hr {
+        border-top: 1px solid #232323;
+        width: 33%;
+    }
+    .modal_content_theater_seat_map .modal-body .booking_category_showtime {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .modal_content_theater_seat_map .modal-body .booking_category_showtime .ticket_count_display{
+        display: inline;
+    }
+    .modal_content_theater_seat_map .modal-body .booking_category_showtime .ticket_count_display .ticket_count_label {
+        display: inline;
+        color: #FFF;
+    }
+    .modal_content_theater_seat_map .modal-body .booking_category_showtime .ticket_count_display .ticket_count{
+        display: inline;
+        margin-left: 10px;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+        font-weight: 600;
+        color: #fff;
+        border-radius: 4px;
+        padding: 5px 30px;
+        background: #333;
+    }
+    .modal_content_theater_seat_map .modal-body .booking_category_showtime .showtime_display{
+        display: inline;
+        margin-left: 40px;
+    }
+    .modal_content_theater_seat_map .modal-body .booking_category_showtime .showtime_display .showtime_label {
+        display: inline;
+        color: #FFF;
+    }
+    .modal_content_theater_seat_map .modal-body .booking_category_showtime .showtime_display .showtime{
+        display: inline;
+        margin-left: 10px;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+        font-weight: 600;
+        color: #fff;
+        border-radius: 4px;
+        padding: 5px 20px;
+        background: #ad0b0b;
+    }
+    .modal_content_theater_seat_map .show-date-total-amount {
+        background-color: #f0f0f0;
+        margin-top: 0;
+        font-size: 32px;
+        user-select: none;
+    }
+    @media (min-width: 768px) {
+    .modal_content_theater_seat_map .show-date-total-amount .col-sm-9 {
+            width: 75%;
+    }}
+    .modal_content_theater_seat_map .show-date-total-amount h4{    
+        margin: 20px 0;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .modal_content_theater_seat_map .show-date-total-amount .date-left h4{    
+        text-align: left;
+        color: #282828;
+    }
+    @media (min-width: 768px) {
+    .modal_content_theater_seat_map .show-date-total-amount .col-sm-9 {
+            width: 25%;
+    }}
+    .modal_content_theater_seat_map .show-date-total-amount .total-right h4 {    
+        text-align: right;
+        color: #ad0b0b;
+    }
+    .modal_content_theater_seat_map .seat-map {
+        text-align: center;
+        margin-top: 60px;
+        user-select: none;
+    }
+    .modal_content_theater_seat_map .seat-map .container-fluid {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    @media screen and (max-width: 767px) {
+    .modal_content_theater_seat_map .seat-map .table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        overflow-y: hidden;
+    }}
+    .modal_content_theater_seat_map .seat-map .table-responsive {
+        min-height: .01%;
+        overflow-x: auto;
+    }
+    .modal_content_theater_seat_map .seat-map .table-responsive .seat_category {
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .modal_content_theater_seat_map .seat-map .table-responsive .seat_category .seat_category_name {
+        color: #282828;
+        font-size: 25px;
+        margin-bottom: 0;
+    }
+    .modal_content_theater_seat_map .seat-map .table-responsive .seat_category .category_price {
+        font-weight: 400;
+        color: #777;
+    }
+    .modal_content_theater_seat_map .seat-map .table-responsive .seat_category .table {
+        margin-bottom: 20px;
+        border-spacing: 0;
+        border-collapse: collapse;
+        background-color: transparent;
+    }
+    .modal_content_theater_seat_map .seat-map .table-responsive .seat_category table.seat_map_wrap {
+        display: inline-block;
+        text-align: center;
+        padding: 2%;
+        width: auto;
+        margin-top: 10px;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    @media only screen and (max-width: 570px) {
+    .modal_content_theater_seat_map .seat-map .table.seat_map_wrap {
+        width: 1040px !important;
+        max-width: 1040px !important;
+    }}
+    .modal_content_theater_seat_map .seat-map .table-responsive .seat_category .seat_map_wrap .screen_area span {
+        background-color: #6b6b6b;
+        display: block;
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        color: #fff;
+        width: 95%;
+        padding-top: -5px;
+        margin: 0 auto 15px;
+    }
+    .modal_content_theater_seat_map .seat-map .seat_map_wrap td {
+        border-top: none !important;
+        padding: 0 !important;
+        line-height: 1.42857143;
+    }
+    .modal_content_theater_seat_map .seat-map .table td {
+        padding: 0;
+        vertical-align: middle;
+        border-top: none;
+    }
+    .modal_content_theater_seat_map .seat-map .seat_map_wrap .seat_row_label {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #4c4d4f;
+        font-size: 12px;
+        margin-right: 6px;
+        margin-top: 4px;
+    }
+    .modal_content_theater_seat_map .seat-map .seat_map_wrap .seat {
+        float: left;
+        margin: 4px 3px;
+        width: 24px;
+    }
+    .modal_content_theater_seat_map .seat-map .seat_map_wrap .seat a {
+        display: inline-block;
+        font-family: inherit;
+        font-size: 10px;
+        line-height: 26px;
+        box-shadow: 0 0 0 1px #f09c0b inset;
+        height: 26px;
+        text-align: center;
+        width: 26px;
+        border-radius: 26%;
+        color: #6c6c6c;
+        cursor: pointer;
+        font-weight: bolder;
+        text-decoration: none;
+        background: #fff9d8;
+        user-select: none;
+    }
+    .modal_content_theater_seat_map .seat-map .seat_map_wrap .seat a:hover {
+        color: #fff;
+        background: green;
+        text-decoration: none;
+        transform: scale(1.6);
+        transition: .5s;
+    }
+    .modal_content_theater_seat_map .seat-map .seat_map_wrap .seat .not_available_seat a {
+        color: #fff;
+        background: red;
+        text-decoration: none;
+        pointer-events: none;
+        box-shadow: 0 0 0 1px red inset;
+    }
+    .modal_content_theater_seat_map .seat-map .seat_map_wrap .seat .selected_seat a{
+        color: #fff;
+        background: green;
+        text-decoration: none;
+        box-shadow: 0 0 0 1px green inset;
+    }
+    .modal_content_theater_seat_map #bottom-next-wrapper {
+        background-color: #000;
+        padding: 15px 0;
+        text-align: center;
+    }
+    .modal_content_theater_seat_map #bottom-next-wrapper .next-btn {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 700;
+        background-color: transparent;
+        color: #ad0b0b;
+        font-size: 25px;
+        line-height: 20px;
+        padding: 15px 60px;
+        display: inline-block;
+        border: 2px solid #fff;
+        border-radius: 40px;
+        box-shadow: none;
+    }
+    .modal_content_theater_seat_map #bottom-next-wrapper .next-btn:hover {
+        background-color: #d30f0f !important;
+        color: #FFF;
+        box-shadow: none !important;
+    }
+    .modal_content_theater_seat_map #bottom-next-wrapper .next-btn:active {
+        background-color:#9b0c0c !important;
+        color: #FFF;
+        box-shadow: none !important;
+    }
+    .modal_content_theater_seat_map #bottom-next-wrapper .next-btn:focus {
+        box-shadow: none !important;
+    }
+    @media (max-width: 575px){
+        .modal_content_theater_seat_map .modal-body .showtime_display{
+            display: block !important;
+            margin-left: 0 !important;
+            margin-top: 15px !important;
+        }
+        .modal_content_theater_seat_map .show-date-total-amount .total-right h4 {
+            text-align: left !important;
+            margin-top: 0 !important;
+        }
+    }
 </style>
 
 <script>
@@ -512,7 +512,7 @@ date_default_timezone_set("Asia/Colombo");
                                 $(this).parent().toggleClass("selected_seat");
                             }else{
                                 $.toast({
-                                    text: "Select you seats from the same seat category " + selected_category + ".",
+                                    text: "Chọn chỗ ngồi của bạn " + selected_category + ".",
                                     icon: 'error',
                                     position: 'top-center',
                                     hideAfter: 3000,
@@ -588,7 +588,7 @@ date_default_timezone_set("Asia/Colombo");
                             $('.amount_value').html(total_amount.toFixed(3));
                         }else{
                             $.toast({
-                                text: "All seats are selected, change number of ticket(s) to pick more.",
+                                text: "Số lượng ghế đã đạt giới hạn, để chọn thêm hãy thay đổ số lượng vé.",
                                 icon: 'error',
                                 position: 'top-center',
                                 hideAfter: 3000,
@@ -613,7 +613,7 @@ date_default_timezone_set("Asia/Colombo");
                         }else{
                             $(this).parent().removeClass("selected_seat");
                             $.toast({
-                                text: "Sorry! This seat has been SELECTED (by another). Please select another seat or try again later.",
+                                text: "Xin lỗi! Ghế này đã được đặt trước. Vui lòng chọn chỗ ngồi khác hoặc thử lại sau.",
                                 icon: 'error',
                                 position: 'top-center',
                                 hideAfter: 5000,
@@ -677,7 +677,7 @@ date_default_timezone_set("Asia/Colombo");
                     window.location = "assets/booking_process_customer_details.php?fullTicketCount=" + full_ticket_count + "&kidsTicketCount=" + kids_ticket_count + "&totalTicketCount=" + total_ticket_count + "&totalAmount=" + total_amount + "&seatCategory=" + selected_category  + "&selectedSeats=" + selected_seats + "&selectedSeatsID=" + selected_seats_id + "&selectedSeatsBookingTemporaryID=" + selected_seats_booking_temporary_id + "&movieName=" + movie_name + "&theaterName=" + theater_name + "&theaterCity=" + theater_city + "&showTime=" + show_time + "&fullPrice=" + full_ticket_price + "&kidsPrice=" + kids_ticket_price;
                 }else{
                     $.toast({
-                        text: "Sorry! Booking expired.",
+                        text: "Thời gian đặt chỗ đã hết",
                         icon: 'error',
                         position: 'top-center',
                         hideAfter: 10000,

@@ -62,7 +62,7 @@ if(isset($_SESSION['payment'])) {
         
         $to = $_SESSION['customer_email'];
         $subject = 'Payment Received';
-        $from = 'thuvarahan97@gmail.com';
+        $from = 'support@cinema.com';
         
         // To send HTML mail, the Content-type header must be set
         $headers  = 'MIME-Version: 1.0' . "\r\n";
@@ -89,7 +89,7 @@ if(isset($_SESSION['payment'])) {
         <div style="margin:0px;">'.$_SESSION['theaterName'].' - '.$_SESSION['theaterCity'].'</div>
         <div style="float:right">
         <div style="margin:-40px 0 15px; text-align:center"><div style="font-weight:bold;font-size:20px;">'.$_SESSION['totalTicketCount'].'</div><div>Ticket(s)</div></div>
-        <div ><img style="border:1px solid black;height:120px;width:120px" src="http://localhost/InstaMovies/assets/booking_process.success.ticket_QRCode.php?ticketID='.$ticketID.'" alt="qr_code"></div>
+        <div ><img style="border:1px solid black;height:120px;width:120px" src="http://localhost/MovieBooking/assets/booking_process.success.ticket_QRCode.php?ticketID='.$ticketID.'" alt="qr_code"></div>
         </div>
         <div style="margin-top:30px">
         <div style="margin:0 0;display:inline-block">Full: '.$_SESSION['fullTicketCount'].'</div>
@@ -101,7 +101,7 @@ if(isset($_SESSION['payment'])) {
         <div style="margin:35px 0 5px;">Customer Name - '.$_SESSION['customer_name'].'</div>
         <div style="margin:5px 0;">Customer Mobile - '.$_SESSION['customer_phone'].'</div>
         <div style="margin:5px 0;">Customer Email - <a href="'.$_SESSION['customer_email'].'">'.$_SESSION['customer_email'].'</a></div>
-        <div style="margin:5px 0;">QR Link - <a href="http://localhost/InstaMovies/assets/booking_process.success.ticket_QRCode.php?ticketID='.$ticketID.'">Click Here</a></div>
+        <div style="margin:5px 0;">QR Link - <a href="http://localhost/MovieBooking/assets/booking_process.success.ticket_QRCode.php?ticketID='.$ticketID.'">Click Here</a></div>
         <hr style="border-top:1px dashed; margin:25px 0">
         <div style="margin:5px 0;font-size:12px;font-weight:bold">Note:</div>
         <div style="margin:5px 0;font-size:12px;line-height:1rem">All sales are final and there will be no refunds, cancellations and or amendments to the confirmed and finalized bookings.</div>
@@ -127,126 +127,134 @@ if(isset($_SESSION['payment'])) {
 
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../validation/dist/css/bootstrapValidator.css"/>
-  
+    <link rel="stylesheet" href="../validation/dist/css/bootstrapValidator.css" />
+
     <title>Cổng thanh toán</title>
 
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif;
-            text-align: center;
-            background: #ededed;
-        }
-        .content {
-            width: 450px;
-            top:50%;
-            left:50%;
-            position:absolute;
-            transform:translate(-50%,-50%);
-            box-sizing:border-box;
-            padding: 30px 30px;
-            background: #FFF;
-            border-radius: 10px;
-        }
-        .icon-box {
-            top:0%;
-            left:50%;
-            position:absolute;
-            transform:translate(-50%,-50%);
-        }
-        .btn-success:hover {
-            background:#6bb61a !important;
-        }
-        .loader {
-            margin:0;
-            position:fixed;
-            top:0;
-            left:0;
-            width: 100%;
-            height: 100%;
-            background: #ededed;
-            text-align:center;
-            cursor: wait;
-            user-select: none;
-            z-index: 2000;
-        }
-        .loader img {
-            width: 100px;
-            height: 100px;
-            user-select: none;
-        }
-        .loader .loading-content {
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            left:50%;
-            margin-right: -50%;
-            transform:translate(-50%, -50%);
-        }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        text-align: center;
+        background: #ededed;
+    }
+
+    .content {
+        width: 450px;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        padding: 30px 30px;
+        background: #FFF;
+        border-radius: 10px;
+    }
+
+    .icon-box {
+        top: 0%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    .btn-success:hover {
+        background: #6bb61a !important;
+    }
+
+    .loader {
+        margin: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ededed;
+        text-align: center;
+        cursor: wait;
+        user-select: none;
+        z-index: 2000;
+    }
+
+    .loader img {
+        width: 100px;
+        height: 100px;
+        user-select: none;
+    }
+
+    .loader .loading-content {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
     </style>
 </head>
 
 <body>
 
-<div class="loader">
-    <div class="loading-content">
-        <img draggable="false" src="../images/loading.gif">
-        <h1 style="margin-top:30px;">Vui lòng đợi trong khi xử lý thanh toán của bạn... </h1>
+    <div class="loader">
+        <div class="loading-content">
+            <img draggable="false" src="../images/loading.gif">
+            <h1 style="margin-top:30px;">Vui lòng đợi trong khi xử lý thanh toán của bạn... </h1>
+        </div>
     </div>
-</div> 
 
-<div class="content">
-    <div class="icon-box">
-        <img src="../images/success_icon.png" height="100px" width="100px">
-    </div>	
-    <h1 style="font-size:55px;margin-top:40px;">Cảm Ơn!</h1>
-    <p style="font-size:20px;margin-bottom:0">Thao tác của bạn đã được xác nhận.</p>
-    <p style="font-size:20px;"><strong>Kiểm tra email của bạn</strong> để xác nhận thanh toán.</p>
-    <hr>
-    <div style="margin-bottom:15px; color:#5c5c5c">Trình duyệt sẽ tự động chuyển hướng đến trang chủ Cinema trong <span id="timer" style="font-weight:bold"></span> giây.</div>
-    <p>
-        <a class="btn btn-success" href="../index.php" role="button" style="font-size:20px; background: #7ed321; border:none">Tiếp tục tới trang chủ</a>
-    </p>
-</div>
+    <div class="content">
+        <div class="icon-box">
+            <img src="../images/success_icon.png" height="100px" width="100px">
+        </div>
+        <h1 style="font-size:55px;margin-top:40px;">Cảm Ơn!</h1>
+        <p style="font-size:20px;margin-bottom:0">Thao tác của bạn đã được xác nhận.</p>
+        <p style="font-size:20px;"><strong>Kiểm tra email của bạn</strong> để xác nhận thanh toán.</p>
+        <hr>
+        <div style="margin-bottom:15px; color:#5c5c5c">Trình duyệt sẽ tự động chuyển hướng đến trang chủ Cinema trong
+            <span id="timer" style="font-weight:bold"></span> giây.</div>
+        <p>
+            <a class="btn btn-success" href="../index.php" role="button"
+                style="font-size:20px; background: #7ed321; border:none">Tiếp tục tới trang chủ</a>
+        </p>
+    </div>
 
 
-<script src="../js/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<script>
-    $(window).on('load', function () {
+    <script>
+    $(window).on('load', function() {
         setTimeout(function() {
             jQuery('.loader').fadeOut(500);
         }, 2000);
     });
 
     $(document).ready(function() {
-        if(performance.navigation.type == performance.navigation.TYPE_BACK_FORWARD) {
+        if (performance.navigation.type == performance.navigation.TYPE_BACK_FORWARD) {
             window.location = "../index.php";
-        }
-        else if(performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+        } else if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
             window.location = "../index.php";
         }
 
         //Disable form re-submission
-        if ( window.history.replaceState ) {
-            window.history.replaceState( null, null, window.location.href );
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
         }
-        
+
         //Timer
         setTimeout(function() {
             var timeleft = 10;
-            var Timer = setInterval(function(){
+            var Timer = setInterval(function() {
                 document.getElementById("timer").innerHTML = timeleft;
                 timeleft -= 1;
-                if(timeleft < 0){
+                if (timeleft < 0) {
                     timeleft = 0;
                     clearInterval(Timer);
                     window.location.replace("../index.php");
@@ -255,12 +263,13 @@ if(isset($_SESSION['payment'])) {
         }, 1500);
 
     });
-</script>
+    </script>
 
 </body>
+
 </html>
 
 
 <script>
-    
+
 </script>

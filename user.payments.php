@@ -11,55 +11,58 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	
-		<!--JQuery Toast CSS-->
-        <link rel="stylesheet" type="text/css" href="css/jquery.toast.min.css">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<!--Custom Style CSS-->
-		<link rel="stylesheet" type="text/css" href="css/style.css?v=<?php echo time(); ?>">
-		
-		<link rel="shortcut icon" type="image/png" href="images/icon.png">
-		
-        <title>Cinema</title>
-        
-        <style>
-            .navbar {
-                background:black !important;
-            }
-        </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
-	</head>
+    <!--JQuery Toast CSS-->
+    <link rel="stylesheet" type="text/css" href="css/jquery.toast.min.css">
 
-	
-  <body id="itemid-3"">
+    <!--Custom Style CSS-->
+    <link rel="stylesheet" type="text/css" href="css/style.css?v=<?php echo time(); ?>">
+
+    <link rel="shortcut icon" type="image/png" href="images/icon.png">
+
+    <title>Cinema</title>
+
+    <style>
+    .navbar {
+        background: black !important;
+    }
+    </style>
+
+</head>
+
+
+<body id="itemid-3"">
 
 	<!--Navbar Code - Start-->
     <?php include('header.php'); ?>
     <!--Navbar Code - End-->
 
 	
-    <div style="padding-top:85px;padding-bottom:25px;background-color:#ebebeb">
-        <div class="container mt-3" style="background:#FFF;padding-bottom:15px">
-            <div style="padding:15px"><h1 style="font-size: 35px;font-weight: normal;">Thanh toán</h1></div>
-            <div class="table-responsive" style="min-height:297px; padding:0 15px">
-                <table class="table table-striped table-bordered table-sm">
-                    <thead style="text-align:center">
-                        <tr>
-                            <th>#</th>
-                            <th>Thời gian thanh toán</th>
-                            <th>Xử lý</th>
-                            <th>Số Tiền</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
+    <div style=" padding-top:85px;padding-bottom:25px;background-color:#ebebeb">
+    <div class="container mt-3" style="background:#FFF;padding-bottom:15px">
+        <div style="padding:15px">
+            <h1 style="font-size: 35px;font-weight: normal;">Thanh toán</h1>
+        </div>
+        <div class="table-responsive" style="min-height:297px; padding:0 15px">
+            <table class="table table-striped table-bordered table-sm">
+                <thead style="text-align:center">
+                    <tr>
+                        <th>#</th>
+                        <th>Thời gian thanh toán</th>
+                        <th>Số tiền</th>
+                        <th>Trạng thái</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
                             $sql = "SELECT * FROM tbl_payments WHERE `user_id` = '{$_SESSION['userID']}' ORDER BY payment_id DESC";
                             $result = $db->query($sql);
                             if($result->num_rows>0){
@@ -69,35 +72,36 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                                     echo "<tr style='text-align:center'>";
                                         echo "<td>{$i}</td>";
                                         echo "<td>{$row['timestamp']}</td>";
-                                        echo "<td>{$row['process']}</td>";
                                         echo "<td>".number_format((float)$row['paid_amount'], 3, '.', '')." VND</td>";
+                                        echo "<td>{$row['process']}</td>";
                                     echo "</tr>";
                                 }
                             }else{
-                                echo "<tr><td colspan='4' style='padding-left:7px'>No payments were made yet!</td></tr>";
+                                echo "<tr><td colspan='4' style='padding-left:7px'>Chưa có thanh toán nào.</td></tr>";
                             }
                         ?>
-                    </tbody>
-                </table>
-            </div>
+                </tbody>
+            </table>
         </div>
     </div>
-        
+    </div>
 
-        
-	
-	<!--Footer Code - Start-->
-	<?php include('footer.php') ?>
-	<!--Footer Code - End-->
-	
-	<!-- Optional JavaScript -->
+
+
+
+    <!--Footer Code - Start-->
+    <?php include('footer.php') ?>
+    <!--Footer Code - End-->
+
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js,then Owl_Carousel, then Bootstrap JS -->
     <script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.toast.min.js"></script>
-		
 
-  </body>
+
+</body>
+
 </html>
 
 <?php

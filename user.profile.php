@@ -121,33 +121,33 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
             
             <form id="user_profile_details" style="margin:10px 15px 0">
                 <div class="form-group row">
-                    <label class="col-sm-4 col-form-label">Họ tên đệm:</label>
+                    <label class="col-sm-4 col-form-label">Họ:</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="first_name" placeholder="First Name" value="<?php echo $user_row['first_name'] ?>" disabled>
+                        <input type="text" class="form-control" id="first_name" value="<?php echo $user_row['first_name'] ?>" disabled>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Tên:</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="last_name" placeholder="Last Name" value="<?php echo $user_row['last_name'] ?>" disabled>
+                        <input type="text" class="form-control" id="last_name" value="<?php echo $user_row['last_name'] ?>" disabled>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Email:</label>
                     <div class="col-sm-8">
-                        <input type="email" class="form-control" id="email" placeholder="Email" value="<?php echo $user_row['email'] ?>" disabled>
+                        <input type="email" class="form-control" id="email" value="<?php echo $user_row['email'] ?>" disabled>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-sm-4 col-form-label">Tên sử dụng:</label>
+                    <label class="col-sm-4 col-form-label">Username:</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="username" placeholder="Username" value="<?php echo $user_row['username'] ?>" disabled>
+                        <input type="text" class="form-control" id="username" value="<?php echo $user_row['username'] ?>" disabled>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Số điện thoại:</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="mobile" placeholder="Mobile" value="0<?php echo $user_row['mobile'] ?>" disabled>
+                        <input type="text" class="form-control" id="mobile" value="0<?php echo $user_row['mobile'] ?>" disabled>
                     </div>
                 </div>
                 <div class="form-group row">
@@ -189,21 +189,21 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                 <div class="modal-body">
                     <form id="edit_user_profile_form">
                         <div class="form-group row">
-                            <label class="col-sm-4 col-form-label">Họ tên đệm:</label>
+                            <label class="col-sm-4 col-form-label">Họ:</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" name="first_name" id="first_name" placeholder="First Name" value="<?php echo $user_row['first_name'] ?>" required>
+                                <input type="text" class="form-control" name="first_name" id="first_name" value="<?php echo $user_row['first_name'] ?>" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-4 col-form-label">Tên:</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name" value="<?php echo $user_row['last_name'] ?>" required>
+                                <input type="text" class="form-control" name="last_name" id="last_name" value="<?php echo $user_row['last_name'] ?>" required>
                             </div>
                         </div>
                         <div class="form-group row" style="margin-bottom:0;">
                             <label class="col-sm-4 col-form-label">Số điện thoại:</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" name="mobile" id="mobile" pattern="[0-9]{10}" placeholder="Mobile" value="0<?php echo $user_row['mobile'] ?>">
+                                <input type="text" class="form-control" name="mobile" id="mobile" pattern="[0-9]{10}" value="0<?php echo $user_row['mobile'] ?>">
                             </div>
                         </div>
                     </form>

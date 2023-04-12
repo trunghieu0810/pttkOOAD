@@ -1,7 +1,7 @@
 <?php
 echo
     "<script>
-        alert('Your account has been verified!');
+        alert('Tài khoản của bạn đã được xác thực!');
         window.location.href = '../index.php';
     </script>";
 ?>

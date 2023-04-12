@@ -32,7 +32,7 @@ if(!isset($_SESSION['userID'])){
             }
 
         }else{
-            echo "<script>alert('The email address or password that you have entered is incorrect. Check and try again.');</script>";
+            echo "<script>alert('Email hoặc mật khẩu không chính xác!');</script>";
             
         }
     }

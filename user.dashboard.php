@@ -12,64 +12,76 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	
-		<!--JQuery Toast CSS-->
-        <link rel="stylesheet" type="text/css" href="css/jquery.toast.min.css">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<!--Custom Style CSS-->
-		<link rel="stylesheet" type="text/css" href="css/style.css?v=<?php echo time(); ?>">
-		
-		<link rel="shortcut icon" type="image/png" href="images/icon.png">
-		
-        <title>Cinema</title>
-        
-        <style>
-            .navbar {
-                background:black !important;
-            }
-            @media (max-width: 575px){
-                #ticketIDForm .form-control {
-                    margin-bottom: 15px;
-                }
-                #ticketIDForm .row {
-                    margin-left: 0;
-                }
-                #ticketIDForm .col-sm-7, .col-sm-3 {
-                    padding-left: 0;
-                    padding-right: 0;
-                }
-            }
-        </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
-	</head>
+    <!--JQuery Toast CSS-->
+    <link rel="stylesheet" type="text/css" href="css/jquery.toast.min.css">
 
-	
-  <body id="itemid-3">
+    <!--Custom Style CSS-->
+    <link rel="stylesheet" type="text/css" href="css/style.css?v=<?php echo time(); ?>">
 
-	<!--Navbar Code - Start-->
+    <link rel="shortcut icon" type="image/png" href="images/icon.png">
+
+    <title>Cinema</title>
+
+    <style>
+    .navbar {
+        background: black !important;
+    }
+
+    @media (max-width: 575px) {
+        #ticketIDForm .form-control {
+            margin-bottom: 15px;
+        }
+
+        #ticketIDForm .row {
+            margin-left: 0;
+        }
+
+        #ticketIDForm .col-sm-7,
+        .col-sm-3 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    </style>
+
+</head>
+
+
+<body id="itemid-3">
+
+    <!--Navbar Code - Start-->
     <?php include('header.php'); ?>
     <!--Navbar Code - End-->
 
-	
+
     <div style="padding-top:85px;padding-bottom:25px;background-color:#ebebeb">
         <div class="container mt-3" style="background:#FFF;">
-            <div style="padding:15px 15px 10px"><h1 style="text-align:center; font-size:50px; font-weight:normal; color:#001c8e; font-family:Arial, Helvetica, sans-serif">Welcome <?php echo $user_row['first_name']?>!</h1></div>
-		</div>
+            <div style="padding:15px 15px 10px">
+                <h1
+                    style="text-align:center; font-size:50px; font-weight:normal; color:#001c8e; font-family:Arial, Helvetica, sans-serif">
+                    Chào mừng <?php echo $user_row['first_name']?>!</h1>
+            </div>
+        </div>
 
-		<div class="container mt-3" style="background:#FFF;padding-bottom:15px">
-            <div style="padding:15px 15px 10px"><h1 style="font-size: 35px; font-weight: normal;">Vé đang ưu đãi</h1></div>
-			<div style="margin:0px 0 30px; text-align:center">
-                <button class="btn btn-danger btn-lg" style="padding:5px 10px" data-toggle="modal" data-target="#buyTicketModal">Đặt vé</button>
+        <div class="container mt-3" style="background:#FFF;padding-bottom:15px">
+            <div style="padding:15px 15px 10px">
+                <h1 style="font-size: 35px; font-weight: normal;">Vé đang ưu đãi</h1>
+            </div>
+            <div style="margin:0px 0 30px; text-align:center">
+                <button class="btn btn-danger btn-lg" style="padding:5px 10px" data-toggle="modal"
+                    data-target="#buyTicketModal">Đặt vé</button>
             </div>
             <div class="table-responsive" style="min-height:121px; padding:0 15px">
-				<table class="table table-striped table-bordered table-sm">
+                <table class="table table-striped table-bordered table-sm">
                     <thead style="text-align:center">
                         <tr>
                             <th>#</th>
@@ -78,10 +90,10 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                             <th>Rạp</th>
                             <th>Ngày</th>
                             <th>Giờ</th>
-                            <th>Loại ghế</th>
+                            <th>Phòng chiếu</th>
                             <th>Số vé</th>
-                            <th>Ghế(s)</th>
-                            <th>Tổng giá</th>
+                            <th>Ghế</th>
+                            <th>Tổng tiền</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -110,264 +122,277 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                             }
                         ?>
                     </tbody>
-                    <tfoot style="text-align:center">
-                    <tr>
-                            <th>#</th>
-                            <th>Mã vé</th>
-                            <th>Phim</th>
-                            <th>Rạp</th>
-                            <th>Ngày</th>
-                            <th>Giờ</th>
-                            <th>Loại ghế</th>
-                            <th>Số vé</th>
-                            <th>Ghế(s)</th>
-                            <th>Tổng giá</th>
-                        </tr>
-                    </tfoot>
                 </table>
             </div>
         </div>
     </div>
-        
-	
 
-	<div class="modal fade" id="buyTicketModal" tabindex="-1" role="dialog">
+
+
+    <div class="modal fade" id="buyTicketModal" tabindex="-1" role="dialog">
         <div class="modal-dialog  modal-dialog-centered" role="document">
             <div class="modal-content" style="background:white">
-            <div class="modal-header">
-                <h5 class="modal-title">Đặt vé</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="outline:none">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form id="ticketIDForm">
-                    <div class="form-group row" style="margin-bottom:0;margin-right:0">
-                        <label class="col-sm-3 col-form-label">Mã vé:</label>
-                        <div class="col-sm-7">
-                            <input id="ticket_id" type="text" class="form-control" maxlength="15" style="text-transform:uppercase">
-                        </div>
-                        <button id="viewTicket" type="button" class="btn btn-danger col-sm-2">xem</button>
-                    </div>
-                </form>
-
-                <div id="ticketDetails">
+                <div class="modal-header">
+                    <h5 class="modal-title">Đặt vé</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="outline:none">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                
-                <div id="invalid" class="alert alert-danger" style="margin:20px 0 0;padding:8px;text-align:center;display:none" role="alert">
-                    Ticket ID is invalid!
-                </div>
-                
-                <div id="customerDetails" style="display:none">
-                    <div style="background:#000; color:#FFF; padding:5px 10px; margin:0 0 20px; font-size:20px; text-align:center">Bạn có <span id="timer">200</span>  giây để hoàn thành quá trình này..</div>
-                    
-                    <div id="errorForm" class="alert alert-danger" style="margin:0 0 15px;padding:8px;text-align:center;display:none" role="alert">
-                    </div>
-                    
-                    <form id="customerDetailsForm">
-                        <div class="form-group row">
-                            <label class="col-sm-4 col-form-label">Tên khách hàng:</label>
-                            <div class="col-sm-8">
-                                <input id="customer_name" name="customer_name" type="text" class="form-control">
+                <div class="modal-body">
+                    <form id="ticketIDForm">
+                        <div class="form-group row" style="margin-bottom:0;margin-right:0">
+                            <label class="col-sm-3 col-form-label">Mã vé:</label>
+                            <div class="col-sm-7">
+                                <input id="ticket_id" type="text" class="form-control" maxlength="15"
+                                    style="text-transform:uppercase">
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-4 col-form-label">Số điện thoại:</label>
-                            <div class="col-sm-8">
-                                <input id="customer_mobile" name="customer_mobile" type="text" maxlength="10" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-4 col-form-label">Email:</label>
-                            <div class="col-sm-8">
-                                <input id="customer_email" name="customer_email" type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="terms" style="margin:20px 0 0"> 
-                            <input style="margin: 0 10px 15px 0" type="checkbox" name="terms" id="terms"/>Tôi đồng ý với <a href="terms_and_conditions.php">Điều kiện & Thỏa thuận</a>.
-                            <div class="error_code" style="color:red; font-size:11px; display: none;">Vui lòng đồng ý với điều khoản &amp; thoản thuận!</div>
+                            <button id="viewTicket" type="button" class="btn btn-danger col-sm-2">xem</button>
                         </div>
                     </form>
 
-                    <div class="payment_options" align="center" style="margin-top: 20px">
-                        <form id="payment_options_form">
-                            <table>
-                                <tr><td><input class="pay_method" type="radio" name="payment_type" id="payment_type" value="visa_mastercard" checked = "checked"></td><td>Thanh toán qua thẻ Visa/Master Card</td><td style="padding-left:10px;"><img src="images/pp_master.jpg" /></td></tr>
-                                <tr><td><input disabled class="pay_method" type="radio" name="payment_type" id="payment_type" value="union"></td><td>Thanh toán qua thẻ ngân hàng Vietcombank</td><td style="padding-left:10px;"><img src="images/pp_vcb.png" /></td></tr>
-                                <tr><td><input disabled class="pay_method" type="radio" name="payment_type" id="payment_type" value="dfcc"></td><td>Thanh toán qua thẻ Techcombank</td><td style="padding-left:10px;"><img src="images/pp_tcb.png" /></td></tr>
-                            </table>                    
-                        </form>
+                    <div id="ticketDetails">
                     </div>
-                </div>
 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                <button id="confirm" type="button" class="btn btn-primary">Đồng ý</button>
-                <button id="pay" type="button" class="btn btn-primary" style="display:none">Thanh toán</button>
-            </div>
+                    <div id="invalid" class="alert alert-danger"
+                        style="margin:20px 0 0;padding:8px;text-align:center;display:none" role="alert">
+                        Ticket ID is invalid!
+                    </div>
+
+                    <div id="customerDetails" style="display:none">
+                        <div
+                            style="background:#000; color:#FFF; padding:5px 10px; margin:0 0 20px; font-size:20px; text-align:center">
+                            Bạn có <span id="timer">200</span> giây để hoàn thành quá trình này..</div>
+
+                        <div id="errorForm" class="alert alert-danger"
+                            style="margin:0 0 15px;padding:8px;text-align:center;display:none" role="alert">
+                        </div>
+
+                        <form id="customerDetailsForm">
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Tên khách hàng:</label>
+                                <div class="col-sm-8">
+                                    <input id="customer_name" name="customer_name" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Số điện thoại:</label>
+                                <div class="col-sm-8">
+                                    <input id="customer_mobile" name="customer_mobile" type="text" maxlength="10"
+                                        class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Email:</label>
+                                <div class="col-sm-8">
+                                    <input id="customer_email" name="customer_email" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="terms" style="margin:20px 0 0">
+                                <input style="margin: 0 10px 15px 0" type="checkbox" name="terms" id="terms" />Tôi đồng
+                                ý với <a href="terms_and_conditions.php">Điều kiện & Thỏa thuận</a>.
+                                <div class="error_code" style="color:red; font-size:11px; display: none;">Vui lòng đồng
+                                    ý với điều khoản &amp; thoản thuận!</div>
+                            </div>
+                        </form>
+
+                        <div class="payment_options" align="center" style="margin-top: 20px">
+                            <form id="payment_options_form">
+                                <table>
+                                    <tr>
+                                        <td><input class="pay_method" type="radio" name="payment_type" id="payment_type"
+                                                value="visa_mastercard" checked="checked"></td>
+                                        <td>Thanh toán qua thẻ Visa/Master Card</td>
+                                        <td style="padding-left:10px;"><img src="images/pp_master.jpg" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input disabled class="pay_method" type="radio" name="payment_type"
+                                                id="payment_type" value="union"></td>
+                                        <td>Thanh toán qua thẻ ngân hàng Vietcombank</td>
+                                        <td style="padding-left:10px;"><img src="images/pp_vcb.png" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input disabled class="pay_method" type="radio" name="payment_type"
+                                                id="payment_type" value="dfcc"></td>
+                                        <td>Thanh toán qua thẻ Techcombank</td>
+                                        <td style="padding-left:10px;"><img src="images/pp_tcb.png" /></td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                    <button id="confirm" type="button" class="btn btn-primary">Đồng ý</button>
+                    <button id="pay" type="button" class="btn btn-primary" style="display:none">Thanh toán</button>
+                </div>
             </div>
         </div>
     </div>
 
-	
-        
-	
-	<!--Footer Code - Start-->
-	<?php include('footer.php') ?>
-	<!--Footer Code - End-->
-	
-	<!-- Optional JavaScript -->
+
+
+
+    <!--Footer Code - Start-->
+    <?php include('footer.php') ?>
+    <!--Footer Code - End-->
+
+    <!-- Optional JavaScript -->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.toast.min.js"></script>
-		
-	<script>
-        jQuery(document).ready(function(){
-            $('#buyTicketModal').on('shown.bs.modal', function () {
-                $('#ticket_id').focus();
-            });
 
+    <script>
+    jQuery(document).ready(function() {
+        $('#buyTicketModal').on('shown.bs.modal', function() {
+            $('#ticket_id').focus();
+        });
+
+        $("#ticketDetails").html("");
+
+        $("#ticket_id").on("input", function() {
             $("#ticketDetails").html("");
+            $("#invalid").hide();
+        })
 
-            $("#ticket_id").on("input", function(){
-                $("#ticketDetails").html("");
-                $("#invalid").hide();
-            })
-  
-            $("#viewTicket").on("click", function(){
-                var ticketID = $("#ticket_id").val();
-                if(ticketID != ""){
-                    $.ajax({
-                        url:'assets/user.dashboard.buyTicket.view_ticket.php',
-                        type:'POST',
-                        data:'ticketID=' + ticketID,
-                        success:function(html){
-                            if(html!=""){
-                                $("#ticketDetails").html(html);
-                            }else{
-                                $("#invalid").show();
-                            }
-                        }
-                    });
-                }
-            });
-  
-            $('#buyTicketModal').on('hidden.bs.modal', function () {
-                $("#ticket_id").val("");
-                $("#ticketDetails").html("");
-                $("#invalid").hide();
-                $("#customerDetails").hide();
-                $("#customerDetailsForm")[0].reset();
-                $("#ticketIDForm").show();
-                $("#confirm").show();
-                $("#pay").hide();
-                $("#ticketDetails").show();
-                $("#errorForm").hide();
-                $(".error_code").hide();
-            });
-
-            $("#confirm").on("click", function(){
-                if($("#ticketDetails").html()!=""){
-                    var ticketID = $("#ticket_id").val();
-                    $.ajax({
-                        url:'assets/user.dashboard.buyTicket.check.php',
-                        type:'POST',
-                        data:'ticketID=' + ticketID,
-                        success:function(success){
-                            if(success=="success"){
-                                $("#ticketIDForm").hide();
-                                $("#confirm").hide();
-                                $("#pay").show();
-                                $("#ticketDetails").hide();
-                                $("#customerDetails").show();
-
-                                $('#customer_name').focus();
-                                
-                                var remaining_time = 200;
-                                document.getElementById("timer").innerHTML = remaining_time;
-                                var Timer = setInterval(function(){
-                                    remaining_time -= 1;
-                                    document.getElementById("timer").innerHTML = remaining_time;
-                                    if(remaining_time <= 0){
-                                        remaining_time = 0;
-                                        clearInterval(Timer);
-                                        $("#buyTicketModal").modal("hide");
-                                    }
-                                    $('#buyTicketModal').on('hidden.bs.modal', function () {
-                                        clearInterval(Timer);
-                                    });
-                                }, 1000);
-                            }else{
-                                $.toast({
-                                    text: "Ticket is unavailable.",
-                                    icon: 'error',
-                                    position: 'top-center',
-                                    hideAfter: 4000,
-                                    stack: false,
-                                    loader: false
-                                });
-                            }
-                        }
-                    }); 
-                }
-            });
-
-            $("#pay").on("click", function(){
-                var customername = jQuery("#customer_name").val();
-                var customerphone = jQuery("#customer_mobile").val();
-                var customeremail = jQuery("#customer_email").val();
-                
-                var numberfilter = /^((\+[1-9]{1,10}[ \-]*)|(\([0-9]{2,10}\)[ \-]*)|([0-9]{2,10})[ \-]*)*?[0-9]{3,10}?[ \-]*[0-9]{0,10}?$/;
-                var emailfilter = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
-
-                if(customername!="" && customerphone!="" && customeremail!=""){
-                    if (!numberfilter.test(customerphone) || customerphone.length!=10) {
-                        jQuery("#errorForm").show();
-                        jQuery("#errorForm").html("Invalid phone number !");
-
-                    }else{
-                        if(!emailfilter.test(customeremail)){
-                            jQuery("#errorForm").show();
-                            jQuery("#errorForm").html("Invalid email !");
-                        }else{
-                            jQuery("#errorForm").hide();
-                            saveUserData();
+        $("#viewTicket").on("click", function() {
+            var ticketID = $("#ticket_id").val();
+            if (ticketID != "") {
+                $.ajax({
+                    url: 'assets/user.dashboard.buyTicket.view_ticket.php',
+                    type: 'POST',
+                    data: 'ticketID=' + ticketID,
+                    success: function(html) {
+                        if (html != "") {
+                            $("#ticketDetails").html(html);
+                        } else {
+                            $("#invalid").show();
                         }
                     }
-                }else{
-                    jQuery("#errorForm").show();
-                    jQuery("#errorForm").html("Fields can not be empty !");
-                }
-            });
-
-            function saveUserData() {
-                if(jQuery('#terms').prop('checked')){
-                    jQuery(".error_code").hide();
-
-                    var user_data = $("#customerDetailsForm").serialize();
-                    var paymentType = $("input[name='payment_type']:checked").val();
-                    window.location = "assets/user.dashboard.buyTicket.payment.php?" + user_data + "&paymentType=" + paymentType;
-                
-                }else{
-                    jQuery(".error_code").show();
-                }
+                });
             }
+        });
 
-            $('#customer_mobile').keyup(function() {
-                $(this).val(
-                    $(this).val()
-                        .replace(/^[^0]*/, '') // Remove starting non-zero characters
-                        .replace(/[^\d]*/g, '') // Remove non-digit characters
-                    );
+        $('#buyTicketModal').on('hidden.bs.modal', function() {
+            $("#ticket_id").val("");
+            $("#ticketDetails").html("");
+            $("#invalid").hide();
+            $("#customerDetails").hide();
+            $("#customerDetailsForm")[0].reset();
+            $("#ticketIDForm").show();
+            $("#confirm").show();
+            $("#pay").hide();
+            $("#ticketDetails").show();
+            $("#errorForm").hide();
+            $(".error_code").hide();
+        });
+
+        $("#confirm").on("click", function() {
+            if ($("#ticketDetails").html() != "") {
+                var ticketID = $("#ticket_id").val();
+                $.ajax({
+                    url: 'assets/user.dashboard.buyTicket.check.php',
+                    type: 'POST',
+                    data: 'ticketID=' + ticketID,
+                    success: function(success) {
+                        if (success == "success") {
+                            $("#ticketIDForm").hide();
+                            $("#confirm").hide();
+                            $("#pay").show();
+                            $("#ticketDetails").hide();
+                            $("#customerDetails").show();
+
+                            $('#customer_name').focus();
+
+                            var remaining_time = 200;
+                            document.getElementById("timer").innerHTML = remaining_time;
+                            var Timer = setInterval(function() {
+                                remaining_time -= 1;
+                                document.getElementById("timer").innerHTML =
+                                    remaining_time;
+                                if (remaining_time <= 0) {
+                                    remaining_time = 0;
+                                    clearInterval(Timer);
+                                    $("#buyTicketModal").modal("hide");
+                                }
+                                $('#buyTicketModal').on('hidden.bs.modal',
+                                function() {
+                                    clearInterval(Timer);
+                                });
+                            }, 1000);
+                        } else {
+                            $.toast({
+                                text: "Ticket is unavailable.",
+                                icon: 'error',
+                                position: 'top-center',
+                                hideAfter: 4000,
+                                stack: false,
+                                loader: false
+                            });
+                        }
+                    }
+                });
+            }
+        });
+
+        $("#pay").on("click", function() {
+            var customername = jQuery("#customer_name").val();
+            var customerphone = jQuery("#customer_mobile").val();
+            var customeremail = jQuery("#customer_email").val();
+
+            var numberfilter =
+                /^((\+[1-9]{1,10}[ \-]*)|(\([0-9]{2,10}\)[ \-]*)|([0-9]{2,10})[ \-]*)*?[0-9]{3,10}?[ \-]*[0-9]{0,10}?$/;
+            var emailfilter = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
+
+            if (customername != "" && customerphone != "" && customeremail != "") {
+                if (!numberfilter.test(customerphone) || customerphone.length != 10) {
+                    jQuery("#errorForm").show();
+                    jQuery("#errorForm").html("Invalid phone number !");
+
+                } else {
+                    if (!emailfilter.test(customeremail)) {
+                        jQuery("#errorForm").show();
+                        jQuery("#errorForm").html("Invalid email !");
+                    } else {
+                        jQuery("#errorForm").hide();
+                        saveUserData();
+                    }
                 }
+            } else {
+                jQuery("#errorForm").show();
+                jQuery("#errorForm").html("Fields can not be empty !");
+            }
+        });
+
+        function saveUserData() {
+            if (jQuery('#terms').prop('checked')) {
+                jQuery(".error_code").hide();
+
+                var user_data = $("#customerDetailsForm").serialize();
+                var paymentType = $("input[name='payment_type']:checked").val();
+                window.location = "assets/user.dashboard.buyTicket.payment.php?" + user_data + "&paymentType=" +
+                    paymentType;
+
+            } else {
+                jQuery(".error_code").show();
+            }
+        }
+
+        $('#customer_mobile').keyup(function() {
+            $(this).val(
+                $(this).val()
+                .replace(/^[^0]*/, '') // Remove starting non-zero characters
+                .replace(/[^\d]*/g, '') // Remove non-digit characters
             );
-		});
-	</script>
+        });
+    });
+    </script>
 
 
-  </body>
+</body>
+
 </html>
 
 <?php

@@ -10,68 +10,81 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	
-		<!--JQuery Toast CSS-->
-        <link rel="stylesheet" type="text/css" href="css/jquery.toast.min.css">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<!--Custom Style CSS-->
-		<link rel="stylesheet" type="text/css" href="css/style.css?v=<?php echo time(); ?>">
-		
-		<link rel="shortcut icon" type="image/png" href="images/icon.png">
-		
-        <title>Cinema</title>
-        
-        <style>
-            .navbar {
-                background:black !important;
-            }
-            @media (max-width: 575px){
-                #ticketIDForm .form-control {
-                    margin-bottom: 15px;
-                }
-                #ticketIDForm .row {
-                    margin-left: 0;
-                }
-                #ticketIDForm .col-sm-8, .col-sm-2 {
-                    padding-left: 0;
-                    padding-right: 0;
-                }
-                #publishTicket_ticketIDForm .form-control {
-                    margin-bottom: 15px;
-                }
-                #publishTicket_ticketIDForm .row {
-                    margin-left: 0;
-                }
-                #publishTicket_ticketIDForm .col-sm-7, .col-sm-3 {
-                    padding-left: 0;
-                    padding-right: 0;
-                }
-            }
-        </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
-	</head>
+    <!--JQuery Toast CSS-->
+    <link rel="stylesheet" type="text/css" href="css/jquery.toast.min.css">
 
-	
-  <body id="itemid-3" style="background-color:#ebebeb">
+    <!--Custom Style CSS-->
+    <link rel="stylesheet" type="text/css" href="css/style.css?v=<?php echo time(); ?>">
 
-	<!--Navbar Code - Start-->
+    <link rel="shortcut icon" type="image/png" href="images/icon.png">
+
+    <title>Cinema</title>
+
+    <style>
+    .navbar {
+        background: black !important;
+    }
+
+    @media (max-width: 575px) {
+        #ticketIDForm .form-control {
+            margin-bottom: 15px;
+        }
+
+        #ticketIDForm .row {
+            margin-left: 0;
+        }
+
+        #ticketIDForm .col-sm-8,
+        .col-sm-2 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        #publishTicket_ticketIDForm .form-control {
+            margin-bottom: 15px;
+        }
+
+        #publishTicket_ticketIDForm .row {
+            margin-left: 0;
+        }
+
+        #publishTicket_ticketIDForm .col-sm-7,
+        .col-sm-3 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    </style>
+
+</head>
+
+
+<body id="itemid-3" style="background-color:#ebebeb">
+
+    <!--Navbar Code - Start-->
     <?php include('header.php'); ?>
     <!--Navbar Code - End-->
 
-	
+
     <div style="margin-top:100px; margin-bottom:25px">
         <div class="container mt-3" style="background:#FFF;padding-bottom:15px">
-            <div style="padding:15px"><h1 style="font-size:35px; font-weight:normal;">Lịch sử đặt vé</h1></div>
+            <div style="padding:15px">
+                <h1 style="font-size:35px; font-weight:normal;">Lịch sử đặt vé</h1>
+            </div>
             <div style="margin:10px 0 30px; text-align:center">
-                <button class="btn btn-info" style="margin:0 2px" data-toggle="modal" data-target="#changeSeatModal">Đổi ghế</button>
-                <button class="btn btn-success" style="margin:0 2px" data-toggle="modal" data-target="#publishTicketModal">Xuất vé</button>
+                <button class="btn btn-info" style="margin:0 2px" data-toggle="modal" data-target="#changeSeatModal">Đổi
+                    ghế</button>
+                <button class="btn btn-success" style="margin:0 2px" data-toggle="modal"
+                    data-target="#publishTicketModal">Xuất vé</button>
             </div>
             <div class="table-responsive" style="padding:0 15px">
                 <table id="bookings_table" class="table table-striped table-bordered table-sm">
@@ -79,15 +92,15 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                         <tr>
                             <th>#</th>
                             <th>Mã vé</th>
-                            <th>Thời Gian đặt</th>
+                            <th>Thời gian đặt</th>
                             <th>Phim</th>
                             <th>Rạp</th>
                             <th>Ngày</th>
                             <th>Giờ</th>
-                            <th>Loại ghế</th>
+                            <th>Phòng chiếu</th>
                             <th>Số vé</th>
                             <th>Ghế</th>
-                            <th>Tổng giá</th>
+                            <th>Tổng tiền</th>
                             <th>Trạng thái</th>
                         </tr>
                     </thead>
@@ -113,7 +126,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                                         echo "<td>{$row['ticket_category']}</td>";
                                         echo "<td>"."Full: {$row['full_seat_count']}"."<br>"."Kids: {$row['kids_seat_count']}"."</td>";
                                         echo "<td>{$row['seat_number']}</td>";
-                                        echo "<td>".number_format((float)$row['total_amount'], 3, '.', '')." VND</td>";
+                                        echo "<td>".number_format((float)$row['total_amount'] + ($row['total_amount'] * 15/100), 3, '.', '')." VND</td>";
                                         echo "<td style='text-align:center'>";
                                             if($row['status'] == '2'){
                                                 echo "<span style='font-weight:bold;color:#c40099'>Sold<br>(&#10003;)</span>";
@@ -134,13 +147,13 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                                     echo "</tr>";
                                 }
                             }else{
-                                echo "<tr><td colspan='12' style='padding-left:7px'>No bookings found.</td></tr>";
+                                echo "<tr><td colspan='12' style='padding-left:7px'>Chưa có lịch sử đặt.</td></tr>";
                             }
                         ?>
                     </tbody>
                 </table>
             </div>
-            
+
         </div>
     </div>
 
@@ -194,7 +207,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                                     echo "</tr>";
                                 }
                             }else{
-                                echo "<tr><td colspan='11' style='padding-left:7px'>No purchased tickets found.</td></tr>";
+                                echo "<tr><td colspan='11' style='padding-left:7px'>Không có vé đã mua.</td></tr>";
                             }
                         ?>
                     </tbody>
@@ -203,83 +216,108 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
 
         </div>
     </div> -->
-        
-        
+
+
     <div class="modal fade" id="changeSeatModal" tabindex="-1" role="dialog">
         <div class="modal-dialog  modal-dialog-centered modal-lg" role="document">
             <div class="modal-content" style="background:white">
-            <div class="modal-header">
-                <h5 class="modal-title">Đổi Ghế</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="outline:none">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form id="ticketIDForm">
-                    <div class="form-group row" style="margin-bottom:0;margin-right:0">
-                        <label class="col-sm-2 col-form-label">Mã vé:</label>
-                        <div class="col-sm-8">
-                            <input id="changeSeat_ticket_id" type="text" class="form-control" maxlength="15" style="text-transform:uppercase">
-                        </div>
-                        <button id="changeSeat_viewTicket" type="button" class="btn btn-danger col-sm-2">Xem</button>
-                    </div>
-                </form>
-
-                <div id="changeSeat_details">
+                <div class="modal-header">
+                    <h5 class="modal-title">Đổi Ghế</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="outline:none">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-
-                <div id="changeSeat_invalid" class="alert alert-danger" style="margin:20px 0 0;padding:8px;text-align:center;display:none" role="alert">
-                    Mã vé không hợp lệ!
-                </div>
-                
-                <div id="customerDetails" style="display:none">
-                    <div style="background:#000; color:#FFF; padding:5px 10px; margin:0 0 20px; font-size:20px; text-align:center">Bạn có <span id="timer">200</span>  giây để hoàn thành quá trình này.</div>
-                    
-                    <div id="changeSeat_errorForm" class="alert alert-danger" style="margin:0 0 15px;padding:8px;text-align:center;display:none" role="alert">
-                    </div>
-                    
-                    <form id="customerDetailsForm">
-                        <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Tên Khách hàng:</label>
-                            <div class="col-sm-9">
-                                <input id="customer_name" name="customer_name" type="text" class="form-control">
+                <div class="modal-body">
+                    <form id="ticketIDForm">
+                        <div class="form-group row" style="margin-bottom:0;margin-right:0">
+                            <label class="col-sm-2 col-form-label">Mã vé:</label>
+                            <div class="col-sm-8">
+                                <input id="changeSeat_ticket_id" type="text" class="form-control" maxlength="15"
+                                    style="text-transform:uppercase">
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Số điện thoại:</label>
-                            <div class="col-sm-9">
-                                <input id="customer_mobile" name="customer_mobile" type="text" maxlength="10" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Email:</label>
-                            <div class="col-sm-9">
-                                <input id="customer_email" name="customer_email" type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="terms" style="margin:20px 0 0"> 
-                            <input style="margin: 0 10px 15px 0" type="checkbox" name="terms" id="terms"/>Tôi đồng ý với <a href="terms_and_conditions.php">Điều kiện & Thỏa thuận</a>.
-                            <div class="error_code" style="color:red; font-size:11px; display: none;">Vui lòng đồng ý với điều khoản &amp; thoản thuận!</div>
+                            <button id="changeSeat_viewTicket" type="button"
+                                class="btn btn-danger col-sm-2">Xem</button>
                         </div>
                     </form>
 
-                    <div class="payment_options" align="center" style="margin-top: 20px">
-                        <form id="payment_options_form">
-                            <table>
-                                <tr><td><input class="pay_method" type="radio" name="payment_type" id="payment_type" value="visa_mastercard" checked = "checked"></td><td>Thanh toán qua thẻ Visa/Master Card</td><td style="padding-left:10px;"><img src="images/pp_master.jpg" /></td></tr>
-                                <tr><td><input disabled class="pay_method" type="radio" name="payment_type" id="payment_type" value="union"></td><td>Thanh toán qua ngân hàng Vietcombank</td><td style="padding-left:10px;"><img src="images/vcb.png" /></td></tr>
-                                <tr><td><input disabled class="pay_method" type="radio" name="payment_type" id="payment_type" value="dfcc"></td><td>Thanh toán qua ngân hàng Techcombank</td><td style="padding-left:10px;"><img src="images/pp_tcb.png" /></td></tr>
-                            </table>                    
-                        </form>
+                    <div id="changeSeat_details">
                     </div>
 
+                    <div id="changeSeat_invalid" class="alert alert-danger"
+                        style="margin:20px 0 0;padding:8px;text-align:center;display:none" role="alert">
+                        Mã vé không hợp lệ!
+                    </div>
+
+                    <div id="customerDetails" style="display:none">
+                        <div
+                            style="background:#000; color:#FFF; padding:5px 10px; margin:0 0 20px; font-size:20px; text-align:center">
+                            Bạn có <span id="timer">200</span> giây để hoàn thành quá trình này.</div>
+
+                        <div id="changeSeat_errorForm" class="alert alert-danger"
+                            style="margin:0 0 15px;padding:8px;text-align:center;display:none" role="alert">
+                        </div>
+
+                        <form id="customerDetailsForm">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Tên Khách hàng:</label>
+                                <div class="col-sm-9">
+                                    <input id="customer_name" name="customer_name" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Số điện thoại:</label>
+                                <div class="col-sm-9">
+                                    <input id="customer_mobile" name="customer_mobile" type="text" maxlength="10"
+                                        class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Email:</label>
+                                <div class="col-sm-9">
+                                    <input id="customer_email" name="customer_email" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="terms" style="margin:20px 0 0">
+                                <input style="margin: 0 10px 15px 0" type="checkbox" name="terms" id="terms" />Tôi đồng
+                                ý với <a href="terms_and_conditions.php">Điều kiện & Thỏa thuận</a>.
+                                <div class="error_code" style="color:red; font-size:11px; display: none;">Vui lòng đồng
+                                    ý với điều khoản &amp; thoản thuận!</div>
+                            </div>
+                        </form>
+
+                        <div class="payment_options" align="center" style="margin-top: 20px">
+                            <form id="payment_options_form">
+                                <table>
+                                    <tr>
+                                        <td><input class="pay_method" type="radio" name="payment_type" id="payment_type"
+                                                value="visa_mastercard" checked="checked"></td>
+                                        <td>Thanh toán qua thẻ Visa/Master Card</td>
+                                        <td style="padding-left:10px;"><img src="images/pp_master.jpg" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input disabled class="pay_method" type="radio" name="payment_type"
+                                                id="payment_type" value="union"></td>
+                                        <td>Thanh toán qua ngân hàng Vietcombank</td>
+                                        <td style="padding-left:10px;"><img src="images/vcb.png" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input disabled class="pay_method" type="radio" name="payment_type"
+                                                id="payment_type" value="dfcc"></td>
+                                        <td>Thanh toán qua ngân hàng Techcombank</td>
+                                        <td style="padding-left:10px;"><img src="images/pp_tcb.png" /></td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+
+                    </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                <button id="changeSeat_confirm" type="button" class="btn btn-primary">Đồng ý</button>
-                <button id="changeSeat_pay" type="button" class="btn btn-primary" style="display:none">Thanh toán</button>
-            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                    <button id="changeSeat_confirm" type="button" class="btn btn-primary">Đồng ý</button>
+                    <button id="changeSeat_pay" type="button" class="btn btn-primary" style="display:none">Thanh
+                        toán</button>
+                </div>
             </div>
         </div>
     </div>
@@ -288,413 +326,450 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
     <div class="modal fade" id="publishTicketModal" tabindex="-1" role="dialog">
         <div class="modal-dialog  modal-dialog-centered" role="document">
             <div class="modal-content" style="background:white">
-            <div class="modal-header">
-                <h5 class="modal-title">Nhận vé</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="outline:none">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form id="publishTicket_ticketIDForm">
-                    <div class="form-group row" style="margin-bottom:0;margin-right:0">
-                        <label class="col-sm-3 col-form-label">Mã vé:</label>
-                        <div class="col-sm-7">
-                            <input id="ticket_id" type="text" class="form-control" maxlength="15" style="text-transform:uppercase">
-                        </div>
-                        <button id="viewTicket" type="button" class="btn btn-danger col-sm-2">Xem</button>
-                    </div>
-                </form>
-
-                <div id="ticketDetails">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nhận vé</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="outline:none">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                
-                <div id="invalid" class="alert alert-danger" style="margin:20px 0 0;padding:8px;text-align:center;display:none" role="alert">
-                    Mã vé không tồn tại!
-                </div>
-                
-                <div id="publishTicket_customerDetails" style="display:none">
-                    <div style="background:#000; color:#FFF; padding:5px 10px; margin:0 0 20px; font-size:20px; text-align:center">Bạn có <span id="publishTicket_timer">200</span>  giây để hoàn tất thanh toán.</div>
-                    
-                    <div id="publishTicket_errorForm" class="alert alert-danger" style="margin:0 0 15px;padding:8px;text-align:center;display:none" role="alert">
-                    </div>
-                    
-                    <form id="publishTicket_customerDetailsForm">
-                        <div class="form-group row">
-                            <label class="col-sm-4 col-form-label">Tên khách hàng:</label>
-                            <div class="col-sm-8">
-                                <input id="publishTicket_customer_name" name="customer_name" type="text" class="form-control">
+                <div class="modal-body">
+                    <form id="publishTicket_ticketIDForm">
+                        <div class="form-group row" style="margin-bottom:0;margin-right:0">
+                            <label class="col-sm-3 col-form-label">Mã vé:</label>
+                            <div class="col-sm-7">
+                                <input id="ticket_id" type="text" class="form-control" maxlength="15"
+                                    style="text-transform:uppercase">
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-4 col-form-label">Số điện thoại:</label>
-                            <div class="col-sm-8">
-                                <input id="publishTicket_customer_mobile" name="customer_mobile" type="text" maxlength="10" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-4 col-form-label">Email:</label>
-                            <div class="col-sm-8">
-                                <input id="publishTicket_customer_email" name="customer_email" type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="terms" style="margin:20px 0 0"> 
-                            <input style="margin: 0 10px 15px 0" type="checkbox" name="publishTicket_terms" id="publishTicket_terms"/>Tôi đồng ý với <a href="terms_and_conditions.php">Điều khoản & Thỏa thuận</a>.
-                            <div class="publishTicket_error_code" style="color:red; font-size:11px; display: none;">Vui lòng đồng ý với điều kiện &amp; Thỏa thuận!</div>
+                            <button id="viewTicket" type="button" class="btn btn-danger col-sm-2">Xem</button>
                         </div>
                     </form>
 
-                    <div class="payment_options" align="center" style="margin-top: 20px">
-                        <form id="publishTicket_payment_options_form">
-                            <table>
-                                <tr><td><input class="pay_method" type="radio" name="publishTicket_payment_type" id="publishTicket_payment_type" value="visa_mastercard" checked = "checked"></td><td>Thanh toán qua thẻ Visa/Master Card</td><td style="padding-left:10px;"><img src="images/pp_master.jpg" /></td></tr>
-                                <tr><td><input disabled class="pay_method" type="radio" name="publishTicket_payment_type" id="publishTicket_payment_type" value="union"></td><td>Thanh toán qua ngân hàng Vietcombank</td><td style="padding-left:10px;"><img src="images/pp_vcb.png" /></td></tr>
-                                <tr><td><input disabled class="pay_method" type="radio" name="publishTicket_payment_type" id="publishTicket_payment_type" value="dfcc"></td><td>Thanh toán qua ngân hàng Techcombank</td><td style="padding-left:10px;"><img src="images/pp_vcb.png" /></td></tr>
-                            </table>                    
-                        </form>
+                    <div id="ticketDetails">
                     </div>
-                </div>
 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                <button id="publishTicket_confirm" type="button" class="btn btn-primary">Đồng ý</button>
-                <button id="publishTicket_pay" type="button" class="btn btn-primary" style="display:none">Thanh toán</button>
-            </div>
+                    <div id="invalid" class="alert alert-danger"
+                        style="margin:20px 0 0;padding:8px;text-align:center;display:none" role="alert">
+                        Mã vé không tồn tại!
+                    </div>
+
+                    <div id="publishTicket_customerDetails" style="display:none">
+                        <div
+                            style="background:#000; color:#FFF; padding:5px 10px; margin:0 0 20px; font-size:20px; text-align:center">
+                            Bạn có <span id="publishTicket_timer">200</span> giây để hoàn tất thanh toán.</div>
+
+                        <div id="publishTicket_errorForm" class="alert alert-danger"
+                            style="margin:0 0 15px;padding:8px;text-align:center;display:none" role="alert">
+                        </div>
+
+                        <form id="publishTicket_customerDetailsForm">
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Tên khách hàng:</label>
+                                <div class="col-sm-8">
+                                    <input id="publishTicket_customer_name" name="customer_name" type="text"
+                                        class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Số điện thoại:</label>
+                                <div class="col-sm-8">
+                                    <input id="publishTicket_customer_mobile" name="customer_mobile" type="text"
+                                        maxlength="10" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Email:</label>
+                                <div class="col-sm-8">
+                                    <input id="publishTicket_customer_email" name="customer_email" type="text"
+                                        class="form-control">
+                                </div>
+                            </div>
+                            <div class="terms" style="margin:20px 0 0">
+                                <input style="margin: 0 10px 15px 0" type="checkbox" name="publishTicket_terms"
+                                    id="publishTicket_terms" />Tôi đồng ý với <a href="terms_and_conditions.php">Điều
+                                    khoản & Thỏa thuận</a>.
+                                <div class="publishTicket_error_code" style="color:red; font-size:11px; display: none;">
+                                    Vui lòng đồng ý với điều kiện &amp; Thỏa thuận!</div>
+                            </div>
+                        </form>
+
+                        <div class="payment_options" align="center" style="margin-top: 20px">
+                            <form id="publishTicket_payment_options_form">
+                                <table>
+                                    <tr>
+                                        <td><input class="pay_method" type="radio" name="publishTicket_payment_type"
+                                                id="publishTicket_payment_type" value="visa_mastercard"
+                                                checked="checked"></td>
+                                        <td>Thanh toán qua thẻ Visa/Master Card</td>
+                                        <td style="padding-left:10px;"><img src="images/pp_master.jpg" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input disabled class="pay_method" type="radio"
+                                                name="publishTicket_payment_type" id="publishTicket_payment_type"
+                                                value="union"></td>
+                                        <td>Thanh toán qua ngân hàng Vietcombank</td>
+                                        <td style="padding-left:10px;"><img src="images/pp_vcb.png" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input disabled class="pay_method" type="radio"
+                                                name="publishTicket_payment_type" id="publishTicket_payment_type"
+                                                value="dfcc"></td>
+                                        <td>Thanh toán qua ngân hàng Techcombank</td>
+                                        <td style="padding-left:10px;"><img src="images/pp_vcb.png" /></td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Đóng</button>
+                    <button id="publishTicket_pay" type="button" class="btn btn-primary" style="display:none">Thanh
+                        toán</button>
+                </div>
             </div>
         </div>
     </div>
 
-        
-	
-	<!--Footer Code - Start-->
-	<?php include('footer.php') ?>
-	<!--Footer Code - End-->
-	
-	<!-- Optional JavaScript -->
+
+
+    <!--Footer Code - Start-->
+    <?php include('footer.php') ?>
+    <!--Footer Code - End-->
+
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.toast.min.js"></script>
-		
+
 
     <script>
-        jQuery(document).ready(function(){
-            //Publish Ticket -start
-            $('#publishTicketModal').on('shown.bs.modal', function () {
-                $('#ticket_id').focus();
-            });
+    jQuery(document).ready(function() {
+        //Publish Ticket -start
+        $('#publishTicketModal').on('shown.bs.modal', function() {
+            $('#ticket_id').focus();
+        });
 
+        $("#ticketDetails").html("");
+
+        $("#ticket_id").on("input", function() {
             $("#ticketDetails").html("");
+            $("#invalid").hide();
+        })
 
-            $("#ticket_id").on("input", function(){
-                $("#ticketDetails").html("");
-                $("#invalid").hide();
-            })
-  
-            $("#viewTicket").on("click", function(){
-                var ticketID = $("#ticket_id").val();
-                if(ticketID != ""){
-                    $.ajax({
-                        url:'assets/user.bookings.publishTicket.view_ticket.php',
-                        type:'POST',
-                        data:'ticketID=' + ticketID,
-                        success:function(html){
-                            if(html!=""){
-                                $("#ticketDetails").html(html);
-                            }else{
-                                $("#invalid").show();
-                            }
+        $("#viewTicket").on("click", function() {
+            var ticketID = $("#ticket_id").val();
+            if (ticketID != "") {
+                $.ajax({
+                    url: 'assets/user.bookings.publishTicket.view_ticket.php',
+                    type: 'POST',
+                    data: 'ticketID=' + ticketID,
+                    success: function(html) {
+                        if (html != "") {
+                            $("#ticketDetails").html(html);
+                        } else {
+                            $("#invalid").show();
                         }
-                    });
-                }
-            });
-  
-            $('#publishTicketModal').on('hidden.bs.modal', function () {
-                $("#ticket_id").val("");
-                $("#ticketDetails").html("");
-                $("#invalid").hide();
-                $("#publishTicket_customerDetails").hide();
-                $("#publishTicket_customerDetailsForm")[0].reset();
-                $("#publishTicket_ticketIDForm").show();
-                $("#publishTicket_confirm").show();
-                $("#publishTicket_pay").hide();
-                $("#ticketDetails").show();
-                $("#publishTicket_errorForm").hide();
-                $(".publishTicket_error_code").hide();
-            });
+                    }
+                });
+            }
+        });
 
-            $("#publishTicket_confirm").on("click", function(){
-                if($("#ticketDetails").html()!=""){
-                    var ticketID = $("#ticket_id").val();
-                    $.ajax({
-                        url:'assets/user.bookings.publishTicket.check.php',
-                        type:'POST',
-                        data:'ticketID=' + ticketID,
-                        success:function(success){
-                            if(success=="success"){
-                                $("#publishTicket_ticketIDForm").hide();
-                                $("#publishTicket_confirm").hide();
-                                $("#publishTicket_pay").show();
-                                $("#ticketDetails").hide();
-                                $("#publishTicket_customerDetails").show();
+        $('#publishTicketModal').on('hidden.bs.modal', function() {
+            $("#ticket_id").val("");
+            $("#ticketDetails").html("");
+            $("#invalid").hide();
+            $("#publishTicket_customerDetails").hide();
+            $("#publishTicket_customerDetailsForm")[0].reset();
+            $("#publishTicket_ticketIDForm").show();
+            $("#publishTicket_confirm").show();
+            $("#publishTicket_pay").hide();
+            $("#ticketDetails").show();
+            $("#publishTicket_errorForm").hide();
+            $(".publishTicket_error_code").hide();
+        });
 
-                                $('#publishTicket_customer_name').focus();
-                                
-                                var remaining_time = 200;
-                                document.getElementById("publishTicket_timer").innerHTML = remaining_time;
-                                var publishTicket_Timer = setInterval(function(){
-                                    remaining_time -= 1;
-                                    document.getElementById("publishTicket_timer").innerHTML = remaining_time;
-                                    if(remaining_time <= 0){
-                                        remaining_time = 0;
-                                        clearInterval(publishTicket_Timer);
-                                        $("#publishTicketModal").modal("hide");
-                                    }
-                                    $('#publishTicketModal').on('hidden.bs.modal', function () {
+        $("#publishTicket_confirm").on("click", function() {
+            if ($("#ticketDetails").html() != "") {
+                var ticketID = $("#ticket_id").val();
+                $.ajax({
+                    url: 'assets/user.bookings.publishTicket.check.php',
+                    type: 'POST',
+                    data: 'ticketID=' + ticketID,
+                    success: function(success) {
+                        if (success == "success") {
+                            $("#publishTicket_ticketIDForm").hide();
+                            $("#publishTicket_confirm").hide();
+                            $("#publishTicket_pay").show();
+                            $("#ticketDetails").hide();
+                            $("#publishTicket_customerDetails").show();
+
+                            $('#publishTicket_customer_name').focus();
+
+                            var remaining_time = 200;
+                            document.getElementById("publishTicket_timer").innerHTML =
+                                remaining_time;
+                            var publishTicket_Timer = setInterval(function() {
+                                remaining_time -= 1;
+                                document.getElementById("publishTicket_timer")
+                                    .innerHTML = remaining_time;
+                                if (remaining_time <= 0) {
+                                    remaining_time = 0;
+                                    clearInterval(publishTicket_Timer);
+                                    $("#publishTicketModal").modal("hide");
+                                }
+                                $('#publishTicketModal').on('hidden.bs.modal',
+                                    function() {
                                         clearInterval(publishTicket_Timer);
                                     });
+                            }, 1000);
+                        } else {
+                            $.toast({
+                                text: "Ticket was already published.",
+                                icon: 'error',
+                                position: 'top-center',
+                                hideAfter: 4000,
+                                stack: false,
+                                loader: false
+                            });
+                        }
+                    }
+                });
+            }
+        });
+
+        $("#publishTicket_pay").on("click", function() {
+            var customername = jQuery("#publishTicket_customer_name").val();
+            var customerphone = jQuery("#publishTicket_customer_mobile").val();
+            var customeremail = jQuery("#publishTicket_customer_email").val();
+
+            var numberfilter =
+                /^((\+[1-9]{1,10}[ \-]*)|(\([0-9]{2,10}\)[ \-]*)|([0-9]{2,10})[ \-]*)*?[0-9]{3,10}?[ \-]*[0-9]{0,10}?$/;
+            var emailfilter = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
+
+            if (customername != "" && customerphone != "" && customeremail != "") {
+                if (!numberfilter.test(customerphone) || customerphone.length != 10) {
+                    jQuery("#publishTicket_errorForm").show();
+                    jQuery("#publishTicket_errorForm").html("Invalid phone number !");
+
+                } else {
+                    if (!emailfilter.test(customeremail)) {
+                        jQuery("#publishTicket_errorForm").show();
+                        jQuery("#publishTicket_errorForm").html("Invalid email !");
+                    } else {
+                        jQuery("#publishTicket_errorForm").hide();
+                        publishTicket_saveUserData();
+                    }
+                }
+            } else {
+                jQuery("#publishTicket_errorForm").show();
+                jQuery("#publishTicket_errorForm").html("Fields can not be empty !");
+            }
+        });
+
+        function publishTicket_saveUserData() {
+            if (jQuery('#publishTicket_terms').prop('checked')) {
+                jQuery(".publishTicket_error_code").hide();
+
+                var user_data = $("#publishTicket_customerDetailsForm").serialize();
+                var paymentType = $("input[name='publishTicket_payment_type']:checked").val();
+                window.location = "assets/user.bookings.publishTicket.payment.php?" + user_data +
+                    "&paymentType=" + paymentType;
+
+            } else {
+                jQuery(".publishTicket_error_code").show();
+            }
+        }
+
+        $('#publishTicket_customer_mobile').keyup(function() {
+            $(this).val(
+                $(this).val()
+                .replace(/^[^0]*/, '') // Remove starting non-zero characters
+                .replace(/[^\d]*/g, '') // Remove non-digit characters
+            );
+        });
+        //Publish Ticket - end
+
+
+
+        //Change Seat - start
+        $('#changeSeatModal').on('shown.bs.modal', function() {
+            $('#changeSeat_ticket_id').focus();
+        });
+
+        $("#changeSeat_details").html("");
+        $("#changeSeat_seats").html("");
+
+        $("#changeSeat_ticket_id").on("input", function() {
+            $("#changeSeat_details").html("");
+            $("#changeSeat_invalid").hide();
+        });
+
+        $("#changeSeat_viewTicket").on("click", function() {
+            var ticketID = $("#changeSeat_ticket_id").val();
+            if (ticketID != "") {
+                $.ajax({
+                    url: 'assets/user.bookings.changeSeat.view_details.php',
+                    type: 'POST',
+                    data: 'ticketID=' + ticketID,
+                    success: function(html1) {
+                        if (html1 != "") {
+                            $("#changeSeat_details").html(html1);
+                        } else {
+                            $("#changeSeat_invalid").show();
+                        }
+                    }
+                });
+            }
+        });
+
+        $('#changeSeatModal').on('hidden.bs.modal', function() {
+            $("#changeSeat_ticket_id").val("");
+            $("#changeSeat_details").html("");
+            $("#changeSeat_invalid").hide();
+            $("#customerDetails").hide();
+            $("#customerDetailsForm")[0].reset();
+            $("#ticketIDForm").show();
+            $("#changeSeat_details").show();
+            $("#changeSeat_confirm").show();
+            $("#changeSeat_pay").hide();
+            $("#errorForm").hide();
+            $(".error_code").hide();
+        });
+
+        $("#changeSeat_confirm").on("click", function() {
+            if ($("#changeSeat_details").html() != "") {
+                var ticketID = $("#changeSeat_ticket_id").val();
+                var seatsChanged = $("#changeSeatsForm").serializeArray();
+                var changedSeatsArray = new Array();
+                var pass = "";
+                $.each(seatsChanged, function(seatsChanged, field) {
+                    changedSeatsArray.push(field.value);
+                    if (field.value != "") {
+                        pass = "success";
+                    }
+                });
+
+                if (pass == "success") {
+                    $.ajax({
+                        url: 'assets/user.bookings.changeSeat.check.php',
+                        type: 'POST',
+                        data: 'changedSeats=' + JSON.stringify(changedSeatsArray),
+                        success: function(html2) {
+                            if (html2 == changedSeatsArray.length) {
+                                $("#ticketIDForm").hide();
+                                $("#changeSeat_confirm").hide();
+                                $("#changeSeat_pay").show();
+                                $("#changeSeat_details").hide();
+                                $("#customerDetails").show();
+
+                                $('#customer_name').focus();
+
+                                var timeleft = 200;
+                                document.getElementById("timer").innerHTML = timeleft;
+                                var Timer = setInterval(function() {
+                                    timeleft -= 1;
+                                    document.getElementById("timer").innerHTML =
+                                        timeleft;
+                                    if (timeleft <= 0) {
+                                        timeleft = 0;
+                                        clearInterval(Timer);
+                                        $("#changeSeatModal").modal("hide");
+                                    }
+                                    $('#changeSeatModal').on('hidden.bs.modal',
+                                        function() {
+                                            clearInterval(Timer);
+                                        });
                                 }, 1000);
-                            }else{
+
+                            } else {
                                 $.toast({
-                                    text: "Ticket was already published.",
+                                    text: "Some seats were entered incorrectly!",
                                     icon: 'error',
                                     position: 'top-center',
-                                    hideAfter: 4000,
+                                    hideAfter: 5000,
                                     stack: false,
                                     loader: false
                                 });
                             }
                         }
-                    }); 
-                }
-            });
-
-            $("#publishTicket_pay").on("click", function(){
-                var customername = jQuery("#publishTicket_customer_name").val();
-                var customerphone = jQuery("#publishTicket_customer_mobile").val();
-                var customeremail = jQuery("#publishTicket_customer_email").val();
-                
-                var numberfilter = /^((\+[1-9]{1,10}[ \-]*)|(\([0-9]{2,10}\)[ \-]*)|([0-9]{2,10})[ \-]*)*?[0-9]{3,10}?[ \-]*[0-9]{0,10}?$/;
-                var emailfilter = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
-
-                if(customername!="" && customerphone!="" && customeremail!=""){
-                    if (!numberfilter.test(customerphone) || customerphone.length!=10) {
-                        jQuery("#publishTicket_errorForm").show();
-                        jQuery("#publishTicket_errorForm").html("Invalid phone number !");
-
-                    }else{
-                        if(!emailfilter.test(customeremail)){
-                            jQuery("#publishTicket_errorForm").show();
-                            jQuery("#publishTicket_errorForm").html("Invalid email !");
-                        }else{
-                            jQuery("#publishTicket_errorForm").hide();
-                            publishTicket_saveUserData();
-                        }
-                    }
-                }else{
-                    jQuery("#publishTicket_errorForm").show();
-                    jQuery("#publishTicket_errorForm").html("Fields can not be empty !");
-                }
-            });
-
-            function publishTicket_saveUserData() {
-                if(jQuery('#publishTicket_terms').prop('checked')){
-                    jQuery(".publishTicket_error_code").hide();
-
-                    var user_data = $("#publishTicket_customerDetailsForm").serialize();
-                    var paymentType = $("input[name='publishTicket_payment_type']:checked").val();
-                    window.location = "assets/user.bookings.publishTicket.payment.php?" + user_data + "&paymentType=" + paymentType;
-                
-                }else{
-                    jQuery(".publishTicket_error_code").show();
-                }
-            }
-
-            $('#publishTicket_customer_mobile').keyup(function() {
-                $(this).val(
-                    $(this).val()
-                        .replace(/^[^0]*/, '') // Remove starting non-zero characters
-                        .replace(/[^\d]*/g, '') // Remove non-digit characters
-                    );
-                }
-            );
-            //Publish Ticket - end
-
-
-
-            //Change Seat - start
-            $('#changeSeatModal').on('shown.bs.modal', function () {
-                $('#changeSeat_ticket_id').focus();
-            });
-
-            $("#changeSeat_details").html("");
-            $("#changeSeat_seats").html("");
-
-            $("#changeSeat_ticket_id").on("input", function(){
-                $("#changeSeat_details").html("");
-                $("#changeSeat_invalid").hide();
-            });
-  
-            $("#changeSeat_viewTicket").on("click", function(){
-                var ticketID = $("#changeSeat_ticket_id").val();
-                if(ticketID != ""){
-                    $.ajax({
-                        url:'assets/user.bookings.changeSeat.view_details.php',
-                        type:'POST',
-                        data:'ticketID=' + ticketID,
-                        success:function(html1){
-                            if(html1!=""){
-                                $("#changeSeat_details").html(html1);
-                            }else{
-                                $("#changeSeat_invalid").show();
-                            }
-                        }
+                    });
+                } else {
+                    $.toast({
+                        text: "No seats were entered.",
+                        icon: 'error',
+                        position: 'top-center',
+                        hideAfter: 5000,
+                        stack: false,
+                        loader: false
                     });
                 }
-            });
-  
-            $('#changeSeatModal').on('hidden.bs.modal', function () {
-                $("#changeSeat_ticket_id").val("");
-                $("#changeSeat_details").html("");
-                $("#changeSeat_invalid").hide();
-                $("#customerDetails").hide();
-                $("#customerDetailsForm")[0].reset();
-                $("#ticketIDForm").show();
-                $("#changeSeat_details").show();
-                $("#changeSeat_confirm").show();
-                $("#changeSeat_pay").hide();
-                $("#errorForm").hide();
-                $(".error_code").hide();
-            });
-
-            $("#changeSeat_confirm").on("click", function(){
-                if($("#changeSeat_details").html()!=""){
-                    var ticketID = $("#changeSeat_ticket_id").val();
-                    var seatsChanged = $("#changeSeatsForm").serializeArray();
-                    var changedSeatsArray = new Array();
-                    var pass = "";
-                    $.each(seatsChanged, function(seatsChanged, field){
-                        changedSeatsArray.push(field.value);
-                        if(field.value !=  "") {
-                            pass = "success";
-                        }
-                    });
-
-                    if(pass == "success") {
-                        $.ajax({
-                            url:'assets/user.bookings.changeSeat.check.php',
-                            type:'POST',
-                            data:'changedSeats=' + JSON.stringify(changedSeatsArray),
-                            success:function(html2){
-                                if(html2==changedSeatsArray.length){
-                                    $("#ticketIDForm").hide();
-                                    $("#changeSeat_confirm").hide();
-                                    $("#changeSeat_pay").show();
-                                    $("#changeSeat_details").hide();
-                                    $("#customerDetails").show();
-
-                                    $('#customer_name').focus();
-                                    
-                                    var timeleft = 200;
-                                    document.getElementById("timer").innerHTML = timeleft;
-                                    var Timer = setInterval(function(){
-                                        timeleft -= 1;
-                                        document.getElementById("timer").innerHTML = timeleft;
-                                        if(timeleft <= 0){
-                                            timeleft = 0;
-                                            clearInterval(Timer);
-                                            $("#changeSeatModal").modal("hide");
-                                        }
-                                        $('#changeSeatModal').on('hidden.bs.modal', function () {
-                                            clearInterval(Timer);
-                                        });
-                                    }, 1000);
-
-                                }else{
-                                    $.toast({
-                                        text: "Some seats were entered incorrectly!",
-                                        icon: 'error',
-                                        position: 'top-center',
-                                        hideAfter: 5000,
-                                        stack: false,
-                                        loader: false
-                                    });
-                                }
-                            }
-                        });
-                    }else{
-                        $.toast({
-                            text: "No seats were entered.",
-                            icon: 'error',
-                            position: 'top-center',
-                            hideAfter: 5000,
-                            stack: false,
-                            loader: false
-                        });
-                    }
-                }
-            });
-
-            $("#changeSeat_pay").on("click", function() {
-                var customername = jQuery("#customer_name").val();
-                var customerphone = jQuery("#customer_mobile").val();
-                var customeremail = jQuery("#customer_email").val();
-                
-                var numberfilter = /^((\+[1-9]{1,10}[ \-]*)|(\([0-9]{2,10}\)[ \-]*)|([0-9]{2,10})[ \-]*)*?[0-9]{3,10}?[ \-]*[0-9]{0,10}?$/;
-                var emailfilter = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
-
-                if(customername!="" && customerphone!="" && customeremail!=""){
-                    if (!numberfilter.test(customerphone) || customerphone.length!=10) {
-                        jQuery("#changeSeat_errorForm").show();
-                        jQuery("#changeSeat_errorForm").html("Invalid phone number !");
-
-                    }else{
-                        if(!emailfilter.test(customeremail)){
-                            jQuery("#changeSeat_errorForm").show();
-                            jQuery("#changeSeat_errorForm").html("Invalid email !");
-                        }else{
-                            jQuery("#changeSeat_errorForm").hide();
-                            saveUserData();
-                        }
-                    }
-                }else{
-                    jQuery("#changeSeat_errorForm").show();
-                    jQuery("#changeSeat_errorForm").html("Fields can not be empty !");
-                }
-            });
-
-            if(performance.navigation.type == performance.navigation.TYPE_BACK_FORWARD) {
-                window.location = "user.bookings.php";
             }
-
-            function saveUserData() {
-                if(jQuery('#terms').prop('checked')){
-                    jQuery(".error_code").hide();
-
-                    var user_data = $("#customerDetailsForm").serialize();
-                    var paymentType = $("input[name='payment_type']:checked").val();
-                    window.location = "assets/user.bookings.changeSeat.payment.php?" + user_data + "&paymentType=" + paymentType;
-                
-                }else{
-                    jQuery(".error_code").show();
-                }
-            }
-
-            $('#customer_mobile').keyup(function() {
-                $(this).val(
-                    $(this).val()
-                        .replace(/^[^0]*/, '') // Remove starting non-zero characters
-                        .replace(/[^\d]*/g, '') // Remove non-digit characters
-                    );
-                }
-            );
-
-            //Change Seat - end
         });
+
+        $("#changeSeat_pay").on("click", function() {
+            var customername = jQuery("#customer_name").val();
+            var customerphone = jQuery("#customer_mobile").val();
+            var customeremail = jQuery("#customer_email").val();
+
+            var numberfilter =
+                /^((\+[1-9]{1,10}[ \-]*)|(\([0-9]{2,10}\)[ \-]*)|([0-9]{2,10})[ \-]*)*?[0-9]{3,10}?[ \-]*[0-9]{0,10}?$/;
+            var emailfilter = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
+
+            if (customername != "" && customerphone != "" && customeremail != "") {
+                if (!numberfilter.test(customerphone) || customerphone.length != 10) {
+                    jQuery("#changeSeat_errorForm").show();
+                    jQuery("#changeSeat_errorForm").html("Invalid phone number !");
+
+                } else {
+                    if (!emailfilter.test(customeremail)) {
+                        jQuery("#changeSeat_errorForm").show();
+                        jQuery("#changeSeat_errorForm").html("Invalid email !");
+                    } else {
+                        jQuery("#changeSeat_errorForm").hide();
+                        saveUserData();
+                    }
+                }
+            } else {
+                jQuery("#changeSeat_errorForm").show();
+                jQuery("#changeSeat_errorForm").html("Fields can not be empty !");
+            }
+        });
+
+        if (performance.navigation.type == performance.navigation.TYPE_BACK_FORWARD) {
+            window.location = "user.bookings.php";
+        }
+
+        function saveUserData() {
+            if (jQuery('#terms').prop('checked')) {
+                jQuery(".error_code").hide();
+
+                var user_data = $("#customerDetailsForm").serialize();
+                var paymentType = $("input[name='payment_type']:checked").val();
+                window.location = "assets/user.bookings.changeSeat.payment.php?" + user_data + "&paymentType=" +
+                    paymentType;
+
+            } else {
+                jQuery(".error_code").show();
+            }
+        }
+
+        $('#customer_mobile').keyup(function() {
+            $(this).val(
+                $(this).val()
+                .replace(/^[^0]*/, '') // Remove starting non-zero characters
+                .replace(/[^\d]*/g, '') // Remove non-digit characters
+            );
+        });
+
+        //Change Seat - end
+    });
     </script>
 
-  </body>
+</body>
+
 </html>
 
 <?php

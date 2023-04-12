@@ -67,7 +67,7 @@ if (isset($_POST['register'])) {
         header('location: register.verification.php?email=' . $email);
     }
     else {
-      echo "<script>alert('The entered email address or username already exists. Try again with another email address or username.');</script>";
+      echo "<script>alert('Địa chỉ email hoặc tên người dùng đã nhập đã tồn tại. Hãy thử lại với một địa chỉ email hoặc tên người dùng khác.');</script>";
     }       
 }
 

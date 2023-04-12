@@ -27,13 +27,15 @@ if(isset($_POST['ticketID']) && !empty($_POST['ticketID'])) {
     <div style="border:15px solid black; margin-top:15px; min-width:450px; max-width:500px; text-align:left">
         <div style="padding: 15px 30px 0;">
             <h2 style="margin:0px;font-size:25px;text-align:center"><?php echo $row['movie_name'] ?></h2>
-            <div style="margin:3px 0 0;text-align:center"><?php echo $row['theatre_name'] ?> - <?php echo $row['city'] ?></div>
+            <div style="margin:3px 0 0;text-align:center"><?php echo $row['theatre_name'] ?> -
+                <?php echo $row['city'] ?></div>
             <div style="margin:10px 0 2px;display:inline-block">Tổng Vé: <?php echo $row['total_seat_count'] ?></div>
             <div style="margin:2px 0;display:inline-block">( Thường: <?php echo $row['full_seat_count'] ?>,</div>
             <div style="margin:2px 0;display:inline-block">Trẻ em: <?php echo $row['kids_seat_count'] ?> )</div>
-            <div style="margin:2px 0;">Loại Ghế:  <?php echo $row['ticket_category'] ?></div>
+            <div style="margin:2px 0;">Phòng chiếu: <?php echo $row['ticket_category'] ?></div>
             <div style="margin:2px 0;">Ngày: <?php echo date("D, d F, Y", strtotime($row['show_date'])) ?></div>
-            <div style="margin:2px 0 15px;">Thời Gian: <?php echo date("h:i A", strtotime($row['starting_time'])) ?></div>
+            <div style="margin:2px 0 15px;">Thời Gian: <?php echo date("h:i A", strtotime($row['starting_time'])) ?>
+            </div>
         </div>
     </div>
 </div>
@@ -73,10 +75,9 @@ if(isset($_POST['ticketID']) && !empty($_POST['ticketID'])) {
                 </td>
                 <td class="seat_row_seats">
                     <?php for ($c = 1; $c <= $row['num_of_columns']; $c++) { ?>
-                        <span class="seat">
-                            <?php if ($seatMapArray[$n]!="0"){ ?>
-                                <div
-                                    <?php
+                    <span class="seat">
+                        <?php if ($seatMapArray[$n]!="0"){ ?>
+                        <div <?php
                                     if(in_array($seatMapArray[$n], $seats)) {
                                         echo " class='selected_seat'";
                                     }
@@ -85,12 +86,11 @@ if(isset($_POST['ticketID']) && !empty($_POST['ticketID'])) {
                                     if($result1->num_rows>0){
                                         echo " class='not_available_seat'";
                                     }
-                                    ?>
-                                    >
-                                    <a seatID="<?php echo $seatIDArray[$n] ?>"><?php echo $seatMapArray[$n] ?></a>
-                                </div>
-                            <?php } ?>
-                        </span>
+                                    ?>>
+                            <a seatID="<?php echo $seatIDArray[$n] ?>"><?php echo $seatMapArray[$n] ?></a>
+                        </div>
+                        <?php } ?>
+                    </span>
                     <?php $n++; } ?>
                 </td>
             </tr>
@@ -126,87 +126,95 @@ if(isset($_POST['ticketID']) && !empty($_POST['ticketID'])) {
 
 
 <style>
+    table.seat_map_wrap {
+        display: inline-block;
+        text-align: center;
+        padding: 2%;
+        width: auto;
+        margin-top: 10px;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
 
-table.seat_map_wrap {
-	display: inline-block;
-	text-align: center;
-	padding: 2%;
-	width: auto;
-	margin-top: 10px;
-	max-width: 100%;
-	margin-bottom: 20px;
-}
-@media only screen and (max-width: 570px) {
-.table.seat_map_wrap {
-	width: 1040px !important;
-	max-width: 1040px !important;
-    user-select:none;
-}}
-.seat_map_wrap .screen_area span {
-	background-color: #6b6b6b;
-	display: block;
-	font-family: sans-serif;
-	font-weight: 600;
-	font-size: 15px;
-	color: #fff;
-	width: 95%;
-	padding: 2px;
-	margin: 0 auto 15px;
-}
-.seat_map_wrap td {
-	border-top: none !important;
-	padding: 0 !important;
-	line-height: 1.1;
-    user-select:none;
-}
-.table.seat_map_wrap td {
-	padding: 0;
-	vertical-align: middle;
-	border-top: none;
-}
-.seat_map_wrap .seat_row_label {
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	color: #4c4d4f;
-	font-size: 10px;
-	margin-right: 6px;
-	margin-top: 4px;
-}
-.seat_map_wrap .seat {
-	float: left;
-	margin: 2px 2px;
-	width: 17px;
-}
-.seat_map_wrap .seat a {
-	display: inline-block;
-	font-family: inherit;
-	font-size: 7.5px;
-	line-height: 17px;
-	box-shadow: 0 0 0 1px #f09c0b inset;
-	height: 17px;
-	text-align: center;
-	width: 17px;
-	border-radius: 26%;
-	color: #6c6c6c;
-	font-weight: bold;
-	text-decoration: none;
-    background: #fff9d8;
-    user-select: none;
-    pointer-events:none;
-}
-.seat_map_wrap .seat .not_available_seat a {
-	color: #fff;
-	background: red;
-	text-decoration: none;
-	pointer-events: none;
-	box-shadow: 0 0 0 1px red inset;
-}
-.seat_map_wrap .seat .selected_seat a{
-	color: #fff;
-	background: green;
-	text-decoration: none;
-	box-shadow: 0 0 0 1px green inset;
-}
+    @media only screen and (max-width: 570px) {
+        .table.seat_map_wrap {
+            width: 1040px !important;
+            max-width: 1040px !important;
+            user-select: none;
+        }
+    }
 
+    .seat_map_wrap .screen_area span {
+        background-color: #6b6b6b;
+        display: block;
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        color: #fff;
+        width: 95%;
+        padding: 2px;
+        margin: 0 auto 15px;
+    }
+
+    .seat_map_wrap td {
+        border-top: none !important;
+        padding: 0 !important;
+        line-height: 1.1;
+        user-select: none;
+    }
+
+    .table.seat_map_wrap td {
+        padding: 0;
+        vertical-align: middle;
+        border-top: none;
+    }
+
+    .seat_map_wrap .seat_row_label {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #4c4d4f;
+        font-size: 10px;
+        margin-right: 6px;
+        margin-top: 4px;
+    }
+
+    .seat_map_wrap .seat {
+        float: left;
+        margin: 2px 2px;
+        width: 17px;
+    }
+
+    .seat_map_wrap .seat a {
+        display: inline-block;
+        font-family: inherit;
+        font-size: 7.5px;
+        line-height: 17px;
+        box-shadow: 0 0 0 1px #f09c0b inset;
+        height: 17px;
+        text-align: center;
+        width: 17px;
+        border-radius: 26%;
+        color: #6c6c6c;
+        font-weight: bold;
+        text-decoration: none;
+        background: #fff9d8;
+        user-select: none;
+        pointer-events: none;
+    }
+
+    .seat_map_wrap .seat .not_available_seat a {
+        color: #fff;
+        background: red;
+        text-decoration: none;
+        pointer-events: none;
+        box-shadow: 0 0 0 1px red inset;
+    }
+
+    .seat_map_wrap .seat .selected_seat a {
+        color: #fff;
+        background: green;
+        text-decoration: none;
+        box-shadow: 0 0 0 1px green inset;
+    }
 </style>
 
 <!-- <script>

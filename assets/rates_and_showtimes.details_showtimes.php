@@ -21,7 +21,7 @@ if(isset($_POST['action']) && ($_POST['action']!='')){
                     }
                 }
                 else{
-                    echo"Not available";
+                    echo"Không có sẵn.";
                 }
 
 

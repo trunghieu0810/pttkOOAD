@@ -9,7 +9,7 @@ if(isset($_POST['ticketID']) && !empty($_POST['ticketID'])) {
     if(mysqli_num_rows($result) > 0){
         $row = mysqli_fetch_array($result);
         $_SESSION['ticketID'] = $ticketID;
-        $charge = $row['total_amount'] * 12.5/100;
+        $charge = $row['total_amount'] + ($row['total_amount'] * 15/100);
         $_SESSION['charge'] = number_format((float)$charge, 3, '.', '');
 ?>
 
@@ -22,19 +22,15 @@ if(isset($_POST['ticketID']) && !empty($_POST['ticketID'])) {
         <div style="margin:10px 0 2px">Tổng Vé: <?php echo $row['total_seat_count'] ?></div>
         <div style="margin:2px 0;display:inline-block">Thường: <?php echo $row['full_seat_count'] ?>,</div>
         <div style="margin:2px 0;display:inline-block">Trẻ em: <?php echo $row['kids_seat_count'] ?></div>
-        <div style="margin:2px 0;">Loại Ghế:  <?php echo $row['ticket_category'] ?> - <?php echo $row['seat_number'] ?></div>
+        <div style="margin:2px 0;">Phòng chiếu - Ghế:  <?php echo $row['ticket_category'] ?> - <?php echo $row['seat_number'] ?></div>
         <div style="margin:2px 0;">Ngày: <?php echo date("D, d F, Y", strtotime($row['show_date'])) ?></div>
         <div style="margin:2px 0;">Thời Gian: <?php echo date("h:i A", strtotime($row['starting_time'])) ?></div>
         <div style="margin:2px 0 20px">Thời gian đặt vé: <?php echo $row['booking_time'] ?></div>
     </div>
-    <div style="margin:0;background:#d6d6d6;padding:10px 30px">
-        <div style="font-size:20px;display:inline-block">Tổng:</div>
-        <div style="float:right;font-size:20px;display:inline-block;font-weight:bold">VND <?php echo number_format((float)$row['total_amount'], 2, '.', '') ?></div>
-    </div>
 </div>
 
 <div style="margin-top:15px; padding:10px 15px 10px; color:#FFF; background:black; font-size: 20px; font-weight:500">
-    Chi Phí: <span style="float:right">VND <?php echo $_SESSION['charge'] ?></span>
+    Tổng thanh toán: <span style="float:right"><?php echo $_SESSION['charge'] ?> VND</span>
 </div>
 
 <?php }} ?>

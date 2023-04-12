@@ -154,7 +154,7 @@ if($_GET['paymentType'] == "visa_mastercard") {
         </div>
         <div class="form-group">
             <label class="control-label">Số thẻ</label>
-            <input type="text" class="form-control" id="card_number" name="number" required title="Enter 16 digit card number" maxlength="16">
+            <input type="text" class="form-control" id="card_number" name="number" required maxlength="16">
         </div>      
         <div class="form-group">
             <label class="control-label">Ngày hết hạn</label>
@@ -275,39 +275,39 @@ if($_GET['paymentType'] == "visa_mastercard") {
                 name: {
                 verbose: false,
                     validators: {notEmpty: {
-                            message: 'The Name is required and can\'t be empty'
+                            message: 'Tên không được để trống'
                         },regexp: {
                             regexp: /^[a-zA-Z ]+$/,
-                            message: 'The Name can only consist of alphabets'
+                            message: 'Không được sử dụng ký tự đặc biệt'
                         } } },
                 number: {
                 verbose: false,
                     validators: {notEmpty: {
-                            message: 'The Card Number is required and can\'t be empty'
+                            message: 'Số thẻ không được để trống'
                         },stringLength: {
                         min: 16,
                         max: 16,
-                        message: 'The Card Number must be 16 characters long'
+                        message: 'Tối đa 16 chữ số'
                     },regexp: {
                             regexp: /^[0-9 ]+$/,
-                            message: 'Enter a valid Card Number'
+                            message: 'Chỉ nhập các chữ số'
                         } } },
                 date: {
                 verbose: false,
                     validators: {notEmpty: {
-                            message: 'The Expire Date is required and can\'t be empty'
+                            message: 'Ngày hết hạn thẻ không được để trống'
                         } } },
                 cvv: {
                 verbose: false,
                     validators: {notEmpty: {
-                            message: 'The cvv is required and can\'t be empty'
+                            message: 'Mã CVV không được để trống'
                         },stringLength: {
                         min: 3,
                         max: 3,
-                        message: 'The cvv must 3 characters long'
+                        message: 'Tối đa 3 chữ số'
                     },regexp: {
                             regexp: /^[0-9 ]+$/,
-                            message: 'Enter a valid cvv'
+                            message: 'Chỉ nhập các chữ số'
                         } } } 
             }
         });

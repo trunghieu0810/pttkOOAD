@@ -79,7 +79,7 @@ if(isset($_SESSION['userID'])){
             <div class="form-group row">
                 <label class="col-sm-4" style="">Số điện thoại:</label>
                 <div class="col-sm-8">
-                  <input class="form-control" type="text" name="mobile" id="mobile" pattern="[0-9]{10}" title="Chỉ nhập 10 số">
+                  <input class="form-control" type="text" name="mobile" id="mobile" pattern="[0-9]{10}" title="Nhập tối đa 10 chữ số">
                 </div>
             </div>
 
@@ -94,7 +94,7 @@ if(isset($_SESSION['userID'])){
             <div class="form-group row">
                 <label class="col-sm-4" style="">Tên người dùng: <span style="color:red">*</span></label>
                 <div class="col-sm-8">
-                  <input class="form-control" type="text" name="username" id="username" pattern="[A-Za-z0-9]{3,}" title="Nhiều hơn 3 ký tự" required>
+                  <input class="form-control" type="text" name="username" id="username" pattern="[A-Za-z0-9]{3,}" title="Nhập tối thiểu 3 ký tự" required>
                 </div>
             </div>
 
@@ -102,7 +102,7 @@ if(isset($_SESSION['userID'])){
             <div class="form-group row">
                 <label class="col-sm-4" style="">Mật khẩu: <span style="color:red">*</span></label>
                 <div class="col-sm-8">
-                  <input class="form-control" type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Phải chứa ít nhất một số và một chữ hoa và chữ thường và ít nhất 8 ký tự trở lên" required>
+                  <input class="form-control" type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Phải chứa ít nhất một số và một chữ hoa và chữ thường và 8 ký tự trở lên" required>
                 </div>
             </div>
 

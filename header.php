@@ -39,9 +39,8 @@
                                         <?php echo strtoupper($_SESSION['username']) ?>
                                     </a>
                                     <ul class="dropdown-menu fadeIn">
-                                        <li><a href="user.dashboard.php">Trang chủ</a></li>
                                         <li><a href="user.profile.php">Hồ sơ</a></li>                                        
-                                        <li><a href="user.bookings.php">Đặt chỗ</a></li>
+                                        <li><a href="user.bookings.php">Vé đã đặt</a></li>
                                         <li><a href="user.payments.php">Thanh toán</a></li>
                                         <li><a href="user.refunds.php">Hoàn tiền</a></li>
                                         <li role="separator" class="divider"></li>

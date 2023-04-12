@@ -74,73 +74,88 @@ if(isset($_POST["sel_date"]) && isset($_POST['movie_id']) && !empty($_POST["sel_
 
 
 <style>
-    .theater{
+    .theater {
         width: 200px;
         user-select: none;
     }
-    .theater-showtime{
+
+    .theater-showtime {
         width: 920px;
     }
-    .theater .theater-name{
-        font-size:20px;
+
+    .theater .theater-name {
+        font-size: 20px;
         font-weight: 600;
     }
-    .theater .theater-city{
+
+    .theater .theater-city {
         font-size: 16px;
         color: #938f8f;
     }
-    .theater-showtime ul a{
+
+    .theater-showtime ul a {
         list-style-type: none;
         font-size: 20px;
         font-weight: 600;
-        text-align:center;
+        text-align: center;
     }
-    .theater-showtime li a:hover, .footer-nav > .active > a {
+
+    .theater-showtime li a:hover,
+    .footer-nav>.active>a {
         color: #f50000 !important;
         text-decoration: none;
     }
-    .theater-showtime ul li{
+
+    .theater-showtime ul li {
         display: inline;
         margin-right: 50px;
         user-select: none;
     }
-    .table-body td{
+
+    .table-body td {
         padding: 8px;
         line-height: 1.42857143;
         vertical-align: top;
         border-top: none;
         border-bottom: 1px solid black;
     }
-    .theater-showtime li{
+
+    .theater-showtime li {
         color: #cc0000;
     }
+
     .theater-showtime a {
         cursor: pointer;
     }
+
     .one-theater-showing a.disabled {
         pointer-events: none;
         color: #666666;
     }
+
     .one-theater-showing.disabled {
         cursor: not-allowed;
     }
 </style>
 
 <script>
-    function start_booking_process(a) {
-        var show_id = $(a).attr("showID");
-        var movie_id = "<?php echo $movieID;?>";
-        var theatre_id = $(a).attr("theatreID");;
-        var selected_date = "<?php echo $sel_Date;?>";
-        var showtime_id = $(a).attr("showtimeID");
-        $.ajax({
-            url:'assets/booking_process_tickets.php',
-            data:"showID="+show_id+"&movieID="+movie_id+"&theatreID="+theatre_id+"&showDate="+selected_date+"&showTimeID="+showtime_id,
-            success:function(body){
-                $('.modal-content').html(body);
-                $('#myModal').modal({show:true});
-            }
-        });
-        //window.location = "assets/booking_process.php?showID="+show_id+"&movieID="+movie_id+"&theatreID="+theatre_id+"&showDate="+selected_date+"&showTime="+selected_showtime;
-    };
+function start_booking_process(a) {
+    var show_id = $(a).attr("showID");
+    var movie_id = "<?php echo $movieID;?>";
+    var theatre_id = $(a).attr("theatreID");;
+    var selected_date = "<?php echo $sel_Date;?>";
+    var showtime_id = $(a).attr("showtimeID");
+    $.ajax({
+        url: 'assets/booking_process_tickets.php',
+        data: "showID=" + show_id + "&movieID=" + movie_id + "&theatreID=" + theatre_id + "&showDate=" +
+            selected_date + "&showTimeID=" + showtime_id,
+        success: function(body) {
+            $('.modal-content').html(body);
+            $('#myModal').modal({
+                show: true
+            });
+        }
+    });
+    //window.location = "assets/booking_process.php?showID="+show_id+"&movieID="+movie_id+"&theatreID="+theatre_id+"&showDate="+selected_date+"&showTime="+selected_showtime;
+};
 </script>

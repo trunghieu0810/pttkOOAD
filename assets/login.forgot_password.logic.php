@@ -31,11 +31,11 @@ if (isset($_POST['reset-password'])) {
   $results = mysqli_query($db, $query);
 
   if (empty($email)) {
-    echo "<script>alert('Enter your email address!');</script>";
-    array_push($errors, "Your email is required");
+    echo "<script>alert('Nhập địa chỉ Email của bạn');</script>";
+    array_push($errors, "Bạn phải nhập địa chỉ Email");
   }else if(mysqli_num_rows($results) <= 0) {
-    echo "<script>alert('Your are not registered with Cinema!');</script>";
-    array_push($errors, "Sorry, no user exists in our system with that email");
+    echo "<script>alert('Bạn chưa đăng ký tài khoản Cinema!');</script>";
+    array_push($errors, "Email này chưa đăng ký tài khoản!");
   }
   // generate a unique random token of length 100
 
@@ -49,9 +49,9 @@ if (isset($_POST['reset-password'])) {
 
     // Send email to user with the token in a link they can click on
     $to = $email;
-    $subject = "Password Recovery";
-    $msg = "We have just received your request to reset the password for your account. In order to reset password please use the confirmation code below. If you haven't ask for password reset service just ignore this message.";
-    $msg .= 'Confirmation Code: '.$x;
+    $subject = "Đặt lại mật khẩu";
+    $msg = "Chúng tôi vừa nhận được yêu cầu đặt lại mật khẩu cho tài khoản của bạn. Để đặt lại mật khẩu, vui lòng sử dụng mã xác nhận bên dưới. Nếu bạn chưa yêu cầu dịch vụ đặt lại mật khẩu, hãy bỏ qua thông báo này.";
+    $msg .= 'Mã xác nhận: '.$x;
     
     $headers = "From: support@cinema.com";
     mail($to, $subject, $msg, $headers);

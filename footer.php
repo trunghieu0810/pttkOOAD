@@ -17,7 +17,7 @@
             </ul>
         
             <ul class="footer-nav">
-                <li class="footer-item-6"><a href="login.php">Đăng Nhập</a></li>
+                <li class="footer-item-6"><a href="login.php">Đăng nhập</a></li>
                 <li class="footer-item-7"><a href="register.php">Đăng kí</a></li>
                 <li class="footer-item-10"><a href="contact_us.php">Liên hệ</a></li>
             </ul>

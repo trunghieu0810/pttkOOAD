@@ -64,20 +64,20 @@ if(!isset($_SESSION['userID'])){
           
           <div style="text-align:center; color:#3f3545;">
             <h3><i class="fa fa-lock fa-4x"></i></h3>
-            <h2 style="font-weight:400; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: #3f3545; font-size:45px; margin-bottom:30px; border-bottom: 1px solid #333333; text-align:center; padding-bottom:15px;">Forgot Password?</h2>
+            <h2 style="font-weight:400; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: #3f3545; font-size:45px; margin-bottom:30px; border-bottom: 1px solid #333333; text-align:center; padding-bottom:15px;">Quên mật khẩu?</h2>
           </div>
           
           <div class="input-group">
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i></span>
             </div>
-            <input id="email" name="email" placeholder="email address" class="form-control"  type="email">
+            <input id="email" name="email" placeholder="Nhập địa chỉ email" class="form-control"  type="email">
           </div>
 
           <hr style="margin:25px 0 20px;">
           
           <div style="text-align:center">
-            <button name="reset-password" class="btn btn-danger btn-block" value="Reset Password" type="submit">Đổi Mật Khẩu</button>
+            <button name="reset-password" class="btn btn-danger btn-block" value="Reset Password" type="submit">Đặt Lại Mật Khẩu</button>
           </div>
 
         </form>

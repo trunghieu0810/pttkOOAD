@@ -39,7 +39,7 @@ include_once ('../db_config.php');
                         echo "<td id='row_column'>{$row['num_of_rows']}</td>";
                         echo "<td id='col_column'>{$row['num_of_columns']}</td>";
                         echo "<td id='seat_column'>{$row['num_of_seats']}</td>";
-                        echo "<td id='seat_map_column'><button type='button' class='view_button' seatCategoryID='{$row['seat_category_id']}'>View</button></td>";
+                        echo "<td id='seat_map_column'><button type='button' class='view_button' seatCategoryID='{$row['seat_category_id']}'>Xem</button></td>";
                         echo "<td id='action_column'><button type='button' class='delete_button' seatCategoryID='{$row['seat_category_id']}'><i class='fa fa-trash'></i></button></td>";
                     echo "</tr>";
                 }

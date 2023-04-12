@@ -11,43 +11,46 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	
-		<!--JQuery Toast CSS-->
-        <link rel="stylesheet" type="text/css" href="css/jquery.toast.min.css">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<!--Custom Style CSS-->
-		<link rel="stylesheet" type="text/css" href="css/style.css?v=<?php echo time(); ?>">
-		
-		<link rel="shortcut icon" type="image/png" href="images/icon.png">
-		
-        <title>Cinema</title>
-        
-        <style>
-            .navbar {
-                background:black !important;
-            }
-        </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
-	</head>
+    <!--JQuery Toast CSS-->
+    <link rel="stylesheet" type="text/css" href="css/jquery.toast.min.css">
 
-	
-  <body id="itemid-3">
+    <!--Custom Style CSS-->
+    <link rel="stylesheet" type="text/css" href="css/style.css?v=<?php echo time(); ?>">
 
-	<!--Navbar Code - Start-->
+    <link rel="shortcut icon" type="image/png" href="images/icon.png">
+
+    <title>Cinema</title>
+
+    <style>
+    .navbar {
+        background: black !important;
+    }
+    </style>
+
+</head>
+
+
+<body id="itemid-3">
+
+    <!--Navbar Code - Start-->
     <?php include('header.php'); ?>
     <!--Navbar Code - End-->
 
-	
+
     <div style="padding-top:85px;padding-bottom:25px;background-color:#ebebeb">
         <div class="container mt-3" style="background:#FFF;padding-bottom:15px">
-            <div style="padding:15px"><h1 style="font-size: 35px;font-weight: normal;">Hoàn tiền</h1></div>
+            <div style="padding:15px">
+                <h1 style="font-size: 35px;font-weight: normal;">Hoàn tiền</h1>
+            </div>
             <div class="table-responsive" style="min-height:297px; padding:0 15px">
                 <table class="table table-striped table-bordered table-sm" id="refunds_table">
                     <thead style="text-align:center">
@@ -55,7 +58,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                             <th>#</th>
                             <th>Thời gian giao dịch</th>
                             <th>Số tiền</th>
-							<th>Trạng thái</th>
+                            <th>Trạng thái</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -73,7 +76,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
 												echo $row['transaction_time'];
 											}
 										echo "</td>";
-										echo "<td>Rs. ".number_format((float)$row['amount'], 2, '.', '')."</td>";
+										echo "<td>".number_format((float)$row['amount'], 3, '.', '')." VND</td>";
 										echo "<td>";
 											if($row['status'] == '0'){
 												echo "<span style='font-weight:bold;font-size:15px;color:red'>Pending</span>";
@@ -84,79 +87,73 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID']) && !($_SESSION['use
                                     echo "</tr>";
                                 }
                             }else{
-                                echo "<tr><td colspan='4' style='padding-left:7px'>No refunds available.</td></tr>";
+                                echo "<tr><td colspan='4' style='padding-left:7px'>Chưa có giao dịch nào.</td></tr>";
                             }
                         ?>
                     </tbody>
-                    <tfoot style="text-align:center">
-                        <tr>
-                            <th>#</th>
-                            <th>Thời gian giao dịch</th>
-                            <th>Số tiền</th>
-							<th>Trạng thái</th>
-                        </tr>
-                    </tfoot>
                 </table>
             </div>
         </div>
     </div>
-        
 
 
-	<div class="modal fade" id="redeemModal" tabindex="-1" role="dialog">
+
+    <div class="modal fade" id="redeemModal" tabindex="-1" role="dialog">
         <div class="modal-dialog  modal-dialog-centered" role="document">
             <div class="modal-content" style="background:white">
-            <div class="modal-header">
-                <h5 class="modal-title">Hoàn tiền</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="outline:none">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form id="redeemForm">
-                    <div class="form-group row">
-                        <label class="col-sm-4 col-form-label">Loại Tài Khoản:</label>
-                        <div class="col-sm-8">
-							<select class="form-control">
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
+                <div class="modal-header">
+                    <h5 class="modal-title">Hoàn tiền</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="outline:none">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="redeemForm">
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-form-label">Loại Tài Khoản:</label>
+                            <div class="col-sm-8">
+                                <select class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row" style="margin-bottom:0">
-                        <label class="col-sm-4 col-form-label">Số Tài Khoản:</label>
-                        <div class="col-sm-8">
-                            <input id="ticket_id" type="text" class="form-control" maxlength="15" style="text-transform:uppercase">
+                        <div class="form-group row" style="margin-bottom:0">
+                            <label class="col-sm-4 col-form-label">Số Tài Khoản:</label>
+                            <div class="col-sm-8">
+                                <input id="ticket_id" type="text" class="form-control" maxlength="15"
+                                    style="text-transform:uppercase">
+                            </div>
                         </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                <button id="confirm" type="button" class="btn btn-primary">Xác nhận</button>
-            </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                    <button id="confirm" type="button" class="btn btn-primary">Xác nhận</button>
+                </div>
             </div>
         </div>
     </div>
 
 
-        
-	
-	<!--Footer Code - Start-->
-	<?php include('footer.php') ?>
-	<!--Footer Code - End-->
-	
-	<!-- Optional JavaScript -->
+
+
+    <!--Footer Code - Start-->
+    <?php include('footer.php') ?>
+    <!--Footer Code - End-->
+
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js,then Owl_Carousel, then Bootstrap JS -->
     <script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.toast.min.js"></script>
-		
 
-  </body>
+
+</body>
+
 </html>
 
 <?php

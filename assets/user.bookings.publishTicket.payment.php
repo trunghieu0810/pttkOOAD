@@ -112,7 +112,7 @@ if($_GET['paymentType'] == "visa_mastercard") {
 <div class="loader">
     <div class="loading-content">
         <img draggable="false" src="../images/loading.gif">
-        <h1 style="margin-top:30px;">Please wait! Loading payment method... </h1>
+        <h1 style="margin-top:30px;">Vui lòng chờ! Đang tải phương thức thanh toán...</h1>
     </div>
 </div>
 
@@ -230,39 +230,39 @@ if($_GET['paymentType'] == "visa_mastercard") {
                 name: {
                 verbose: false,
                     validators: {notEmpty: {
-                            message: 'The Name is required and can\'t be empty'
+                            message: 'Tên không được để trống'
                         },regexp: {
                             regexp: /^[a-zA-Z ]+$/,
-                            message: 'The Name can only consist of alphabets'
+                            message: 'Chỉ nhập các chữ cái'
                         } } },
                 number: {
                 verbose: false,
                     validators: {notEmpty: {
-                            message: 'The Card Number is required and can\'t be empty'
+                            message: 'Số thẻ không được để trống'
                         },stringLength: {
                         min: 16,
                         max: 16,
-                        message: 'The Card Number must be 16 characters long'
+                        message: 'Tối đa 16 ký tự'
                     },regexp: {
                             regexp: /^[0-9 ]+$/,
-                            message: 'Enter a valid Card Number'
+                            message: 'Nhập các số từ 0-9'
                         } } },
                 date: {
                 verbose: false,
                     validators: {notEmpty: {
-                            message: 'The Expire Date is required and can\'t be empty'
+                            message: 'Ngày hết hạn không được để trống'
                         } } },
                 cvv: {
                 verbose: false,
                     validators: {notEmpty: {
-                            message: 'The cvv is required and can\'t be empty'
+                            message: 'Mã CVV không được để trống'
                         },stringLength: {
                         min: 3,
                         max: 3,
-                        message: 'The cvv must 3 characters long'
+                        message: 'Tối đa 3 ký tự'
                     },regexp: {
                             regexp: /^[0-9 ]+$/,
-                            message: 'Enter a valid cvv'
+                            message: 'Nhập các số từ 0-9'
                         } } } 
             }
         });

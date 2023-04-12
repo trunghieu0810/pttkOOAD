@@ -1,7 +1,7 @@
 <?php
 echo
     "<script>
-        alert('Successfully registered with Cinema!');
+        alert('Đăng ký thành công!');
         window.location.href = '../login.php';
     </script>";
 ?>

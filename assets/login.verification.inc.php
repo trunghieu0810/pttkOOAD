@@ -33,7 +33,7 @@ if (isset($_POST['confirm'])) {
         header("location: assets/login.verification.success.php");
     }
     else{
-        echo "<script>alert('Verification code is invalid!');</script>";
+        echo "<script>alert('Mã xác nhận không chính xác!');</script>";
     }
 }
 ?>

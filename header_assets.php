@@ -28,7 +28,7 @@
                                 <li class="item-3"><a class="nav-link" href="../rates_and_showtimes.php">Lịch Chiếu<span class="sr-only">(current)</span></a></li>
                                 <li class="item-4"><a class="nav-link" href="../theatres.php">Rạp</a></li>
                                 <!-- <li class="item-5"><a class="nav-link" href="../news.php">NEWS</a></li> -->
-                                <li class="item-6"><a class="nav-link" href="../offers.php">Ưu đãi</a></li>
+                                <li class="item-6"><a class="nav-link" href="../offers.php">Ưu Đãi</a></li>
                                 <li class="item-7"><a class="nav-link" href="../buy_tickets.php">Đặt Vé</a></li>
                                 <li class="item-8"><a class="nav-link" href="../contact_us.php">Liên Hệ</a></li>
                             </ul>
@@ -39,9 +39,8 @@
                                         <?php echo strtoupper($_SESSION['username']) ?>
                                     </a>
                                     <ul class="dropdown-menu fadeIn">
-                                        <li><a href="../user.dashboard.php">Tùy Chọn</a></li>
                                         <li><a href="../user.profile.php">Hồ Sơ</a></li>
-                                        <li><a href="../user.bookings.php">Đặt Vé</a></li>
+                                        <li><a href="../user.bookings.php">Vé đã đặt</a></li>
                                         <li><a href="../user.payments.php">Thanh Toán</a></li>
                                         <li><a href="../user.refunds.php">Hoàn Tiền</a></li>
                                         <li role="separator" class="divider"></li>

@@ -28,19 +28,19 @@ if(isset($_POST['ticketID']) && !empty($_POST['ticketID'])) {
         <div style="margin:10px 0 2px">Tổng vé: <?php echo $row['total_seat_count'] ?></div>
         <div style="margin:2px 0;display:inline-block">Thường: <?php echo $row['full_seat_count'] ?>,</div>
         <div style="margin:2px 0;display:inline-block">Trẻ em: <?php echo $row['kids_seat_count'] ?></div>
-        <div style="margin:2px 0;">Loại ghế:  <?php echo $row['ticket_category'] ?> - <?php echo $row['seat_number'] ?></div>
+        <div style="margin:2px 0;">Phòng chiếu:  <?php echo $row['ticket_category'] ?> - <?php echo $row['seat_number'] ?></div>
         <div style="margin:2px 0;">Ngày: <?php echo date("D, d F, Y", strtotime($row['show_date'])) ?></div>
         <div style="margin:2px 0 15px;">Thời gian: <?php echo date("h:i A", strtotime($row['starting_time'])) ?></div>
     </div>
     <div style="margin:0;background:#d6d6d6;padding:10px 30px">
         <div style="font-size:20px;display:inline-block">Tổng: </div>
-        <div style="float:right;font-size:20px;display:inline-block;font-weight:bold">VND <?php echo number_format((float)$row['total_amount'], 3, '.', '') ?></div>
+        <div style="float:right;font-size:20px;display:inline-block;font-weight:bold"> <?php echo number_format((float)$row['total_amount'], 3, '.', '') ?> VND</div>
     </div>
 </div>
 
 <div style="margin-top:15px; padding:10px 15px 10px; color:#FFF; background:black; font-size: 20px; font-weight:500">
-    <div>Phí xử lý: <span style="float:right">VND <?php echo $_SESSION['charge'] ?></span></div>
-    <div>Tổng giá: <span style="float:right">VND <?php echo $_SESSION['total_charge'] ?></span></div>
+    <div>Phí xử lý: <span style="float:right"> <?php echo $_SESSION['charge'] ?> VND</span></div>
+    <div>Tổng giá: <span style="float:right"> <?php echo $_SESSION['total_charge'] ?> VND</span></div>
 </div>
 
 <?php }} ?>

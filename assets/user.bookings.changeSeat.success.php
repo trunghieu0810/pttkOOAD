@@ -33,7 +33,7 @@ if(isset($_SESSION['payment'])) {
 
     $to = $_SESSION['customer_email'];
     $subject = 'Seat(s) Changed - Payment Received';
-    $from = 'thuvarahan97@gmail.com';
+    $from = 'support@cinema.com';
     
     // To send HTML mail, the Content-type header must be set
     $headers  = 'MIME-Version: 1.0' . "\r\n";
@@ -55,13 +55,13 @@ if(isset($_SESSION['payment'])) {
     <div style="margin:15px 15px 5px;">Customer Name - '.$_SESSION['customer_name'].'</div>
     <div style="margin:5px 15px;">Customer Mobile - '.$_SESSION['customer_phone'].'</div>
     <div style="margin:5px 15px;">Customer Email - <a href="'.$_SESSION['customer_email'].'">'.$_SESSION['customer_email'].'</a></div>
-    <div style="margin:5px 15px;">QR Link - <a href="http://localhost/InstaMovies/assets/booking_process.success.ticket_QRCode.php?ticketID='.$_SESSION['ticketID'].'">Click Here</a></div>
+    <div style="margin:5px 15px;">QR Link - <a href="http://localhost/MovieBooking/assets/booking_process.success.ticket_QRCode.php?ticketID='.$_SESSION['ticketID'].'">Click Here</a></div>
     <hr style="border-top:1px dashed; margin:10px 15px">
     <div style="margin:5px 15px;">Transaction No. - '.$paymentNumber.'</div>
     <div style="margin:5px 15px;">Transaction Date - '.date("Y-m-d H:i:s", $paymentTime).'</div>
     <div style="margin:20px 0 0;background:#d6d6d6;padding:10px 15px">
     <div style="color:#000;font-size:20px;display:inline-block">Amount:</div>
-    <div style="float:right;color:#000;font-size:20px;display:inline-block;font-weight:bold">Rs. '.$_SESSION['charge'].'</div>
+    <div style="float:right;color:#000;font-size:20px;display:inline-block;font-weight:bold">VND '.$_SESSION['charge'].'</div>
     </div>
     </div>
     </body>

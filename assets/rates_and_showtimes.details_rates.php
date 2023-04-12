@@ -31,7 +31,7 @@ if(isset($_POST['action']) && ($_POST['action']!='')){
 
                 if(mysqli_num_rows($result_rates)>0){
                     echo "<tr>
-                            <th>Hạng ghế</th>
+                            <th>Phòng chiếu</th>
                             <th>Loại vé</th>
                             <th>Giá vé</th> 
                         </tr>";

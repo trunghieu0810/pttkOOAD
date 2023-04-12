@@ -45,7 +45,7 @@ if(isset($_POST["sel_date"]) && isset($_POST['movie_id']) && !empty($_POST["sel_
             echo '<option value="'.$row['theatre_id'].'">'.$row['theatre_name'].' - '.$row['city'].'</option>';
         }
     }else{
-        echo '<option value="">Theatres not available</option>';
+        echo '<option value="">Không có.</option>';
     }
 }
 

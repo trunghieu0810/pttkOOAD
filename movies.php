@@ -130,7 +130,7 @@ include_once ('db_config.php');
 						if(mysqli_num_rows($result_nowshowing) > 0){
 						?>
 						<div class="nowshowing_movies">
-							<h2 style="font-weight:normal; color:#23241d; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:45px; margin-bottom:30px; padding-top:15px">Đang chiếu tại rạp</h2>
+							<h2 style="font-weight:normal; color:#23241d; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:45px; margin-bottom:30px; padding-top:15px">Phim Đang Chiếu</h2>
 							<div class="row">
 								<?php while($row_nowshowing = mysqli_fetch_array($result_nowshowing)){
 									
@@ -176,7 +176,7 @@ include_once ('db_config.php');
 						if(mysqli_num_rows($result_upcoming) > 0){
 						?>
 						<div class="upcoming_movies">
-							<h2 style="font-weight:normal; color:#23241d; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:45px; margin-bottom:30px; padding-top:15px">Upcoming Movies</h2>
+							<h2 style="font-weight:normal; color:#23241d; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:45px; margin-bottom:30px; padding-top:15px">Phim Sắp Chiếu</h2>
 							<div class="row">
 								<?php while($row_upcoming = mysqli_fetch_array($result_upcoming)){ ?>
 								<div class="col-md-3 col-sm-4">
