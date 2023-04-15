@@ -229,10 +229,10 @@ include_once ('db_config.php');
 					rateMax : 5, // maximal rate - integer from 0 to 9999 (or more)
 					phpPath: 'libs/Movierating.php',
 					onSuccess: function(){
-						alert('Your rating has been submitted');
+						alert('Đánh giá của bạn đã được ghi nhận');
 					},
 					onError: function(){
-						alert('There was a problem submitting your feedback');
+						alert('Đã xảy ra sự cố khi gửi phản hồi của bạn');
 					}
 				});
 			});

@@ -52,7 +52,8 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -62,13 +63,13 @@
 
     <!--Bootstrap Fullscreen Modal CSS-->
     <link rel="stylesheet" type="text/css" href="css/bootstrap4-modal-fullscreen.min.css">
-    
+
     <!--JQuery Toast Plugin CSS-->
     <link rel="stylesheet" type="text/css" href="css/jquery.toast.min.css">
 
     <!--Font Awesome CSS-->
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    
+
     <!--Glyphicons CSS-->
     <link rel="stylesheet" type="text/css" href="css/glyphicon.css">
 
@@ -78,22 +79,22 @@
     <!--Owl Carousel CSS-->
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="css/owl.theme.default.css">
-    
+
     <!--Custom Style CSS-->
     <link rel="stylesheet" type="text/css" href="css/style.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" type="text/css" href="css/movies_slider.css">
 
     <!--Favicon Image-->
     <link rel="shortcut icon" type="image/png" href="images/icon.png">
-    
+
     <title>Cinema</title>
 
-  </head>
+</head>
 
-	
-  <body id="itemid-7">
 
-	<!--Navbar Code - Start-->
+<body id="itemid-7">
+
+    <!--Navbar Code - Start-->
     <?php include('header.php'); ?>
     <!--Navbar Code - End-->
 
@@ -108,7 +109,7 @@
             }else{
                 echo '<img src="images/banner.jpg?v='.time().'"/>';
             }
-            ?>    
+            ?>
         </div>
         <!--Select Movie-->
         <div class="movie-name">
@@ -117,7 +118,8 @@
                     <div class="movie_selection_list col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <form>
                             <div class="form-group" id="now-showing-list">
-                                <select class="form-control form-control-lg" id="selectMovie" onChange="SelectRedirect();">
+                                <select class="form-control form-control-lg" id="selectMovie"
+                                    onChange="SelectRedirect();">
                                     <?php
                                         $select_movie = "SELECT * FROM tbl_movies WHERE `status` = 1";
                                         $query_movie=mysqli_query($db,$select_movie);
@@ -129,7 +131,7 @@
                                             }
                                         }
                                     }else{
-                                        echo '<option value="">Select Movie</option>';
+                                        echo '<option value="">Chọn Phim</option>';
                                         if($rowCount_movie > 0){
                                             while($row = $query_movie->fetch_assoc()){
                                                 echo '<option value="'.$row['movie_id'].'">'.$row['movie_name'].'</option>';
@@ -144,7 +146,7 @@
                 </div>
             </div>
         </div>
-        
+
 
         <!--Show-Datepicker-->
 
@@ -154,7 +156,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="date-container">
                             <ul class="list-inline">
-                                
+
                                 <?php
                                 if($startingDate>date("Y-m-d")){
                                     $date = $startingDate;
@@ -205,12 +207,12 @@
                 </div>
             </div>
         </div> -->
-        
+
         <!--Display Show-Time-Table-->
         <div class="show-time-table" id="time_table">
             <div class="container">
                 <div class="row" style="margin:-1px 0px">
-                    <table class="table table-responsive" id=table_details>  
+                    <table class="table table-responsive" id=table_details>
                         <!--table link-->
                     </table>
                 </div>
@@ -221,87 +223,86 @@
         <div class="modal fade modal-fullscreen" id="myModal" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-                    <!--Link to Modal Content-->                    
+                    <!--Link to Modal Content-->
                 </div>
             </div>
         </div>
-        
+
     </div>
     <!--Buy Tickets Body - End-->
-        
-        
-        
-	
-	<!--Footer Code - Start-->
-    <?php include('footer.php') ?>
-	<!--Footer Code - End-->
 
-	<!-- Optional JavaScript -->
+
+
+
+    <!--Footer Code - Start-->
+    <?php include('footer.php') ?>
+    <!--Footer Code - End-->
+
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js,then Owl_Carousel, then Bootstrap JS -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/popper.min.js"></script>
-		<script src="js/owl.carousel.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery-ui.js"></script>
-        <script src="js/jquery.toast.min.js"></script>
-        
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.toast.min.js"></script>
+
 
     <!--Page Redirecting-->
-        <script>
-            //Redirecting to selected movie
-            function SelectRedirect(){
-                var $valueid = document.getElementById('selectMovie').value;
-                window.location="buy_tickets.php?movieID="+$valueid;
-            }
+    <script>
+    //Redirecting to selected movie
+    function SelectRedirect() {
+        var $valueid = document.getElementById('selectMovie').value;
+        window.location = "buy_tickets.php?movieID=" + $valueid;
+    }
 
-            //Setting the select option to current movieID
-            $("#selectMovie > [value=" + "<?php echo $movieID ?>" + "]").attr("selected", "true");
-
-        </script>
+    //Setting the select option to current movieID
+    $("#selectMovie > [value=" + "<?php echo $movieID ?>" + "]").attr("selected", "true");
+    </script>
 
     <!--Date Picker Script-->
-		<script>
-        $(document).ready(function(){
-            //Set first date as default and fetch showtimes for that date
-            $("#date-0").addClass('active');
-            var sel_Date = $('#date-0').attr('dateValue');
-            var movieID = jQuery('#selectMovie').val();
-            if(sel_Date){
-                $.ajax({
-                    type:'POST',
-                    url:'assets/buy_tickets.inc.php',
-                    data:'sel_date=' + sel_Date + '&movie_id=' + movieID,
-                    success:function(html){
-                        $('#table_details').html(html);
-                    }
-                }); 
-            }
-
-            //Change active class to selected date and fetch showtimes for that date
-            $(".date-container ul[class*=list-inline] li").click(function () {
-                $(".date-container ul[class*=list-inline] .active").removeClass('active');
-                $(this).addClass('active');
-                var sel_Date = $(this).attr('dateValue');
-                var movieID = jQuery('#selectMovie').val();
-                if(sel_Date){
-                    $.ajax({
-                        type:'POST',
-                        url:'assets/buy_tickets.inc.php',
-                        data:'sel_date=' + sel_Date + '&movie_id=' + movieID,
-                        success:function(html){
-                            $('#table_details').html(html);
-                        }
-                    }); 
+    <script>
+    $(document).ready(function() {
+        //Set first date as default and fetch showtimes for that date
+        $("#date-0").addClass('active');
+        var sel_Date = $('#date-0').attr('dateValue');
+        var movieID = jQuery('#selectMovie').val();
+        if (sel_Date) {
+            $.ajax({
+                type: 'POST',
+                url: 'assets/buy_tickets.inc.php',
+                data: 'sel_date=' + sel_Date + '&movie_id=' + movieID,
+                success: function(html) {
+                    $('#table_details').html(html);
                 }
             });
+        }
+
+        //Change active class to selected date and fetch showtimes for that date
+        $(".date-container ul[class*=list-inline] li").click(function() {
+            $(".date-container ul[class*=list-inline] .active").removeClass('active');
+            $(this).addClass('active');
+            var sel_Date = $(this).attr('dateValue');
+            var movieID = jQuery('#selectMovie').val();
+            if (sel_Date) {
+                $.ajax({
+                    type: 'POST',
+                    url: 'assets/buy_tickets.inc.php',
+                    data: 'sel_date=' + sel_Date + '&movie_id=' + movieID,
+                    success: function(html) {
+                        $('#table_details').html(html);
+                    }
+                });
+            }
         });
-        </script>
+    });
+    </script>
 
 
 
     <!--------------------- Usual Date Picker Calendar - Start ------------------------->
-        <!--Date Picker Script-->
-		<!-- <script>
+    <!--Date Picker Script-->
+    <!-- <script>
 			$( function() {
 				$( "#datepicker" ).datepicker({
 					dateFormat: 'yy-mm-dd',
@@ -312,10 +313,10 @@
 				});
 			});
 		</script> -->
-        
 
-        <!--Enabling Dates between Two Dates fetched from database-->
-        <!-- <script>
+
+    <!--Enabling Dates between Two Dates fetched from database-->
+    <!-- <script>
             //Converting any number to two digits (for example: (9 -> 09))
             function pad2(number) {
                return (number < 10 ? '0' : '') + number;
@@ -357,7 +358,7 @@
         </script> -->
 
 
-        <!-- <script>
+    <!-- <script>
             $('#datepicker').on('change',function(){
                 var sel_Date = $(this).val();
                 var movieID = jQuery('#selectMovie').val();
@@ -378,20 +379,21 @@
 
 
 
-        <script>
-            $('#myModal').on('show.bs.modal', function () {
-                $('body').css('overflow', 'hidden');
-            })
+    <script>
+    $('#myModal').on('show.bs.modal', function() {
+        $('body').css('overflow', 'hidden');
+    })
 
-            $('#myModal').on('hidden.bs.modal', function (e) {
-                $('body').css('overflow', 'auto');
-            })
-        </script>
-        
+    $('#myModal').on('hidden.bs.modal', function(e) {
+        $('body').css('overflow', 'auto');
+    })
+    </script>
 
-        <script>
-            $(".header_wrapper .main_menu_wrapper .item-7").addClass("active");
-        </script>
 
-  </body>
+    <script>
+    $(".header_wrapper .main_menu_wrapper .item-7").addClass("active");
+    </script>
+
+</body>
+
 </html>

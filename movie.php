@@ -25,7 +25,7 @@ $movie_id=$_GET["movie_id"];
 
     <style>
     .movie .banner img {
-        width: 100%
+        width: 100%;
     }
 
     .banner-caption {
@@ -291,8 +291,8 @@ $movie_id=$_GET["movie_id"];
         ?>
 
         <!--Banner Code - Start-->
-        <div class="banner">
-            <img src="data:image/jpeg;base64,<?php echo base64_encode($row_movie['wallpaper'])?>"
+        <div class="banner ">
+            <img src="data:image/jpeg;base64, <?php echo base64_encode($row_movie['banner'])?>"
                 alt="<?php echo $row_movie["movie_name"]?>">
             <div class="banner-caption">
                 <p><button class="btn-0 btn-lg" style="min-width:323px"

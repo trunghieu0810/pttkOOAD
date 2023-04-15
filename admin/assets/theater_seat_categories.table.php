@@ -49,10 +49,10 @@ include_once ('../db_config.php');
 </table>
 
 <script>
-    $(document).ready(function () {
-        $('#seat_category_table').DataTable({
-            "ordering": false,
-        });
-        $('.dataTables_length').addClass('bs-select');
+$(document).ready(function() {
+    $('#seat_category_table').DataTable({
+        "ordering": false,
     });
-  </script>
+    $('.dataTables_length').addClass('bs-select');
+});
+</script>
