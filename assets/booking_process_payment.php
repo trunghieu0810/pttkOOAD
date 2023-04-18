@@ -247,14 +247,12 @@ if($_GET['paymentType'] == "visa_mastercard") {
             if($("#type option:selected").val() == "mastercard") {
                 $(this).val(
                     $(this).val()
-                        .replace(/^[^5]*/, '')
                         .replace(/[^\d]*/g, '')
                 );
             }
             else if($("#type option:selected").val() == "visa") {
                 $(this).val(
                     $(this).val()
-                        .replace(/^[^4]*/, '')
                         .replace(/[^\d]*/g, '')
                 );
             }
@@ -289,7 +287,7 @@ if($_GET['paymentType'] == "visa_mastercard") {
                         max: 16,
                         message: 'Tối đa 16 chữ số'
                     },regexp: {
-                            regexp: /^[0-9 ]+$/,
+                            regexp: /^[0-9]+$/,
                             message: 'Chỉ nhập các chữ số'
                         } } },
                 date: {

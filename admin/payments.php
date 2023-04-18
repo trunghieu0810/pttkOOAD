@@ -270,7 +270,7 @@ else if($_SESSION['admin_id']=='1'){
                                         echo "</tr>";
                                     }
                                 }else{
-                                    echo "<tr><td colspan='12' style='padding-left:7px'>No payments available.</td></tr>";
+                                    echo "<tr><td colspan='12' style='padding-left:7px'>Chưa có thanh toán nào.</td></tr>";
                                 }
                             ?>
                             </tbody>

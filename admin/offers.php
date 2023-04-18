@@ -207,7 +207,7 @@ if(!isset($_SESSION['admin_id'])) {
             <div class="card">
                 <h3 class="card-header text-center font-weight-bold text-uppercase py-3">Ưu Đãi</h3>
                 <div class="card-body">
-                    <?php if($_SESSION['admin_id']=='1'){ ?>
+                    <?php if($_SESSION['admin_id']){ ?>
                     <div class="add_new_offer">
                         <a href="offers.add.php"> <button type="button" class="add_button" data-toggle="modal"
                                 data-target="#addModal">Thêm ưu đãi</button></a>
@@ -228,7 +228,7 @@ if(!isset($_SESSION['admin_id'])) {
                                     <th class="th-sm">Miêu tả</th>
                                     <th class="th-sm">Hình ảnh</th>
                                     <th class="th-sm">Banner</th>
-                                    <?php if($_SESSION['admin_id']=='1'){ ?><th class="th-sm"></th><?php } ?>
+                                    <?php if($_SESSION['admin_id']){ ?><th class="th-sm"></th><?php } ?>
                                 </tr>
 
                             </thead>
@@ -254,14 +254,17 @@ if(!isset($_SESSION['admin_id'])) {
                                     </td>
                                     <td><?php  echo '<img src="data:image/jpeg;base64,'.base64_encode($row['banner']).'" style="height:20%"/>'; ?>
                                     </td>
-                                    <?php if($_SESSION['admin_id']=='1'){ ?>
+                                    <?php if($_SESSION['admin_id']){ ?>
                                     <td id='action_column'><a
                                             href="assets/offers.delete.php?offer_id=<?php echo $row['offer_id']; ?>"><button
                                                 type='button' class='delete_button'><i
                                                     class='fa fa-trash'></i></button></a></td>
                                     <?php } ?>
                                 </tr>
-                                <?php }} ?>
+                                <?php }} 
+                                else{
+                                    echo "<tr><td colspan='9' style='padding-left:7px'>Chưa có.</td></tr>";
+                                } ?>
 
                             </tbody>
                         </table>

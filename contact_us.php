@@ -64,7 +64,7 @@ include 'assets/contact_us.inc.php';
 											</div> 
 											<div class="form-group">
 												<span>Số Điện Thoại</span>        
-													<input type="text" class="form-control required" name="phone" id="phone" pattern="07[0-9]{8}" maxlength="10" style="max-width:445px;" value="" required/>        
+													<input type="text" class="form-control required" name="phone" id="phone"  maxlength="10" style="max-width:445px;" value="" required/>        
 											</div> 
 											<div class="form-group">
 												<span>Email</span>        

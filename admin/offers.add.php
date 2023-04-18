@@ -167,7 +167,7 @@ include ("assets/offers.add.insert.php");
                         </div>
                         <hr style="margin:30px 0 20px">
                         <div class="content-footer" align="center">
-                            <input type="submit" name="add" value="add" class="btn btn-primary">
+                            <input type="submit" name="add" value="Thêm" class="btn btn-primary">
                             <button onclick="location.href='offers.php'" class="btn btn-secondary">Hủy</button>
                         </div>
                     </form>

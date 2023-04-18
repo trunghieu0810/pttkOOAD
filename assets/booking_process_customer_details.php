@@ -271,7 +271,7 @@ $_SESSION['showDate'];
                         </div>
                         <div class="form-group">
                             <span>Số điện thoại</span>
-                            <input id="customer_phone" name="customer_phone" placeholder="07xxxxxxxx" type="text" class="form-control" maxlength="10" value="" required>
+                            <input id="customer_phone" name="customer_phone" type="text" class="form-control" maxlength="10" value="" required>
                         </div>
                         <div class="form-group">
                             <span>Email</span>

@@ -262,7 +262,7 @@ else if($_SESSION['admin_id']=='1'){
                                         echo "</tr>";
                                     }
                                 }else{
-                                    echo "<tr><td colspan='6' style='padding-left:7px'>No refunds available.</td></tr>";
+                                    echo "<tr><td colspan='6' style='padding-left:7px'>Chưa có.</td></tr>";
                                 }
                             ?>
                             </tbody>

@@ -101,13 +101,13 @@ include 'assets/rates_and_showtimes.inc.php';
 
             <div class="output_details" id="output_details" style="display:none;">
                 <div class="rates_details mt-4">
-                    <label class="heading">Đánh giá: </label>
+                    <label class="heading">Thông tin: </label>
                     <div class="rates_table mt-2" id="output_details_rates_table">
                         <!--table file link-->
                     </div>
                 </div>
                 <div class="showtimes_details mt-4">
-                    <label class="heading">Lịch chiếu: </label>
+                    <label class="heading">Lịch chiếu trong ngày: </label>
                     <div class="showtimes_table mt-2" id="output_details_showtimes_table">
                         <!--table file link-->
                     </div>
